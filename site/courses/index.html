@@ -185,6 +185,94 @@
   </div>
 </section>
 
+
+<section>
+  <div class="wrap">
+    <h2 style="font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:12px">— Tool modules — one per tool</h2>
+    <p style="color:var(--dim);margin-bottom:24px;max-width:700px">Each tool gets its own module: what it is, its structure, and the Claude Code directives to rebuild it — plus exactly what its output looks like.</p>
+    
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T1</span>The Intake Bot</h3><span class="price">$35</span></div>
+      <p>The Telegram OPQRST engine: 18-question state machine, skips what it already knows, correction loop.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: structured intake JSON + HPI draft</p>
+      <a class="buy" href="https://buy.stripe.com/3cIcN63Ce5DHg8Mc4LbMR04">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T2</span>The Pseudonym Generator</h3><span class="price">$35</span></div>
+      <p>Identity split via Google Sheets formula or 3-line JS. Only the code travels with the case.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: alphanumeric code + a mapping row that never leaves your sheet</p>
+      <a class="buy" href="https://buy.stripe.com/9B6dRa5Kmc252hW9WDbMR05">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T3</span>The De-Identifier</h3><span class="price">$35</span></div>
+      <p>Strips names, DOBs, addresses, ID numbers before any API call.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: clean case text — PHI-free</p>
+      <a class="buy" href="https://buy.stripe.com/00w7sM6Oq5DH7Cg1q7bMR06">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T4</span>Document Router & OCR</h3><span class="price">$35</span></div>
+      <p>Faxes, PDFs and scans become page-indexed text with low-confidence pages flagged.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: searchable text bundle per document</p>
+      <a class="buy" href="https://buy.stripe.com/5kQ5kE1u63vz5u8gl1bMR07">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T5</span>The Multi-AI Council</h3><span class="price">$35</span></div>
+      <p>Independent model answers → debate → consensus secretary; every position must cite evidence.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: consensus report + disagreement log</p>
+      <a class="buy" href="https://buy.stripe.com/6oU8wQ0q2ead09O0m3bMR08">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T6</span>Card Builder & Serve-Time Gate</h3><span class="price">$35</span></div>
+      <p>Locked-spec decision cards, live re-verified before showing; handled cases auto-evict.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: a decision-ready case card</p>
+      <a class="buy" href="https://buy.stripe.com/6oU3cwgp06HLaOsd8PbMR09">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T7</span>Work-Ledger & Executor</h3><span class="price">$35</span></div>
+      <p>Append-only state machine CREATED→DECIDED→EXECUTING→DONE; idempotent, source-faithful execution.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: audit log + the executed action</p>
+      <a class="buy" href="https://buy.stripe.com/28E3cw8Wyc25cWA4CjbMR0a">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T8</span>The Publishing Stack</h3><span class="price">$35</span></div>
+      <p>Static pages, git, the deploy babysitter, hash-chained ledgers, Stripe walls.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: live pages + verifiable JSON ledgers</p>
+      <a class="buy" href="https://buy.stripe.com/fZu8wQa0C4zD8Gk6KrbMR0b">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 style="font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:12px">— Sequence modules — where each tool enters</h2>
+    <p style="color:var(--dim);margin-bottom:24px;max-width:700px">A sequence module teaches a whole pipeline: which tool module enters at which step, to do what, what it hands to the next step, and what the final output looks like.</p>
+    
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">SEQUENCE S1</span>Patient → Report</h3><span class="price">$35</span></div>
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;font-family:'Courier New',monospace;font-size:12.5px;margin-bottom:14px;min-width:520px"><tr><th style="text-align:left;color:var(--brass);padding-right:10px">#</th><th style="text-align:left;color:var(--brass);padding-right:14px">module</th><th style="text-align:left;color:var(--brass);padding-right:14px">enters to do</th><th style="text-align:left;color:var(--brass)">hands off</th></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">1</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T1 Intake Bot</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">collects the OPQRST story, one question at a time</td><td style="color:var(--good);padding:6px 0;vertical-align:top">intake JSON</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">2</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T2 Pseudonym</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">splits identity from the case before anything leaves</td><td style="color:var(--good);padding:6px 0;vertical-align:top">code, e.g. K7M2Q9XR</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">3</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T3 De-Identifier</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">scrubs the free text of the last traces</td><td style="color:var(--good);padding:6px 0;vertical-align:top">clean case text</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">4</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T5 Council</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">debates the case, cites evidence, reaches consensus</td><td style="color:var(--good);padding:6px 0;vertical-align:top">consensus report</td></tr></table></div>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">FINAL OUTPUT: a patient-language consensus HPI PDF you can hand to any doctor on earth</p>
+      <a class="buy" href="https://buy.stripe.com/28EeVeb4Gead8Gk5GnbMR0c">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">SEQUENCE S2</span>The Doctor's Day</h3><span class="price">$35</span></div>
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;font-family:'Courier New',monospace;font-size:12.5px;margin-bottom:14px;min-width:520px"><tr><th style="text-align:left;color:var(--brass);padding-right:10px">#</th><th style="text-align:left;color:var(--brass);padding-right:14px">module</th><th style="text-align:left;color:var(--brass);padding-right:14px">enters to do</th><th style="text-align:left;color:var(--brass)">hands off</th></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">1</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T4 Router & OCR</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">pulls the six intake sources into one worklist</td><td style="color:var(--good);padding:6px 0;vertical-align:top">who is truly waiting</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">2</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T6 Card Builder</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">builds locked-spec cards, live-gated at serve time</td><td style="color:var(--good);padding:6px 0;vertical-align:top">decision-ready cards</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">3</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">— the doctor —</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">swipes: approves, edits, or rejects the recommendation</td><td style="color:var(--good);padding:6px 0;vertical-align:top">a decision</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">4</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T7 Ledger & Executor</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">logs the decision, executes it faithfully</td><td style="color:var(--good);padding:6px 0;vertical-align:top">sent reply + audit trail</td></tr></table></div>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">FINAL OUTPUT: every waiting patient answered, every action logged, zero double-handling</p>
+      <a class="buy" href="https://buy.stripe.com/aFabJ20q20jne0EecTbMR0d">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">SEQUENCE S3</span>The Case Review</h3><span class="price">$35</span></div>
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;font-family:'Courier New',monospace;font-size:12.5px;margin-bottom:14px;min-width:520px"><tr><th style="text-align:left;color:var(--brass);padding-right:10px">#</th><th style="text-align:left;color:var(--brass);padding-right:14px">module</th><th style="text-align:left;color:var(--brass);padding-right:14px">enters to do</th><th style="text-align:left;color:var(--brass)">hands off</th></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">1</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T4 Router & OCR</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">turns up to thousands of record pages into indexed text</td><td style="color:var(--good);padding:6px 0;vertical-align:top">page-indexed bundle</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">2</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T2+T3 Identity split</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">pseudonymizes and scrubs before any AI sees it</td><td style="color:var(--good);padding:6px 0;vertical-align:top">clean case, coded</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">3</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">chunk-map</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">cheap models compress pages into a case digest</td><td style="color:var(--good);padding:6px 0;vertical-align:top">~30k-token digest</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">4</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T5 Council</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">debates the digest, cites the source pages</td><td style="color:var(--good);padding:6px 0;vertical-align:top">verdict + citations</td></tr></table></div>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">FINAL OUTPUT: the “is it even worth it?” report — timeline, strengths, weaknesses, cited pages</p>
+      <a class="buy" href="https://buy.stripe.com/5kQ00k0q2ead8Gk2ubbMR0e">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">SEQUENCE S4</span>Going Public</h3><span class="price">$35</span></div>
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;font-family:'Courier New',monospace;font-size:12.5px;margin-bottom:14px;min-width:520px"><tr><th style="text-align:left;color:var(--brass);padding-right:10px">#</th><th style="text-align:left;color:var(--brass);padding-right:14px">module</th><th style="text-align:left;color:var(--brass);padding-right:14px">enters to do</th><th style="text-align:left;color:var(--brass)">hands off</th></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">1</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">git repos</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">one repo per audience so nothing mixes</td><td style="color:var(--good);padding:6px 0;vertical-align:top">version-controlled truth</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">2</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">deploy babysitter</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">pushes pages through hostile deploy queues</td><td style="color:var(--good);padding:6px 0;vertical-align:top">live pages</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">3</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">hash-chained ledger</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">indexes every public post, append-only</td><td style="color:var(--good);padding:6px 0;vertical-align:top">verifiable ledger JSON</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">4</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">payment walls + postbacks</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">Stripe links, supporter wall, affiliate postbacks</td><td style="color:var(--good);padding:6px 0;vertical-align:top">sale/donation ledgers</td></tr></table></div>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">FINAL OUTPUT: a communication surface people can verify, fork, and fund</p>
+      <a class="buy" href="https://buy.stripe.com/bJe6oIgp0gil3m0c4LbMR0f">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+  </div>
+</section>
 <section>
   <div class="wrap">
     <h2 style="font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:24px">— Challenges — current version</h2>
