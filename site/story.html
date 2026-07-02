@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstantHPI — Our Story &amp; Outreach Journey</title>
+  <meta name="description" content="Follow our journey to bring free AI healthcare to every population on earth. See who we've contacted, which countries we've reached, and where we're headed.">
+  <meta property="og:title" content="InstantHPI — Our Outreach Journey">
+  <meta property="og:description" content="Tracking every step of our mission to provide free AI healthcare to 3.5 billion people. Countries reached, organizations contacted, partnerships formed.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://instanthpi.com/story.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e8;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { color: #00f0ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* ═══ HEADER ═══ */
+    .page-header {
+      padding: 80px 24px 60px;
+      text-align: center;
+      position: relative;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(0,240,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .page-header h1 .hl {
+      background: linear-gradient(135deg, #00f0ff, #7b61ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: #999;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* ═══ STATS BAR ═══ */
+    .stats-bar {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 32px 24px;
+      margin-bottom: 40px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #00f0ff;
+    }
+    .stat-lbl { font-size: 0.8rem; color: #666; margin-top: 2px; }
+
+    /* ═══ MISSION ═══ */
+    .mission {
+      background: rgba(0,240,255,0.04);
+      border: 1px solid rgba(0,240,255,0.15);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .mission h2 { font-size: 1.3rem; margin-bottom: 16px; color: #00f0ff; }
+    .mission p { font-size: 1rem; color: #bbb; max-width: 700px; margin: 0 auto; }
+
+    /* ═══ SECTIONS ═══ */
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #00f0ff;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    /* ═══ TIMELINE ═══ */
+    .timeline { margin-bottom: 80px; }
+    .timeline-entry {
+      position: relative;
+      padding-left: 40px;
+      padding-bottom: 40px;
+      border-left: 2px solid rgba(255,255,255,0.08);
+    }
+    .timeline-entry:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #00f0ff;
+      border: 2px solid #0a0a0f;
+    }
+    .timeline-entry.pending::before { background: #333; border-color: #555; }
+    .timeline-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #00f0ff;
+      margin-bottom: 6px;
+    }
+    .timeline-entry.pending .timeline-date { color: #555; }
+    .timeline-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+    .timeline-entry.pending .timeline-title { color: #666; }
+    .timeline-body { font-size: 0.9rem; color: #999; }
+    .timeline-entry.pending .timeline-body { color: #444; }
+    .timeline-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-weight: 500;
+    }
+    .tag-country { background: rgba(123,97,255,0.15); color: #a88bff; }
+    .tag-org { background: rgba(0,240,255,0.1); color: #00f0ff; }
+    .tag-type { background: rgba(255,61,113,0.1); color: #ff6b8a; }
+
+    /* ═══ COUNTRY MAP (text-based) ═══ */
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 60px;
+    }
+    .country-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .country-card.active { border-color: rgba(0,240,255,0.3); background: rgba(0,240,255,0.04); }
+    .country-card.planned { border-color: rgba(255,255,255,0.05); }
+    .country-name { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+    .country-card.active .country-name { color: #00f0ff; }
+    .country-card.planned .country-name { color: #555; }
+    .country-status { font-size: 0.7rem; color: #666; }
+
+    /* ═══ ORG LIST ═══ */
+    .org-list { margin-bottom: 60px; }
+    .org-category { margin-bottom: 32px; }
+    .org-category h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #7b61ff;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .org-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .org-name { font-size: 0.9rem; }
+    .org-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .status-contacted { background: rgba(0,240,255,0.1); color: #00f0ff; }
+    .status-responded { background: rgba(0,255,136,0.1); color: #00ff88; }
+    .status-piloting { background: rgba(255,200,0,0.15); color: #ffc800; }
+    .status-planned { background: rgba(255,255,255,0.05); color: #555; }
+    .status-partner { background: rgba(123,97,255,0.15); color: #a88bff; }
+
+    /* ═══ COLLAB CTA ═══ */
+    .collab-cta {
+      text-align: center;
+      padding: 80px 24px;
+      position: relative;
+    }
+    .collab-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(123,97,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .collab-cta h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .collab-cta p { font-size: 1rem; color: #999; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; position: relative; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #00f0ff, #7b61ff);
+      color: #0a0a0f;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,240,255,0.3); text-decoration: none; }
+    .btn-secondary {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #e0e0e8;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); text-decoration: none; }
+
+    /* ═══ FOOTER ═══ */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .stats-bar { gap: 20px; }
+      .stat-num { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="page-header">
+    <h1>Our <span class="hl">Outreach Journey</span></h1>
+    <p>
+      Tracking every step of our mission to bring free AI healthcare to the populations that need it most. Every contact, every country, every conversation — documented transparently.
+    </p>
+  </div>
+
+  <!-- ═══ LIVE STATS ═══ -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">92+</div>
+      <div class="stat-lbl">Organizations Contacted</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">50+</div>
+      <div class="stat-lbl">Countries Reached</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">6</div>
+      <div class="stat-lbl">Outreach Waves</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">8+</div>
+      <div class="stat-lbl">Grant Applications Active</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">15+</div>
+      <div class="stat-lbl">Videos Published</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">1</div>
+      <div class="stat-lbl">Reply Received (Greece)</div>
+    </div>
+  </div>
+
+  <!-- ═══ MISSION ═══ -->
+  <div class="container">
+    <div class="mission">
+      <h2>Why We're Doing This</h2>
+      <p>
+        3.5 billion people have no access to healthcare. A single AI consultation costs $0.003. For $1, we can serve 333 patients. For $100, 33,000. The technology is live on Telegram right now — free, in every language. The only barrier left is reach. This page documents our effort to remove that barrier.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══ OUTREACH TIMELINE ═══ -->
+  <div class="container">
+    <div class="section-label">// TIMELINE</div>
+    <h2 class="section-title">Outreach Activity Log</h2>
+
+    <div class="timeline" id="timeline">
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 26, 2026</div>
+        <div class="timeline-title">Project Launch &amp; Strategy Formation</div>
+        <div class="timeline-body">
+          Built the InstantHPI bot and deployed it free on Telegram. Conducted multi-AI brainstorm (GPT-4o, DeepSeek, Gemini, Claude) to develop outreach strategy. Created partnership page, outreach templates in 6 languages, and 5 video scripts.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-type">Strategy</span>
+          <span class="tag tag-type">Launch</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 26, 2026</div>
+        <div class="timeline-title">First Global Outreach Wave — 16 Organizations Contacted</div>
+        <div class="timeline-body">
+          Sent personalized partnership emails from Dr. Carlos Font to 16 organizations across 5 categories. Each email included a live demo link, partnership proposal, and cost analysis. Also emailed 4 Canadian embassies in Africa to facilitate government introductions.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-type">Outreach</span>
+          <span class="tag tag-type">Email</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 26, 2026 — Batch 1</div>
+        <div class="timeline-title">International Organizations</div>
+        <div class="timeline-body">
+          <strong>WHO Digital Health Department</strong> — Emailed Dr. Alain Labrique's team (Director, Data, Digital Health, Analytics &amp; AI). Proposed pilot partnership and inclusion in GIDH digital health tool assessments.<br><br>
+          <strong>PAHO — Pan American Health Organization</strong> — Emailed Dr. Jarbas Barbosa's office. Focused on Haiti (0.3 doctors/1,000), Honduras, Guatemala, Bolivia. Requested intro to Ministry of Health digital health leads.<br><br>
+          <strong>Rwanda Ministry of Health</strong> — Emailed Dr. Sabin Nsanzimana's team. Proposed 50-100 CHW pilot in one district. Rwanda is Africa's digital health leader.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-org">WHO</span>
+          <span class="tag tag-org">PAHO</span>
+          <span class="tag tag-country">Rwanda</span>
+          <span class="tag tag-country">Haiti</span>
+          <span class="tag tag-country">Honduras</span>
+          <span class="tag tag-country">Guatemala</span>
+          <span class="tag tag-country">Bolivia</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 26, 2026 — Batch 2</div>
+        <div class="timeline-title">NGOs &amp; Community Health</div>
+        <div class="timeline-body">
+          <strong>Partners in Health</strong> — Emailed partnerships team AND Dr. Louise Ivers (Harvard Global Health / PIH). Proposed 3-month pilot with CHWs in Haiti or Rwanda. Zero cost to PIH.<br><br>
+          <strong>Last Mile Health</strong> — Proposed pilot with CHWs in Liberia. AI-assisted triage for health workers walking hours to reach patients.<br><br>
+          <strong>M&eacute;decins Sans Fronti&egrave;res (MSF)</strong> — Emailed Geneva HQ. Pitched for conflict zones where MSF can't physically reach — Telegram bot gets there first.<br><br>
+          <strong>BRAC</strong> — Emailed partnership unit in Dhaka. BRAC reaches 100M+ people. Proposed pilot in one upazila in Bangladesh.<br><br>
+          <strong>Clinton Health Access Initiative (CHAI)</strong> — Requested introductions to health ministry digital health leads in CHAI's 35+ partner countries.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-org">PIH</span>
+          <span class="tag tag-org">Last Mile Health</span>
+          <span class="tag tag-org">MSF</span>
+          <span class="tag tag-org">BRAC</span>
+          <span class="tag tag-org">CHAI</span>
+          <span class="tag tag-country">Liberia</span>
+          <span class="tag tag-country">Bangladesh</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 26, 2026 — Batch 3</div>
+        <div class="timeline-title">Foundations, Medical Associations &amp; Tech Partners</div>
+        <div class="timeline-body">
+          <strong>Bill &amp; Melinda Gates Foundation</strong> — Pitched funding for large-scale deployment. "For $1,000, serve 333,000 patients."<br><br>
+          <strong>Wellcome Trust</strong> — Proposed research partnership to validate clinical accuracy in LMICs.<br><br>
+          <strong>World Medical Association (WMA)</strong> — Requested endorsement from Dr. Jacqueline Kitulu (President, Kenyan physician). WMA represents 10M doctors via 115 national associations.<br><br>
+          <strong>Ada Health</strong> — Proposed tech collaboration. "You assess symptoms for the developed world. We document for the developing world."<br><br>
+          <strong>Zipline</strong> — Proposed AI triage + drone delivery pipeline. "We identify what needs to be delivered. You deliver it."<br><br>
+          <strong>Rockefeller Foundation</strong> — Pitched large-scale deployment funding for Africa and South Asia.<br><br>
+          <strong>Ethiopia Ministry of Health</strong> — Emailed Minister Mekdes Daba. Proposed pilot for 125M citizens with ~1 doctor per 10,000 people.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-org">Gates Foundation</span>
+          <span class="tag tag-org">Wellcome Trust</span>
+          <span class="tag tag-org">WMA</span>
+          <span class="tag tag-org">Ada Health</span>
+          <span class="tag tag-org">Zipline</span>
+          <span class="tag tag-org">Rockefeller</span>
+          <span class="tag tag-country">Ethiopia</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 26, 2026 — Batch 4</div>
+        <div class="timeline-title">Canadian Embassy Outreach — 4 African Countries</div>
+        <div class="timeline-body">
+          Contacted Canadian embassies in Ethiopia, Rwanda, DRC, and Burkina Faso. As a Canadian physician, requested introductions to local health ministry officials. Emails sent in French (Rwanda, DRC, Burkina Faso) and English (Ethiopia).
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-country">Ethiopia</span>
+          <span class="tag tag-country">Rwanda</span>
+          <span class="tag tag-country">DRC</span>
+          <span class="tag tag-country">Burkina Faso</span>
+          <span class="tag tag-type">Diplomacy</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 27, 2026 — Wave 2</div>
+        <div class="timeline-title">Tier 2 Outreach — 4 New Organizations</div>
+        <div class="timeline-body">
+          <strong>UNICEF Office of Innovation</strong> — Proposed integration with UNICEF's CHW support programs in 100+ countries. Suggested pilot in Tanzania, Malawi, or Bangladesh.<br><br>
+          <strong>WHO AFRO — Regional Office for Africa</strong> — Contacted Brazzaville HQ. Requested introductions to digital health leads in priority member states. Referenced existing Rwanda and Ethiopia MOH outreach.<br><br>
+          <strong>Nigeria Federal Ministry of Health</strong> — Proposed 100-user pilot in one Local Government Area. Nigeria has 5,500 people per doctor — 220M population.<br><br>
+          <strong>Kenya Ministry of Health</strong> — Proposed 50-100 user pilot. Kenya is Africa's digital health leader with M-PESA reach and existing eCHIS infrastructure.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-org">UNICEF</span>
+          <span class="tag tag-org">WHO AFRO</span>
+          <span class="tag tag-country">Nigeria</span>
+          <span class="tag tag-country">Kenya</span>
+          <span class="tag tag-type">Email</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 28, 2026 — Wave 3</div>
+        <div class="timeline-title">Medical Associations &amp; Academic Partners — 10 Organizations</div>
+        <div class="timeline-body">
+          <strong>Nigerian Medical Association</strong> (40,000 physicians), <strong>Kenya Medical Association</strong>, <strong>Indian Medical Association</strong> (350,000 members), <strong>Bangladesh Medical Association</strong>, <strong>Coll&egrave;ge des m&eacute;decins du Qu&eacute;bec</strong> (Carlos's own college — in French), <strong>Canadian Medical Association</strong>, <strong>Direct Relief</strong> (90+ countries), <strong>Reach Digital Health</strong> (Africa mobile health), <strong>London School of Hygiene &amp; Tropical Medicine</strong>, <strong>Johns Hopkins Bloomberg School of Public Health</strong>.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-org">NMA</span>
+          <span class="tag tag-org">IMA</span>
+          <span class="tag tag-org">CMA</span>
+          <span class="tag tag-org">LSHTM</span>
+          <span class="tag tag-org">JHU</span>
+          <span class="tag tag-type">Medical Associations</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 28, 2026 — Wave 4</div>
+        <div class="timeline-title">World's 5 Biggest Healthcare Systems Contacted</div>
+        <div class="timeline-body">
+          <strong>India — National Health Authority (Ayushman Bharat)</strong> — 500 million people on one digital health platform. Proposed integration as the AI consultation layer.<br><br>
+          <strong>Brazil — Minist&eacute;rio da Sa&uacute;de (SUS)</strong> — 210 million people under universal free healthcare. Email sent in Portuguese.<br><br>
+          <strong>NHS England — Health Innovation Network</strong> — 67 million people. Proposed pre-visit AI documentation to reduce GP burden.<br><br>
+          <strong>US Veterans Affairs</strong> — 9 million veterans, largest US hospital system. Proposed documentation automation pilot.<br><br>
+          <strong>Indonesia — BPJS Kesehatan (JKN)</strong> — 200+ million covered. Email sent in English with Bahasa Indonesia support highlighted.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-country">India</span>
+          <span class="tag tag-country">Brazil</span>
+          <span class="tag tag-country">UK</span>
+          <span class="tag tag-country">USA</span>
+          <span class="tag tag-country">Indonesia</span>
+          <span class="tag tag-type">Healthcare Giants</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 28, 2026 — Wave 5</div>
+        <div class="timeline-title">34 Montreal Consulates — Global Diplomatic Outreach</div>
+        <div class="timeline-body">
+          Emailed every consulate in Montreal (except USA) requesting introductions to their country's health ministry. Personalized in each country's language — French, Spanish, Portuguese, Arabic, or English. Countries reached: Haiti, Dominican Republic, Brazil, Mexico, China, Colombia, Pakistan, Morocco, Algeria, Cuba, France, Germany, UK, Japan, Italy, Chile, Argentina, Peru, Uruguay, El Salvador, Guatemala, Honduras, Ecuador, Lebanon, Egypt, Belgium, Spain, Poland, Turkey, Portugal, Switzerland, Greece, Romania, Venezuela.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-type">Diplomacy</span>
+          <span class="tag tag-type">34 Countries</span>
+          <span class="tag tag-type">5 Languages</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 28–29, 2026</div>
+        <div class="timeline-title">Grant Applications — 8 Programs Active, $8M+ in Funding Targets</div>
+        <div class="timeline-body">
+          <strong>MIT Solve</strong> — Application submitted ✓<br>
+          <strong>CHISEL Singapore</strong> (S$500K) — Application 37% complete, in progress<br>
+          <strong>Devpost</strong> — Submitted ✓<br>
+          <strong>EVAH (Gates/Wellcome/Novo Nordisk)</strong> ($750K) — Application drafted, Pathway A. Deadline April 1.<br>
+          <strong>Google.org AI for Science</strong> ($1-3M) — Application in preparation<br>
+          <strong>Falling Walls</strong> — Application in preparation<br>
+          <strong>TechCrunch Battlefield 2026</strong> — NOMINATED ✓<br>
+          <strong>Case study</strong> published at <a href='https://instanthpi.com/case-study' style='color:#00f0ff;'>instanthpi.com/case-study.html</a>.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-type">Grants</span>
+          <span class="tag tag-org">MIT Solve</span>
+          <span class="tag tag-org">Google.org</span>
+          <span class="tag tag-org">CHISEL</span>
+          <span class="tag tag-org">EVAH</span>
+          <span class="tag tag-type">TechCrunch Nominated</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 26–29, 2026</div>
+        <div class="timeline-title">15+ Promotional Videos Created &amp; Posted</div>
+        <div class="timeline-body">
+          Created and published 15+ short-form videos on LinkedIn and X/Twitter covering: patient cases (Amara in Senegal, Ibrahim in Nigeria), cost argument ($0.003), language support (20+), physician benefits, outreach journey, safety narrative, Canadian ER pilot vision, AI accuracy improvements, and the movement. Videos scheduled through April 10.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-type">Content</span>
+          <span class="tag tag-type">15+ Videos</span>
+          <span class="tag tag-type">LinkedIn + X</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 29, 2026</div>
+        <div class="timeline-title">TechCrunch Battlefield Nomination + First Reply + Wave 4 Outreach</div>
+        <div class="timeline-body">
+          <strong>TechCrunch Battlefield 2026</strong> — Nominated. One of the most competitive startup showcases in the world.<br><br>
+          <strong>First reply received</strong> — Greece Consulate in Montreal responded to the diplomatic outreach. Proof the campaign is generating real engagement.<br><br>
+          <strong>Wave 4 outreach</strong> — 8 additional organizations contacted, bringing total to 42+.<br><br>
+          <strong>EVAH application drafted</strong> — Full Pathway A proposal ($750K) for Gates/Wellcome/Novo Nordisk grant administered by J-PAL. Deadline April 1.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-type">TechCrunch</span>
+          <span class="tag tag-type">First Reply</span>
+          <span class="tag tag-org">EVAH Grant</span>
+          <span class="tag tag-type">Wave 4</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 29, 2026 — Wave 5</div>
+        <div class="timeline-title">South America Expansion — 38 Organizations Across 10 Countries</div>
+        <div class="timeline-body">
+          Massive South America outreach blitz targeting physicians, hospital associations, medical colleges, health ministries, telemedicine orgs, and NGOs across the entire continent. Every email customized per organization in their native language (Portuguese for Brazil, Spanish for all others).<br><br>
+          <strong>Brazil (14 targets)</strong> — CREMERJ, CRM-MG, FBH (4,500 hospitals), ANAHP (private hospitals), Hospital Albert Einstein (#1 in Latin America), HC-FMUSP (largest public teaching hospital), CONASS (27 state health secretaries), CONASEMS (5,570 municipal secretaries), SBIS (health informatics), ABTMS (telemedicine association).<br><br>
+          <strong>Colombia (6 targets)</strong> — Colegio M&eacute;dico Colombiano, ACSC (specialty societies), ACHC (300+ hospitals), Fundaci&oacute;n Santa Fe de Bogot&aacute;, Fundaci&oacute;n Cardioinfantil LaCardio, Ministerio de Salud y Protecci&oacute;n Social.<br><br>
+          <strong>Peru (4 targets)</strong> — Colegio M&eacute;dico del Per&uacute;, MINSA (Hospital Digital program), ACP (private clinics), PAHO Peru.<br><br>
+          <strong>Ecuador (3 targets)</strong> — Colegio M&eacute;dico de Pichincha, ACHPE (83 hospitals in 12 cities), PAHO Ecuador.<br><br>
+          <strong>Bolivia (3 targets)</strong> — Colegio M&eacute;dico de Bolivia, PROSALUD (24 health centers), PAHO Bolivia. Bolivia has the most extensive telesalud network in South America (340+ rural points).<br><br>
+          <strong>Venezuela (3 targets)</strong> — International Medical Corps (3.7M Venezuelans reached across 120+ health centers), M&eacute;dicos del Mundo, PAHO Venezuela. Also contacted M&eacute;dicos Venezolanos Online (diaspora telemedicine).<br><br>
+          <strong>Argentina (4 targets)</strong> — AMA (50,000+ physicians), ADECRA+CEDIM (420+ private clinics), UBA Faculty of Medicine (International Relations + Telemedicine Center).<br><br>
+          <strong>Chile (2 targets)</strong> — UC Chile School of Medicine, CIMT Universidad de Chile (Center for Medical Informatics and Telemedicine).<br><br>
+          <strong>Uruguay (3 targets)</strong> — SMU (physicians union), ASSE (1.5M public users), AGESIC (runs Salud.uy, PAHO-recognized digital health model).<br><br>
+          <strong>Paraguay (3 targets)</strong> — C&iacute;rculo Paraguayo de M&eacute;dicos, FCM-UNA (medical school), MSPyBS DGTIC (digital health directorate, manages 15-region telemedicine program since 2014).
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-country">Brazil</span>
+          <span class="tag tag-country">Colombia</span>
+          <span class="tag tag-country">Peru</span>
+          <span class="tag tag-country">Ecuador</span>
+          <span class="tag tag-country">Bolivia</span>
+          <span class="tag tag-country">Venezuela</span>
+          <span class="tag tag-country">Argentina</span>
+          <span class="tag tag-country">Chile</span>
+          <span class="tag tag-country">Uruguay</span>
+          <span class="tag tag-country">Paraguay</span>
+          <span class="tag tag-type">Wave 5</span>
+          <span class="tag tag-type">38 Organizations</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-date">March 29, 2026 — Wave 6</div>
+        <div class="timeline-title">Africa, Southeast Asia &amp; Global Health Networks — 6 Organizations</div>
+        <div class="timeline-body">
+          <strong>Africa CDC</strong> — Emailed Africa Centres for Disease Control and Prevention (Addis Ababa). Africa's premier continental public health body, coordinating health across 55 member states. Proposed digital health partnership and pilot deployment with community health worker programs.<br><br>
+          <strong>ACHAP — Africa Christian Health Associations Platform</strong> — Emailed Gaborone headquarters. ACHAP coordinates faith-based health clinics and community health networks across Sub-Saharan Africa. Proposed white-label pilot with member clinic networks in the field.<br><br>
+          <strong>IAKMI — Indonesian Public Health Association</strong> — Emailed Indonesia's national public health association. Indonesia's geographic reality (17,000 islands, 270M people) makes AI-assisted clinical documentation critical for puskesmas and island clinics. Pitched Bahasa Indonesia-language deployment.<br><br>
+          <strong>IntraHealth International</strong> — Emailed Chapel Hill headquarters. IntraHealth works in 30+ countries strengthening health workforces, community health workers, and frontline care capacity. Proposed integration with existing CHW programs.<br><br>
+          <strong>Medicus Mundi International</strong> — Emailed Geneva secretariat. MMI's 19 member organizations span Sub-Saharan Africa, Southeast Asia, and Latin America. Offered to present to the full network and pilot with Francophone Africa members.<br><br>
+          <strong>ACHEST — Africa Centre for Global Health &amp; Social Transformation</strong> — Emailed Kampala, Uganda. ACHEST bridges health policy, research, and systems strengthening across East Africa. Proposed research collaboration and Uganda CHW pilot.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-org">Africa CDC</span>
+          <span class="tag tag-org">ACHAP</span>
+          <span class="tag tag-org">IAKMI</span>
+          <span class="tag tag-org">IntraHealth</span>
+          <span class="tag tag-org">Medicus Mundi</span>
+          <span class="tag tag-country">Indonesia</span>
+          <span class="tag tag-country">Uganda</span>
+          <span class="tag tag-type">Wave 6</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry pending">
+        <div class="timeline-date">April 1, 2026</div>
+        <div class="timeline-title">EVAH Grant Submission + Day 5 Follow-ups</div>
+        <div class="timeline-body">
+          Submit EVAH Pathway A application ($750K) before 10am EDT deadline. Follow up on Wave 1 non-responders (Day 5). Complete CHISEL Singapore application. Register for Harvard HSIL Hackathon (April 10-11).
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-type">Follow-up</span>
+          <span class="tag tag-org">EVAH Deadline</span>
+          <span class="tag tag-org">CHISEL</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry pending">
+        <div class="timeline-date">Month 2 — May 2026</div>
+        <div class="timeline-title">World Health Assembly &amp; Foundation Push</div>
+        <div class="timeline-body">
+          Timed outreach around WHA in Geneva. Target delegation members. Push for Rockefeller Foundation, Bloomberg Philanthropies. Aim for first pilot agreements.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-type">Conference</span>
+          <span class="tag tag-org">Rockefeller</span>
+          <span class="tag tag-org">Bloomberg</span>
+        </div>
+      </div>
+
+      <div class="timeline-entry pending">
+        <div class="timeline-date">Month 3 — June 2026</div>
+        <div class="timeline-title">Scale &amp; First Pilots</div>
+        <div class="timeline-body">
+          First pilot deployments. Telco integrations. South Asia and Pacific Islands expansion. Academic research partnerships with Harvard and Johns Hopkins.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag tag-country">Bangladesh</span>
+          <span class="tag tag-country">Nepal</span>
+          <span class="tag tag-country">Papua New Guinea</span>
+          <span class="tag tag-type">Pilots</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ COUNTRIES ═══ -->
+  <div class="container">
+    <div class="section-label">// COUNTRIES</div>
+    <h2 class="section-title">Where We're Reaching</h2>
+    <div class="country-grid" id="countries">
+      <!-- Africa -->
+      <div class="country-card active"><div class="country-name">Kenya</div><div class="country-status">Contacted March 27</div></div>
+      <div class="country-card active"><div class="country-name">Rwanda</div><div class="country-status">Contacted March 26</div></div>
+      <div class="country-card active"><div class="country-name">Nigeria</div><div class="country-status">Contacted March 27</div></div>
+      <div class="country-card active"><div class="country-name">Ethiopia</div><div class="country-status">Contacted March 26</div></div>
+      <div class="country-card planned"><div class="country-name">Tanzania</div><div class="country-status">Month 2</div></div>
+      <div class="country-card planned"><div class="country-name">Uganda</div><div class="country-status">Month 2</div></div>
+      <div class="country-card planned"><div class="country-name">Ghana</div><div class="country-status">Month 2</div></div>
+      <div class="country-card planned"><div class="country-name">Senegal</div><div class="country-status">Month 2</div></div>
+      <div class="country-card active"><div class="country-name">DRC</div><div class="country-status">Embassy contacted March 26</div></div>
+      <div class="country-card active"><div class="country-name">Burkina Faso</div><div class="country-status">Embassy contacted March 26</div></div>
+      <div class="country-card active"><div class="country-name">Morocco</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Algeria</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Egypt</div><div class="country-status">Consulate March 28</div></div>
+      <!-- South Asia -->
+      <div class="country-card active"><div class="country-name">India</div><div class="country-status">NHA + IMA March 28</div></div>
+      <div class="country-card active"><div class="country-name">Bangladesh</div><div class="country-status">BMA March 28</div></div>
+      <div class="country-card active"><div class="country-name">Pakistan</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card planned"><div class="country-name">Nepal</div><div class="country-status">Month 3</div></div>
+      <div class="country-card active"><div class="country-name">Indonesia</div><div class="country-status">BPJS March 28</div></div>
+      <div class="country-card planned"><div class="country-name">Myanmar</div><div class="country-status">Month 3</div></div>
+      <!-- Latin America -->
+      <div class="country-card active"><div class="country-name">Haiti</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Dominican Rep.</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Brazil</div><div class="country-status">SUS + Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Mexico</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Colombia</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Cuba</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Honduras</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Guatemala</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Chile</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Argentina</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Peru</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Venezuela</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Ecuador</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">El Salvador</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Uruguay</div><div class="country-status">Consulate March 28</div></div>
+      <!-- Europe -->
+      <div class="country-card active"><div class="country-name">UK</div><div class="country-status">NHS + Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">France</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Germany</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Italy</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Spain</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Turkey</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Switzerland</div><div class="country-status">Consulate March 28</div></div>
+      <!-- Middle East -->
+      <div class="country-card active"><div class="country-name">Lebanon</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">China</div><div class="country-status">Consulate March 28</div></div>
+      <div class="country-card active"><div class="country-name">Japan</div><div class="country-status">Consulate March 28</div></div>
+      <!-- Other -->
+      <div class="country-card active"><div class="country-name">USA (VA)</div><div class="country-status">VA Healthcare March 28</div></div>
+      <div class="country-card planned"><div class="country-name">Philippines</div><div class="country-status">Next wave</div></div>
+      <div class="country-card planned"><div class="country-name">Papua New Guinea</div><div class="country-status">Next wave</div></div>
+    </div>
+  </div>
+
+  <!-- ═══ ORGANIZATIONS ═══ -->
+  <div class="container">
+    <div class="section-label">// ORGANIZATIONS</div>
+    <h2 class="section-title">Who We're Talking To</h2>
+
+    <div class="org-list" id="orgs">
+
+      <div class="org-category">
+        <h3>International Health Organizations</h3>
+        <div class="org-item"><span class="org-name">World Health Organization (WHO)</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Pan American Health Organization (PAHO)</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">WHO AFRO — Regional Office for Africa</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">UNICEF Office of Innovation</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">The Global Fund</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">GAVI, the Vaccine Alliance</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">Africa CDC</span><span class="org-status status-planned">Planned</span></div>
+      </div>
+
+      <div class="org-category">
+        <h3>NGOs &amp; Nonprofits</h3>
+        <div class="org-item"><span class="org-name">M&eacute;decins Sans Fronti&egrave;res (MSF)</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Partners in Health</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Last Mile Health</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">BRAC</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">PATH</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">Living Goods</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">Direct Relief</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">International Medical Corps</span><span class="org-status status-planned">Planned</span></div>
+      </div>
+
+      <div class="org-category">
+        <h3>Foundations</h3>
+        <div class="org-item"><span class="org-name">Bill &amp; Melinda Gates Foundation</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Wellcome Trust</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Rockefeller Foundation</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Bloomberg Philanthropies</span><span class="org-status status-planned">Planned</span></div>
+      </div>
+
+      <div class="org-category">
+        <h3>Telecom &amp; Mobile Platforms</h3>
+        <div class="org-item"><span class="org-name">Safaricom / M-PESA (Kenya)</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">Airtel Africa</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">MTN Group</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">GCash (Philippines)</span><span class="org-status status-planned">Planned</span></div>
+      </div>
+
+      <div class="org-category">
+        <h3>Medical Associations &amp; Doctor Unions</h3>
+        <div class="org-item"><span class="org-name">World Medical Association</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Kenya Medical Association</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Indian Medical Association</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Nigerian Medical Association</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Bangladesh Medical Association</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Canadian Medical Association</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">London School of Hygiene &amp; Tropical Medicine</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Johns Hopkins Bloomberg School of Public Health</span><span class="org-status status-contacted">Contacted</span></div>
+      </div>
+
+      <div class="org-category">
+        <h3>Government &amp; Embassies</h3>
+        <div class="org-item"><span class="org-name">Rwanda Ministry of Health</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Ethiopia Ministry of Health</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Canadian Embassy — Ethiopia</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Canadian Embassy — Rwanda</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Canadian Embassy — DRC</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Canadian Embassy — Burkina Faso</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Nigeria Federal Ministry of Health</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Kenya Ministry of Health</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">India National Health Authority (Ayushman Bharat)</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Greece Consulate — Montreal</span><span class="org-status status-responded">Responded ✓</span></div>
+      </div>
+
+      <div class="org-category">
+        <h3>Health Tech Companies</h3>
+        <div class="org-item"><span class="org-name">Ada Health</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">mDoc (Nigeria)</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">Praekelt.org</span><span class="org-status status-planned">Planned</span></div>
+        <div class="org-item"><span class="org-name">Zipline (Drone delivery)</span><span class="org-status status-contacted">Contacted</span></div>
+      </div>
+
+      <div class="org-category">
+        <h3>Academic &amp; Research</h3>
+        <div class="org-item"><span class="org-name">Harvard Global Health Institute (Dr. Louise Ivers)</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Johns Hopkins Bloomberg School</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">London School of Hygiene &amp; Tropical Medicine</span><span class="org-status status-contacted">Contacted</span></div>
+        <div class="org-item"><span class="org-name">Reach Digital Health (Africa)</span><span class="org-status status-contacted">Contacted</span></div>
+      </div>
+
+      <div class="org-category">
+        <h3>Competitions &amp; Grants</h3>
+        <div class="org-item"><span class="org-name">TechCrunch Battlefield 2026</span><span class="org-status status-partner">Nominated ✓</span></div>
+        <div class="org-item"><span class="org-name">MIT Solve</span><span class="org-status status-responded">Submitted ✓</span></div>
+        <div class="org-item"><span class="org-name">Devpost</span><span class="org-status status-responded">Submitted ✓</span></div>
+        <div class="org-item"><span class="org-name">CHISEL Singapore (S$500K)</span><span class="org-status status-contacted">In Progress 37%</span></div>
+        <div class="org-item"><span class="org-name">EVAH — Gates/Wellcome/Novo Nordisk ($750K)</span><span class="org-status status-contacted">Draft Ready</span></div>
+        <div class="org-item"><span class="org-name">Google.org AI for Science ($1–3M)</span><span class="org-status status-planned">In Preparation</span></div>
+        <div class="org-item"><span class="org-name">Falling Walls</span><span class="org-status status-planned">In Preparation</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ TAKE ACTION ═══ -->
+  <div class="container" style="margin-bottom:60px;">
+    <div class="section-label">// TAKE ACTION</div>
+    <h2 class="section-title">Tell them you support free universal healthcare through AI</h2>
+    <div style="background:rgba(0,240,255,0.04); border:1px solid rgba(0,240,255,0.15); border-radius:16px; padding:32px; margin-bottom:32px;">
+      <p style="font-size:1rem; color:#bbb; margin-bottom:20px;">
+        We've written to these organizations asking them to pilot a free AI tool that assists doctors and patients in underserved communities. <strong style="color:#00ff88;">First reply received: Greece Consulate (March 29, 2026).</strong> 42+ organizations across 50+ countries have been contacted. If you believe healthcare should be free and accessible to all 8 billion people on earth — write to them. Tell them you support this cause. The more voices they hear, the harder it is to ignore.
+      </p>
+      <p style="font-size:0.9rem; color:#999; margin-bottom:24px;">
+        This is not about replacing doctors. It's about giving AI assistance to doctors who are overwhelmed and patients who have no access at all. One consultation costs $0.003. For $1, 333 people get help. The technology exists <em>right now</em> — it just needs the organizations below to say yes.
+      </p>
+      <p style="font-size:0.85rem; color:#00f0ff; margin-bottom:8px; font-weight:600;">Sample message you can send:</p>
+      <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:20px; font-size:0.88rem; color:#ccc; font-style:italic; margin-bottom:28px;">
+        "I'm writing to express my support for InstantHPI — a free AI medical consultation tool on Telegram that costs $0.003 per consultation. I believe your organization should explore this as a pilot for underserved communities. Free AI assistance for doctors and patients is the future of universal healthcare. Please give this a chance. Try it yourself: @instanthpibot on Telegram."
+      </div>
+
+      <div style="font-size:0.75rem; color:#00f0ff; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px; font-family:'JetBrains Mono',monospace;">International Organizations</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:10px; margin-bottom:24px;">
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">WHO Digital Health</span>
+          <a href="mailto:DigitalHealth@who.int?subject=I support InstantHPI — free AI healthcare for all&body=I'm writing to express my support for InstantHPI, a free AI medical consultation tool that assists doctors and patients at $0.003 per consultation. Please explore this as a pilot. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">DigitalHealth@who.int</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">WHO Africa (AFRO)</span>
+          <a href="mailto:afrgocom@who.int?subject=I support InstantHPI — free AI healthcare for Africa&body=I'm writing to express my support for InstantHPI, a free AI medical consultation tool that assists doctors and patients at $0.003 per consultation. Please explore this for WHO AFRO member states. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">afrgocom@who.int</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">PAHO (Americas)</span>
+          <a href="mailto:hqstaffec@paho.org?subject=I support InstantHPI — free AI healthcare for the Americas&body=I'm writing to express my support for InstantHPI, a free AI medical consultation tool that assists doctors and patients at $0.003 per consultation. Please explore this for Haiti, Honduras, Guatemala, and Bolivia. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">hqstaffec@paho.org</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">UNICEF Innovation</span>
+          <a href="mailto:innovation@unicef.org?subject=I support InstantHPI — free AI healthcare for children and mothers&body=I'm writing to express my support for InstantHPI, a free AI medical consultation tool that assists community health workers at $0.003 per consultation. Please explore this for UNICEF country programs. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">innovation@unicef.org</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">World Medical Association</span>
+          <a href="mailto:wma@wma.net?subject=I support InstantHPI — AI assistance for 10 million physicians&body=I'm writing to express my support for InstantHPI, a free AI tool that assists doctors with clinical documentation and patients with triage. Please consider endorsing this initiative. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">wma@wma.net</a>
+        </div>
+      </div>
+
+      <div style="font-size:0.75rem; color:#7b61ff; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px; font-family:'JetBrains Mono',monospace;">NGOs &amp; Nonprofits</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:10px; margin-bottom:24px;">
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">MSF (Doctors Without Borders)</span>
+          <a href="mailto:office-gva@geneva.msf.org?subject=I support InstantHPI — AI triage for conflict zones&body=I'm writing to express my support for InstantHPI, a free AI medical consultation tool for communities where MSF cannot yet reach. $0.003 per consultation on Telegram. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">office-gva@geneva.msf.org</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Partners in Health</span>
+          <a href="mailto:partnerships@pih.org?subject=I support InstantHPI — free AI for community health workers&body=I'm writing to express my support for InstantHPI. This free AI tool could assist PIH community health workers with triage and documentation. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">partnerships@pih.org</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">BRAC (Bangladesh)</span>
+          <a href="mailto:hafizur.rah@brac.net?subject=I support InstantHPI — free AI healthcare for Bangladesh&body=I'm writing to support InstantHPI, a free AI consultation tool that could assist BRAC's 100M+ beneficiaries. $0.003 per consultation. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">hafizur.rah@brac.net</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">CHAI (Clinton Health Access)</span>
+          <a href="mailto:development@clintonhealthaccess.org?subject=I support InstantHPI — free AI for 35+ countries&body=I'm writing to support InstantHPI, a free AI medical consultation tool for the communities CHAI serves. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">development@clintonhealthaccess.org</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Last Mile Health</span>
+          <a href="mailto:partnerships@lastmilehealth.org?subject=I support InstantHPI — AI for the last mile&body=I'm writing to support InstantHPI as a free AI triage tool for community health workers. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">partnerships@lastmilehealth.org</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Zipline (Drone Delivery)</span>
+          <a href="mailto:contact@flyzipline.com?subject=I support InstantHPI + Zipline — AI triage meets drone delivery&body=AI triage + drone delivery = complete healthcare pipeline for areas with no doctors. Please explore a partnership with InstantHPI. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">contact@flyzipline.com</a>
+        </div>
+      </div>
+
+      <div style="font-size:0.75rem; color:#ff3d71; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px; font-family:'JetBrains Mono',monospace;">Foundations</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:10px; margin-bottom:24px;">
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Gates Foundation</span>
+          <a href="mailto:media@gatesfoundation.org?subject=I support InstantHPI — $0.003 per consultation for the world&body=For $1,000 you serve 333,000 patients. InstantHPI is live and free on Telegram. Please fund this. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">media@gatesfoundation.org</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Wellcome Trust</span>
+          <a href="mailto:grants@wellcome.org?subject=I support InstantHPI — research partnership for AI healthcare&body=InstantHPI is a free AI consultation tool that needs clinical validation in LMICs. Please consider funding a study. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">grants@wellcome.org</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Rockefeller Foundation</span>
+          <a href="mailto:info@rockefellerfoundation.org?subject=I support InstantHPI — the next step in global health equity&body=InstantHPI provides free AI medical consultations at $0.003 each. Please explore funding this initiative. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">info@rockefellerfoundation.org</a>
+        </div>
+      </div>
+
+      <div style="font-size:0.75rem; color:#ffc800; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px; font-family:'JetBrains Mono',monospace;">Government Health Ministries</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:10px; margin-bottom:24px;">
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Rwanda Ministry of Health</span>
+          <a href="mailto:info@moh.gov.rw?subject=I support InstantHPI — free AI healthcare for Rwanda&body=Rwanda leads Africa in digital health. Please pilot InstantHPI with your community health workers. $0.003 per consultation. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">info@moh.gov.rw</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Ethiopia Ministry of Health</span>
+          <a href="mailto:moh@moh.gov.et?subject=I support InstantHPI — AI assistance for 125 million Ethiopians&body=Ethiopia has 1 doctor per 10,000 people. InstantHPI can assist your Health Extension Workers for $0.003 per consultation. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">moh@moh.gov.et</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Nigeria Ministry of Health</span>
+          <a href="mailto:info@health.gov.ng?subject=I support InstantHPI — free AI healthcare for 220 million Nigerians&body=Nigeria has 5,500 people per doctor. InstantHPI provides free AI triage at $0.003 per consultation. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">info@health.gov.ng</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Kenya Ministry of Health</span>
+          <a href="mailto:ps.medical@health.go.ke?subject=I support InstantHPI — AI for Kenya's community health workers&body=Kenya leads Africa in digital health. Please pilot InstantHPI alongside M-PESA and eCHIS. $0.003 per consultation. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">ps.medical@health.go.ke</a>
+        </div>
+      </div>
+
+      <div style="font-size:0.75rem; color:#a88bff; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px; font-family:'JetBrains Mono',monospace;">Research &amp; Academia</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:10px; margin-bottom:12px;">
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Dr. Louise Ivers (Harvard / PIH)</span>
+          <a href="mailto:livers@mgh.harvard.edu?subject=I support InstantHPI — free AI for global health research&body=Dr. Ivers, please consider a research partnership with InstantHPI to validate free AI clinical documentation in low-resource settings. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">livers@mgh.harvard.edu</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.88rem;">Ada Health</span>
+          <a href="mailto:hello@ada.com?subject=I support InstantHPI — collaborate on AI for the developing world&body=Ada Health assesses symptoms for the developed world. InstantHPI documents for the developing world. Please explore a collaboration. Try it: t.me/instanthpibot" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#00f0ff;">hello@ada.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ WHAT WE OFFER ═══ -->
+  <div class="container" style="margin-bottom:60px;">
+    <div class="section-label">// WHAT WE'RE LOOKING FOR</div>
+    <h2 class="section-title">Endorsements. Sponsors. Collaborators.</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:20px;">
+      <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:28px;">
+        <h3 style="font-size:1rem; margin-bottom:10px; color:#00f0ff;">Endorsements</h3>
+        <p style="font-size:0.88rem; color:#999;">Health organizations, medical associations, and physicians who believe AI can bridge the healthcare gap. Your endorsement helps us reach decision-makers.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:28px;">
+        <h3 style="font-size:1rem; margin-bottom:10px; color:#7b61ff;">Sponsors</h3>
+        <p style="font-size:0.88rem; color:#999;">The AI costs $0.003 per consultation. For $1,000, we serve 333,000 patients. Sponsor consultations for a country, a region, or a community. Full transparency on every dollar.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:28px;">
+        <h3 style="font-size:1rem; margin-bottom:10px; color:#ff3d71;">Collaborators</h3>
+        <p style="font-size:0.88rem; color:#999;">Governments, NGOs, and companies who want to integrate InstantHPI into their existing health systems. We provide the technology. You provide the reach.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CTA ═══ -->
+  <div class="collab-cta">
+    <h2>Join the mission</h2>
+    <p>
+      Whether you represent a government, an organization, or yourself — if you believe healthcare should be accessible to everyone, we want to hear from you.
+    </p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; position:relative;">
+      <a href="mailto:cff@centremedicalfont.ca?subject=InstantHPI Collaboration" class="btn btn-primary">Contact Us</a>
+      <a href="https://t.me/instanthpibot" target="_blank" class="btn btn-secondary">Try the Bot</a>
+      <a class='btn btn-secondary' href='/partner'>Partnership Details</a>
+    </div>
+    <p style="font-size:0.8rem; color:#555; margin-top:24px; position:relative;">
+      cff@centremedicalfont.ca &nbsp;|&nbsp; LinkedIn: InstantHPI Bot &nbsp;|&nbsp; @instanthpibot on Telegram
+    </p>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <p>&copy; 2026 InstantHPI. Built by <a href="https://instanthpi.com" style="color:#00f0ff;">Dr. Carlos Font</a>.</p>
+    <p style="margin-top:8px;">This page is updated as outreach progresses. Transparency is not optional — it's the foundation.</p>
+  </footer>
+
+  <script>
+    // Stats are now hardcoded — updated manually as outreach progresses
+    // Last updated: March 28, 2026
+  </script>
+
+</body>
+</html>

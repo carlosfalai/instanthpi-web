@@ -1,0 +1,6 @@
+*.log
+*.err
+pinned/
+worker-metadata.json
+node_modules/
+.env

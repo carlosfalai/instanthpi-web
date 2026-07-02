@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InstantHPI /4chan — launch ledger</title>
+<meta name="description" content="Free AI health education bots, the roadmap, and a hash-chained index of every thread we participate in.">
+<style>
+  :root{--bg:#0b0e12;--panel:#12171f;--line:#232f3f;--acc:#b08d57;--acc2:#d4af7a;--txt:#c9d2dc;--dim:#7d8896;--ok:#7fb069;--bad:#c9704a}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--txt);font-family:'Courier New',Courier,monospace;line-height:1.6;font-size:15px}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+  header{padding:40px 0 24px;border-bottom:1px solid var(--line)}
+  h1{font-size:22px;letter-spacing:.08em;color:var(--acc2);font-weight:normal}
+  h1 b{color:var(--txt)}
+  .sub{color:var(--dim);margin-top:8px;max-width:680px}
+  section{padding:34px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--acc);margin-bottom:18px}
+  h2::before{content:"== ";color:var(--line)} h2::after{content:" ==";color:var(--line)}
+  p{margin-bottom:12px;max-width:720px}
+  .hl{color:var(--acc2)}
+  a{color:var(--acc2)}
+  .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+  .links a{border:1px solid var(--line);padding:10px 16px;text-decoration:none;color:var(--txt);font-size:14px}
+  .links a:hover{border-color:var(--acc);color:var(--acc2)}
+  .links a.money{background:var(--acc);color:#0b0e12;border-color:var(--acc);font-weight:bold}
+  ol.road{margin-left:20px;max-width:720px}
+  ol.road li{margin-bottom:12px}
+  ol.road li b{color:var(--acc2);font-weight:normal}
+  .ledger-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+  #chainstatus{font-size:13px;color:var(--dim)}
+  #chainstatus.ok{color:var(--ok)} #chainstatus.bad{color:var(--bad)}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line)}
+  table{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--acc);letter-spacing:.1em;text-transform:uppercase;font-weight:normal;font-size:11px}
+  td.h{color:var(--dim);font-size:11px;white-space:nowrap}
+  td a{color:var(--acc2);text-decoration:none}
+  td a:hover{text-decoration:underline}
+  .note{color:var(--dim);font-size:13px;margin-top:12px;max-width:720px}
+  footer{padding:30px 0 60px;color:var(--dim);font-size:12px;line-height:1.8}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1><b>INSTANT</b>HPI &gt;&gt; /4chan launch ledger</h1>
+    <p class="sub">The articulated brain of a physician, powered by AI. Free. Built by one board-certified family doctor, full-time, paid out of his own money and revenue — completely, and beyond. At this point it is in your hands to see this go into the future, or not.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What this is</h2>
+    <p>Free structured clinical reasoning — the same OPQRST method a real doctor uses — for anyone, in any language, on a phone that already has Telegram. Multiple AI models debate each case through API calls and answer only through consensus, clearly marked as the answers of multiple AIs. Not for emergencies. Not a replacement for a doctor — see one whenever possible. For the people the system refused, and for the places with no reasonable access to healthcare (fewer than 1 physician per 10,000 people).</p>
+    <div class="links">
+      <a href="https://t.me/InstantHPIBot">@InstantHPIBot</a>
+      <a href="https://t.me/freehealtheducationbot">@freehealtheducationbot</a>
+      <a href="https://github.com/carlosfalai/free-universal-healthcare-ai">github — full source, MIT</a>
+      <a href="https://instanthpi.ai/donations/">donations + roadmap</a>
+      <a class="money" href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">donate $</a>
+      <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=cff%40centremedicalfont.ca&item_name=InstantHPI+donation&currency_code=USD">paypal: cff@centremedicalfont.ca</a>
+      <a href="https://buy.stripe.com/4gMcN61u6fehf4I3yfbMQ44">physicians assoc $100/mo</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Roadmap — released</h2>
+    <ol class="road">
+      <li><b>Phase 1 (now):</b> free health education, guided intake, HPI synthesis on Telegram. Multi-agent consensus already in place.</li>
+      <li><b>Phase 2 (funded by donations):</b> memory — upload your whole medical history; chronicity indexation of all conversations, new problems openable, AIs given full prior-visit context; a dossier-managing AI keeps the structure like a true medical record, all in one easy app.</li>
+      <li><b>Phase 3:</b> downloadable exe. Your medical record local on your machine, isolated from the outer world, multiple patients, remembered encounters — only de-identified information ever leaves for the API calls and multi-agent discussion.</li>
+      <li><b>Phase 4:</b> chronic disease (COPD, HTN, DM…) — medication adjustment recommendations decided by multiple AIs in debate, delivered in one plain physician voice, marked as "they offered and recommended". Physician confirms where one exists.</li>
+      <li><b>Phase 5:</b> the Physician Guild (InstantHPI Physician Network) — physicians get verified as valid practitioners and receive IDs; they and their approved AI works carry proof-of-work and verification. Doctors from all over the world caring for patients all over the world through the AI-automated telemed blockchain. Better care at record time.</li>
+    </ol>
+    <p class="note">Sources you can check us against: personal history, physician, experts, AI, and national/international healthcare guidelines — side by side on our sites. Everything gets uploaded to GitHub. Fork it, save it, try things along the way.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="ledger-head">
+      <h2 style="margin:0">Thread ledger</h2>
+      <span id="chainstatus">verifying chain…</span>
+    </div>
+    <p class="note" style="margin:0 0 14px">The purpose of these posts: to communicate with people, educate, instruct, troubleshoot — and to revise our own code and methodology in the open. Every thread we start and every post we make gets indexed here, blockchain-like: append-only, each entry carrying the SHA-256 of the previous one. Your browser re-verifies the whole chain right now. We watch these threads and provide as much support as possible.</p>
+    <div class="tblwrap">
+      <table>
+        <thead><tr><th>#</th><th>date</th><th>board</th><th>type</th><th>thread / post</th><th>note</th><th>hash</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="7" style="color:var(--dim)">loading ledger…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    INSTANTHPI · free health education, not medical advice · no doctor-patient relationship · not for emergencies ·
+    donations are voluntary gifts, not tax-deductible at this time; if we ever obtain non-profit status, receipts and
+    receipt history will be provided for past donations — identify your donations well ·
+    <a href="https://instanthpi.ai/donations/">instanthpi.ai/donations</a> ·
+    write me directly: <a href="mailto:cff@centremedicalfont.ca">cff@centremedicalfont.ca</a>
+  </div>
+</footer>
+
+<script>
+(async function(){
+  var status = document.getElementById('chainstatus');
+  var rows = document.getElementById('rows');
+  try {
+    var res = await fetch('./threads.json?t=' + Date.now());
+    var ledger = await res.json();
+    var chain = ledger.chain || [];
+    async function sha256hex(s){
+      var b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+      return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('');
+    }
+    var ok = true;
+    for (var k = 0; k < chain.length; k++) {
+      var e = chain[k];
+      var h = await sha256hex([e.i,e.ts,e.board,e.url,e.title,e.note,e.prev].join('|'));
+      if (h !== e.hash || (k > 0 && e.prev !== chain[k-1].hash)) { ok = false; break; }
+    }
+    status.textContent = ok ? '[OK] chain verified — ' + chain.length + ' entries' : '[!!] CHAIN BROKEN at entry ' + k;
+    status.className = ok ? 'ok' : 'bad';
+    rows.innerHTML = '';
+    chain.slice().reverse().forEach(function(e){
+      var tr = document.createElement('tr');
+      function td(t, cls){ var c = document.createElement('td'); if (cls) c.className = cls; c.textContent = t; return c; }
+      tr.appendChild(td('#' + e.i));
+      tr.appendChild(td((e.ts || '').slice(0, 10), 'h'));
+      tr.appendChild(td(e.board));
+      tr.appendChild(td(e.type || '-', 'h'));
+      var tdl = document.createElement('td');
+      var a = document.createElement('a'); a.href = e.url; a.rel = 'noopener'; a.textContent = e.title;
+      tdl.appendChild(a); tr.appendChild(tdl);
+      tr.appendChild(td(e.note || ''));
+      tr.appendChild(td((e.hash || '').slice(0, 12) + '…', 'h'));
+      rows.appendChild(tr);
+    });
+  } catch (err) {
+    status.textContent = '[!!] ledger unavailable';
+    status.className = 'bad';
+  }
+})();
+</script>
+</body>
+</html>

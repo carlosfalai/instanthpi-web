@@ -1,0 +1,40 @@
+FIRST POST — TEST (board: /g/ or /sci/, image attached: img-01 or img-02)
+=========================================================================
+
+SUBJECT: I'm a board-certified family doctor. I automated my own brain and put it on Telegram for free.
+
+Not selling anything. The bots are free and stay free.
+
+I spent the last years automating my own medical practice — intake,
+history-taking, clinical reasoning, the works. Then I put the same
+engine on Telegram so anyone can use it:
+
+>@InstantHPIBot
+>@freehealtheducationbot
+
+What it does: takes you through a real structured intake (the same
+OPQRST method every doctor is trained on), then multiple AI models
+debate your case through API calls and only answer through consensus.
+The output is a clinical summary you can hand to any doctor anywhere
+and be understood in two minutes. Any language.
+
+What it is NOT: an emergency service, or a replacement for a real
+doctor. If you can see a physician, see one. This is for the people
+the system refused, and for places with less than 1 doctor per
+10,000 people (South Sudan sits at 0.04 — that's 250,000 patients
+per doctor).
+
+Roadmap, honest limits, and where money goes if you feel like
+throwing any: instanthpi.ai/donations
+
+Every thread we post gets indexed hash-chained at instanthpi.ai/4chan
+and we watch them and answer.
+
+Ask me anything. First thread, testing the waters.
+
+=========================================================================
+NOTES FOR CARLOS (not part of post):
+- 4chan OP posts require an attached image -> use one of the generated pngs
+- keep replies short, factual, no marketing tone; anons smell shills instantly
+- expect hostility first 20 replies; the demo sells it, argue with results
+- after posting run: node add-thread.cjs "<thread url>" "<title>"

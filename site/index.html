@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VP4WV3MSP0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VP4WV3MSP0');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstantHPI — AI That Breaks The System</title>
+  <meta name="description" content="A portfolio of AI-powered projects that redefine what's possible. Built by Carlos Faviel Font with Claude, Gemini, and relentless ambition.">
+  <meta property="og:title" content="InstantHPI — AI That Breaks The System">
+  <meta property="og:description" content="Every project here was built with AI. Medicine, spirituality, language, trucking, matrimony — no industry is safe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://instanthpi.com">
+  <meta property="og:site_name" content="InstantHPI">
+  <meta property="og:image" content="https://instanthpi.ai/assets/case-promos/case-1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="InstantHPI — AI That Breaks The System">
+  <meta name="twitter:description" content="Every project here was built with AI. Medicine, spirituality, language, trucking, matrimony — no industry is safe.">
+  <meta name="twitter:image" content="https://instanthpi.ai/assets/case-promos/case-1.png">
+  <meta name="keywords" content="InstantHPI, AI projects, medical AI, Carlos Faviel Font, Claude, Gemini, AI portfolio">
+  <link rel="canonical" href="https://instanthpi.com">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ═══ RESET + BASE ═══ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e8;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ═══ UTILITY ═══ */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .text-gradient {
+      background: linear-gradient(135deg, #00f0ff, #7b61ff, #ff3d71);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-gold {
+      background: linear-gradient(135deg, #ffd700, #ffaa00, #ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ═══ ANIMATED GRID BACKGROUND ═══ */
+    .bg-grid {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image:
+        linear-gradient(rgba(0,240,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,240,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .bg-glow {
+      position: fixed;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(ellipse at 30% 20%, rgba(123,97,255,0.08) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 80%, rgba(0,240,255,0.06) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+      animation: glowDrift 20s ease-in-out infinite alternate;
+    }
+    @keyframes glowDrift {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-5%, 3%); }
+    }
+
+    /* ═══ NAV ═══ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      z-index: 100;
+      padding: 16px 0;
+      backdrop-filter: blur(20px);
+      background: rgba(10,10,15,0.8);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+    }
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-links > a, .nav-drop > .nav-drop-trigger {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #8888a0;
+      transition: color 0.2s;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .nav-links > a:hover, .nav-drop:hover > .nav-drop-trigger { color: #fff; background: rgba(255,255,255,0.04); }
+    .nav-cta {
+      padding: 8px 20px !important;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #7b61ff, #00f0ff);
+      color: #fff !important;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 30px rgba(123,97,255,0.3);
+      background: linear-gradient(135deg, #7b61ff, #00f0ff) !important;
+    }
+
+    /* ═══ MEGA DROPDOWN ═══ */
+    .nav-drop { position: relative; }
+    .nav-drop-trigger { display: inline-flex; align-items: center; gap: 5px; }
+    .nav-drop-trigger::after { content: '▾'; font-size: 0.6rem; opacity: 0.5; transition: transform 0.2s; }
+    .nav-drop:hover .nav-drop-trigger::after { transform: rotate(180deg); opacity: 0.8; }
+    .nav-drop-panel {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      min-width: 280px;
+      background: rgba(16,16,24,0.98);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 12px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+      z-index: 1000;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 1px rgba(255,255,255,0.1);
+    }
+    .nav-drop:hover .nav-drop-panel {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    /* invisible bridge between trigger and panel */
+    .nav-drop::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 12px;
+    }
+    .nav-drop-panel a {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .nav-drop-panel a:hover { background: rgba(255,255,255,0.05); }
+    .nav-drop-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .nav-drop-text { flex: 1; }
+    .nav-drop-text .dd-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #e0e0e8;
+      line-height: 1.2;
+    }
+    .nav-drop-text .dd-desc {
+      font-size: 0.7rem;
+      color: #6666880;
+      color: rgba(224,224,232,0.4);
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+    .nav-drop-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin: 6px 8px;
+    }
+    .nav-drop-label {
+      font-size: 0.6rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(224,224,232,0.25);
+      padding: 8px 12px 4px;
+      font-weight: 700;
+    }
+
+    /* ═══ MOBILE HAMBURGER ═══ */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: #8888a0;
+    }
+    .nav-hamburger svg { width: 24px; height: 24px; }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,15,0.97);
+      z-index: 999;
+      padding: 80px 24px 24px;
+      overflow-y: auto;
+      backdrop-filter: blur(20px);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: #8888a0;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    .mobile-menu-section {
+      margin-bottom: 24px;
+    }
+    .mobile-menu-section-title {
+      font-size: 0.65rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(224,224,232,0.3);
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      margin-bottom: 8px;
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 10px 0;
+      color: #e0e0e8;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .mobile-menu a:active { color: #00f0ff; }
+
+    /* ═══ HERO ═══ */
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 160px 0 100px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 100px;
+      background: rgba(123,97,255,0.1);
+      border: 1px solid rgba(123,97,255,0.2);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #00ff88;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+    .hero .subtitle {
+      font-size: 1.2rem;
+      color: #8888a0;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 48px;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: #6666a0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 4px;
+    }
+
+    /* ═══ SECTION ═══ */
+    section { position: relative; z-index: 1; }
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      color: #8888a0;
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-tag {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #00f0ff;
+      margin-bottom: 12px;
+    }
+
+    /* ═══ PROJECT CARDS ═══ */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+      padding: 0 0 100px;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(123,97,255,0.3);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(123,97,255,0.1);
+    }
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .card-image-placeholder {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .card-body { padding: 24px; }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .card-category {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .cat-medical { background: rgba(255,61,113,0.15); color: #ff3d71; }
+    .cat-spiritual { background: rgba(255,170,0,0.15); color: #ffaa00; }
+    .cat-tools { background: rgba(0,240,255,0.15); color: #00f0ff; }
+    .cat-language { background: rgba(0,255,136,0.15); color: #00ff88; }
+    .cat-civic { background: rgba(255,255,0,0.15); color: #ffff00; }
+    .cat-social { background: rgba(255,105,180,0.15); color: #ff69b4; }
+    .cat-trucking { background: rgba(255,140,0,0.15); color: #ff8c00; }
+    .card-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: #555;
+    }
+    .card-body h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+    .card-body p {
+      font-size: 0.9rem;
+      color: #8888a0;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .card-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .feature-tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #aaa;
+    }
+    .card-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .card-link {
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: rgba(123,97,255,0.1);
+      border: 1px solid rgba(123,97,255,0.2);
+      color: #a78bfa;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .card-link:hover {
+      background: rgba(123,97,255,0.2);
+      border-color: rgba(123,97,255,0.4);
+    }
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .btn-notify, .btn-report {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-notify {
+      background: linear-gradient(135deg, #7b61ff, #5b3fdf);
+      color: #fff;
+    }
+    .btn-notify:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(123,97,255,0.3);
+    }
+    .btn-report {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #8888a0;
+    }
+    .btn-report:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    /* ═══ FEATURED (InstantHPI) ═══ */
+    .featured-section {
+      padding: 100px 0;
+    }
+    .featured-card {
+      background: linear-gradient(135deg, rgba(255,61,113,0.05), rgba(123,97,255,0.05));
+      border: 1px solid rgba(255,61,113,0.15);
+      border-radius: 24px;
+      padding: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .featured-card::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -20%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(255,61,113,0.08), transparent 60%);
+      pointer-events: none;
+    }
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 100px;
+      background: rgba(255,61,113,0.15);
+      border: 1px solid rgba(255,61,113,0.3);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #ff3d71;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .featured-card h2 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+    }
+    .featured-card .desc {
+      font-size: 1.1rem;
+      color: #8888a0;
+      max-width: 700px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .panel-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .panel-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .panel-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    .panel-item h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .panel-item p {
+      font-size: 0.7rem;
+      color: #666;
+      line-height: 1.4;
+    }
+    .status-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 24px;
+      background: rgba(255,170,0,0.08);
+      border: 1px solid rgba(255,170,0,0.2);
+      border-radius: 12px;
+    }
+    .status-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #ffaa00;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    .status-bar span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #ffaa00;
+    }
+
+    /* ═══ MANIFESTO ═══ */
+    .manifesto {
+      padding: 100px 0;
+      text-align: center;
+    }
+    .manifesto blockquote {
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-style: italic;
+      color: #aaa;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .manifesto blockquote em {
+      font-style: normal;
+      font-weight: 700;
+      color: #fff;
+    }
+    .manifesto .author {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* ═══ FOOTER ═══ */
+    footer {
+      position: relative;
+      z-index: 1;
+      padding: 48px 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+    }
+    footer p {
+      color: #444;
+      font-size: 0.85rem;
+    }
+    footer a { color: #7b61ff; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; letter-spacing: -1px; }
+      .hero-stats { flex-direction: column; gap: 24px; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .panel-grid { grid-template-columns: repeat(2, 1fr); }
+      .panel-grid .panel-item:last-child {
+        grid-column: 1 / -1;
+      }
+      .featured-card { padding: 32px 20px; }
+      .featured-card h2 { font-size: 1.8rem; }
+      .nav-links { display: none !important; }
+      .nav-hamburger { display: block; }
+    }
+
+    /* ═══ SCROLL REVEAL ═══ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══ LIGHTBOX ═══ */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 9999;
+      cursor: zoom-out;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.8);
+    }
+    .card-image { cursor: zoom-in; }
+  </style>
+</head>
+<body>
+<div style="background:#b08d57;color:#0b0e12;font-family:'Courier New',monospace;font-size:14px;text-align:center;padding:10px 16px;letter-spacing:.05em">
+  <b>FREE HEALTHCARE AI IS LIVE:</b>
+  <a href="/donations/" style="color:#0b0e12;font-weight:bold;margin:0 8px">DONATIONS + ROADMAP</a> ·
+  <a href="/courses/" style="color:#0b0e12;font-weight:bold;margin:0 8px">$35 COURSES (FREE AT 1000 BUYERS)</a> ·
+  <a href="/4chan/" style="color:#0b0e12;font-weight:bold;margin:0 8px">THREAD LEDGER</a> ·
+  <a href="https://github.com/carlosfalai/free-universal-healthcare-ai" style="color:#0b0e12;font-weight:bold;margin:0 8px">GITHUB (MIT)</a>
+</div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <!-- ═══ NAV ═══ -->
+  <nav>
+    <div class="container">
+      <div class="nav-logo"><a href="/" style="text-decoration:none;"><span class="text-gradient">InstantHPI</span></a></div>
+      <div class="nav-links">
+
+        <!-- Medical AI dropdown -->
+        <div class="nav-drop">
+          <span class="nav-drop-trigger">Medical AI</span>
+          <div class="nav-drop-panel">
+            <div class="nav-drop-label">The Bot</div>
+            <a href="https://t.me/instanthpibot" target="_blank">
+              <div class="nav-drop-icon" style="background:rgba(0,240,255,0.1);color:#00f0ff;">BOT</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Try InstantHPI Bot</div>
+                <div class="dd-desc">Free AI medical interview on Telegram</div>
+              </div>
+            </a>
+            <a href="/medical-sequence">
+              <div class="nav-drop-icon" style="background:rgba(123,97,255,0.1);color:#7b61ff;">SEQ</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">How It Works</div>
+                <div class="dd-desc">10-step medical reasoning sequence</div>
+              </div>
+            </a>
+            <a href="/ai-vs-doctors">
+              <div class="nav-drop-icon" style="background:rgba(255,61,113,0.1);color:#ff3d71;">VS</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">AI vs Doctors</div>
+                <div class="dd-desc">Side-by-side comparison study</div>
+              </div>
+            </a>
+            <div class="nav-drop-divider"></div>
+            <div class="nav-drop-label">Results</div>
+            <a href="/impact">
+              <div class="nav-drop-icon" style="background:rgba(0,255,136,0.1);color:#00ff88;">LIVE</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Live Impact Dashboard</div>
+                <div class="dd-desc">Real-time stats, languages, funnel</div>
+              </div>
+            </a>
+            <a href="/pro">
+              <div class="nav-drop-icon" style="background:rgba(255,170,0,0.1);color:#ffaa00;">PRO</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">InstantHPI Pro</div>
+                <div class="dd-desc">For clinics and healthcare providers</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projects dropdown -->
+        <div class="nav-drop">
+          <span class="nav-drop-trigger">Projects</span>
+          <div class="nav-drop-panel">
+            <div class="nav-drop-label">Categories</div>
+            <a href="#medical">
+              <div class="nav-drop-icon" style="background:rgba(255,61,113,0.1);color:#ff3d71;">MED</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Medical</div>
+                <div class="dd-desc">AI-powered healthcare tools</div>
+              </div>
+            </a>
+            <a href="#languages">
+              <div class="nav-drop-icon" style="background:rgba(0,255,136,0.1);color:#00ff88;">LANG</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Language Bots</div>
+                <div class="dd-desc">Sanskrit, Hindi, Arabic, Chinese + more</div>
+              </div>
+            </a>
+            <a href="#spiritual">
+              <div class="nav-drop-icon" style="background:rgba(255,170,0,0.1);color:#ffaa00;">DEV</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Spiritual</div>
+                <div class="dd-desc">Sacred Gita, yoga, meditation apps</div>
+              </div>
+            </a>
+            <a href="#tools">
+              <div class="nav-drop-icon" style="background:rgba(0,240,255,0.1);color:#00f0ff;">TOOL</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Developer Tools</div>
+                <div class="dd-desc">DockStation, extensions, utilities</div>
+              </div>
+            </a>
+            <a href="#projects">
+              <div class="nav-drop-icon" style="background:rgba(123,97,255,0.1);color:#7b61ff;">ALL</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">View All Projects</div>
+                <div class="dd-desc">Complete portfolio</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Story dropdown -->
+        <div class="nav-drop">
+          <span class="nav-drop-trigger">About</span>
+          <div class="nav-drop-panel">
+            <a href="/story">
+              <div class="nav-drop-icon" style="background:rgba(123,97,255,0.1);color:#7b61ff;">STR</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Our Story</div>
+                <div class="dd-desc">From clinic to code</div>
+              </div>
+            </a>
+            <a href="/journey">
+              <div class="nav-drop-icon" style="background:rgba(0,240,255,0.1);color:#00f0ff;">JRN</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Transparency Diary</div>
+                <div class="dd-desc">Open development journey</div>
+              </div>
+            </a>
+            <a href="/timeline">
+              <div class="nav-drop-icon" style="background:rgba(0,255,136,0.1);color:#00ff88;">DEV</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Dev Timeline</div>
+                <div class="dd-desc">Daily build activity log</div>
+              </div>
+            </a>
+            <a href="/the-inevitable-future">
+              <div class="nav-drop-icon" style="background:rgba(255,170,0,0.1);color:#ffaa00;">VIS</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">The Inevitable Future</div>
+                <div class="dd-desc">Where AI medicine is heading</div>
+              </div>
+            </a>
+            <div class="nav-drop-divider"></div>
+            <a href="/partner">
+              <div class="nav-drop-icon" style="background:rgba(255,61,113,0.1);color:#ff3d71;">PTR</div>
+              <div class="nav-drop-text">
+                <div class="dd-title">Partner With Us</div>
+                <div class="dd-desc">Grants, clinics, researchers</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="/quebec">Quebec</a>
+        <a href="/social">Social</a>
+        <a href="mailto:instanthpi@gmail.com" class="nav-cta">Contact</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-hamburger" onclick="document.getElementById('mobile-menu').classList.add('open')" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ MOBILE MENU ═══ -->
+  <div id="mobile-menu" class="mobile-menu">
+    <button class="mobile-menu-close" onclick="this.parentElement.classList.remove('open')">&times;</button>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-section-title">Medical AI</div>
+      <a href="https://t.me/instanthpibot" target="_blank">Try the Bot</a>
+      <a href="/medical-sequence">How It Works</a>
+      <a href="/ai-vs-doctors">AI vs Doctors</a>
+      <a href="/impact">Live Impact Dashboard</a>
+      <a href="/pro">InstantHPI Pro</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-section-title">Projects</div>
+      <a href="#medical" onclick="this.closest('.mobile-menu').classList.remove('open')">Medical</a>
+      <a href="#languages" onclick="this.closest('.mobile-menu').classList.remove('open')">Language Bots</a>
+      <a href="#spiritual" onclick="this.closest('.mobile-menu').classList.remove('open')">Spiritual</a>
+      <a href="#tools" onclick="this.closest('.mobile-menu').classList.remove('open')">Developer Tools</a>
+      <a href="#projects" onclick="this.closest('.mobile-menu').classList.remove('open')">View All</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-section-title">About</div>
+      <a href="/story">Our Story</a>
+      <a href="/journey">Transparency Diary</a>
+      <a href="/timeline">Dev Timeline</a>
+      <a href="/the-inevitable-future">The Inevitable Future</a>
+      <a href="/partner">Partner With Us</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-section-title">Quebec</div>
+      <a href="/quebec">Quebec Projects</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-section-title">Connect</div>
+      <a href="/social">Social</a>
+      <a href="mailto:instanthpi@gmail.com">Contact</a>
+    </div>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        All Built With AI
+      </div>
+      <h1>AI That <span class="text-gradient">Breaks The System</span></h1>
+      <p class="subtitle">
+        Every project on this page was built with artificial intelligence. Medicine, spirituality, language learning, civic action, trucking, matrimony &mdash; no industry is safe. This is what happens when you let AI loose.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number text-gradient">22+</div>
+          <div class="stat-label">Projects Shipped</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number text-gradient">8</div>
+          <div class="stat-label">Industries</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number text-gradient">4</div>
+          <div class="stat-label">Language Bots</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number text-gradient">1</div>
+          <div class="stat-label">Developer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// shipped &amp; live</span>
+        <h2>The Portfolio</h2>
+        <p>Each project was conceived, designed, coded, and deployed using AI as the primary development partner.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- GOD — Sacred Gita -->
+        <div class="project-card reveal">
+          <img src="assets/god-sacredgita.png" alt="GOD — Bhagavad Gita Visual Journey" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-spiritual">Spiritual</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>GOD &mdash; A Journey Through the Bhagavad Gita</h3>
+            <p>Interactive web app that teaches the Bhagavad Gita's wisdom by applying it to 84 modern problems: money, relationships, war, race, sexuality, death. Every topic gets 8 AI-generated manga-style paintings in Muralidhara Dasa's art style. Plus 16 public figures analyzed through the three gunas.</p>
+            <div class="card-features">
+              <span class="feature-tag">84 Modern Topics</span>
+              <span class="feature-tag">AI Art</span>
+              <span class="feature-tag">8-Frame Stories</span>
+              <span class="feature-tag">Influencer Analysis</span>
+            </div>
+            <div class="card-links">
+              <a href="https://sacredgita.com" target="_blank" class="card-link">sacredgita.com &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20GOD%20updates" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20GOD%20App" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Siddhanath Yoga Marathon -->
+        <div class="project-card reveal">
+          <img src="assets/siddhanath-yoga-marathon.png" alt="Siddhanath Yoga Marathon" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-spiritual">Spiritual</span>
+              <span class="card-date">Jan 2026</span>
+            </div>
+            <h3>Siddhanath Yoga Marathon</h3>
+            <p>A structured journey through Yogiraj Siddhanath's sacred teachings. 280 guided video sessions, 4,941 sacred sayings database, streak tracking, and a glass-morphism UI. Desktop and mobile apps coming soon.</p>
+            <div class="card-features">
+              <span class="feature-tag">280 Sessions</span>
+              <span class="feature-tag">4,941 Sayings</span>
+              <span class="feature-tag">Streak Calendar</span>
+              <span class="feature-tag">YouTube Embedded</span>
+            </div>
+            <div class="card-links">
+              <a href="https://cottoncandygod.com" target="_blank" class="card-link">cottoncandygod.com &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Siddhanath%20Yoga%20Marathon" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Siddhanath%20Yoga%20Marathon" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- DockStation -->
+        <div class="project-card reveal">
+          <img src="assets/dockstation.png" alt="DockStation" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-tools">Developer Tool</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>DockStation</h3>
+            <p>Free Stream Deck alternative for Windows. Always-on-top overlay dock that floats above every window &mdash; even full-screen games. Import existing Stream Deck profiles. Double-Alt toggle from any app. No hardware needed.</p>
+            <div class="card-features">
+              <span class="feature-tag">Always-On-Top</span>
+              <span class="feature-tag">5 Button Types</span>
+              <span class="feature-tag">Stream Deck Import</span>
+              <span class="feature-tag">Double-Alt Toggle</span>
+              <span class="feature-tag">Free</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/carlosfalai/deskstation" target="_blank" class="card-link">GitHub &rarr;</a>
+              <a href="https://instanthpi.gumroad.com/l/xlhqdb" target="_blank" class="card-link">Gumroad (Free) &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20DockStation" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20DockStation" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Route Sante -->
+        <div class="project-card reveal">
+          <img src="assets/route-sante.png" alt="Route Santé Québec" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-civic">Civic Platform</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Route Sant&eacute; Qu&eacute;bec</h3>
+            <p>Citizens photograph road damage (potholes, ice, pavement failures), document real costs (repairs, towing, rentals), and collectively pressure municipalities to act. Interactive danger zone maps, heatmaps, and municipal statistics.</p>
+            <div class="card-features">
+              <span class="feature-tag">Photo Reports</span>
+              <span class="feature-tag">Danger Heatmap</span>
+              <span class="feature-tag">Cost Tracking</span>
+              <span class="feature-tag">Municipal Stats</span>
+            </div>
+            <div class="card-links">
+              <a href="https://routesante.ca" target="_blank" class="card-link">routesante.ca &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Route%20Sante" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Route%20Sante" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ArrangedSuccess -->
+        <div class="project-card reveal">
+          <img src="assets/arrangedsuccess.png" alt="ArrangedSuccess" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-social">Matrimonial</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>ArrangedSuccess</h3>
+            <p>Marriage with purpose. A premium matrimonial platform where men present themselves with integrity and women choose freely. Vedic &amp; Western astrology compatibility, auspicious wedding date calculations, and zero paywalls.</p>
+            <div class="card-features">
+              <span class="feature-tag">Astrology Match</span>
+              <span class="feature-tag">Wedding Dates</span>
+              <span class="feature-tag">Family Validation</span>
+              <span class="feature-tag">Free</span>
+            </div>
+            <div class="card-links">
+              <a href="https://arrangedsuccess.com" target="_blank" class="card-link">arrangedsuccess.com &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20ArrangedSuccess" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20ArrangedSuccess" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RecuFlotte -->
+        <div class="project-card reveal">
+          <img src="assets/recuflotte.png" alt="RecuFlotte" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-trucking">Trucking</span>
+              <span class="card-date">Jan 2026</span>
+            </div>
+            <h3>RecuFlotte</h3>
+            <p>SMS-based AI receipt management for Quebec trucking companies. Drivers text a photo of any receipt &mdash; AI extracts all data, calculates GST/QST/IFTA automatically, and builds compliance reports. Fuel price intelligence across all fleets.</p>
+            <div class="card-features">
+              <span class="feature-tag">AI Receipt OCR</span>
+              <span class="feature-tag">IFTA Reports</span>
+              <span class="feature-tag">GST/QST</span>
+              <span class="feature-tag">Fleet Intel</span>
+              <span class="feature-tag">SMS-Based</span>
+            </div>
+            <div class="card-links">
+              <a href="https://recuflotte.com" target="_blank" class="card-link">recuflotte.com &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20RecuFlotte" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20RecuFlotte" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kriya Yoga Trainer -->
+        <div class="project-card reveal">
+          <img src="assets/kriya-yoga-trainer.png" alt="Kriya Yoga Trainer" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-spiritual">Chrome Extension</span>
+              <span class="card-date">Feb 2026</span>
+            </div>
+            <h3>Siddhanath Kriya Yoga Trainer</h3>
+            <p>Chrome extension for daily Kriya Yoga practice. Configurable timers with phases (pranayama, meditation, closing), streak calendar like GitHub's heatmap, event sync from siddhanath.org, and a full technique library of kriyas, mantras, mudras, and bandhas.</p>
+            <div class="card-features">
+              <span class="feature-tag">Practice Timer</span>
+              <span class="feature-tag">Streak Calendar</span>
+              <span class="feature-tag">Event Sync</span>
+              <span class="feature-tag">Technique Library</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Chrome Web Store (Pending Review)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Kriya%20Yoga%20Trainer" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Kriya%20Yoga%20Trainer" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spruce Patient Inviter -->
+        <div class="project-card reveal">
+          <img src="assets/spruce-patient-inviter.png" alt="Spruce Patient Inviter" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-medical">Medical AI</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Spruce Patient Inviter</h3>
+            <p>Screenshot your patient list, AI extracts every name and number, one click to invite them all to Spruce Health. HIPAA-compliant desktop app powered by Claude Vision on AWS Bedrock. Deduplicates against existing patients automatically.</p>
+            <div class="card-features">
+              <span class="feature-tag">Claude Vision OCR</span>
+              <span class="feature-tag">Spruce Health API</span>
+              <span class="feature-tag">HIPAA / AWS BAA</span>
+              <span class="feature-tag">Auto-Dedup</span>
+              <span class="feature-tag">Desktop App</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Windows Download (Coming Soon)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Spruce%20Patient%20Inviter" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Spruce%20Patient%20Inviter" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gita Learner Sanskrit -->
+        <div class="project-card reveal">
+          <img src="assets/gita-learner-sanskrit.png" alt="Gita Learner Sanskrit" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-spiritual">Chrome Extension</span>
+              <span class="card-date">Feb 2026</span>
+            </div>
+            <h3>Gita Learner Sanskrit</h3>
+            <p>Learn the Bhagavad Gita word by word in Sanskrit. All 18 chapters, 700 verses, 5,000+ Sanskrit words with transliteration, individual meanings, practice mode, and audio pronunciation. Works 100% offline. Free forever.</p>
+            <div class="card-features">
+              <span class="feature-tag">700 Verses</span>
+              <span class="feature-tag">Word-by-Word</span>
+              <span class="feature-tag">Practice Mode</span>
+              <span class="feature-tag">Spotify Audio</span>
+              <span class="feature-tag">100% Offline</span>
+            </div>
+            <div class="card-links">
+              <a href="https://gita-learner-sanskrit.pages.dev" target="_blank" class="card-link">Homepage &rarr;</a>
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Chrome Web Store (Pending)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Gita%20Learner%20Sanskrit" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Gita%20Learner%20Sanskrit" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Truck Stop Sante AI -->
+        <div class="project-card reveal">
+          <img src="assets/ai-receptionist.png" alt="AI Medical Receptionist" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-medical">Medical AI</span>
+              <span class="card-date">Feb 2026</span>
+            </div>
+            <h3>AI Medical Receptionist</h3>
+            <p>24/7 AI voice receptionist for a Quebec medical clinic. Answers calls in French, auto-processes incoming faxes, reads lab results with AI vision, posts summaries to patient charts, and sends SMS alerts for critical findings.</p>
+            <div class="card-features">
+              <span class="feature-tag">Voice AI (French)</span>
+              <span class="feature-tag">Fax Processing</span>
+              <span class="feature-tag">Lab Result AI</span>
+              <span class="feature-tag">HIPAA Compliant</span>
+            </div>
+            <div class="card-links">
+              <a href="https://routesante.ca" target="_blank" class="card-link">Clinic Website &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20AI%20Receptionist" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20AI%20Receptionist" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4chan Integrity -->
+        <div class="project-card reveal">
+          <img src="assets/integrity.png" alt="4chan Integrity" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-tools">Chrome Extension</span>
+              <span class="card-date">2025</span>
+            </div>
+            <h3>4chan Integrity</h3>
+            <p>AI-powered shill detection for 4chan. Fingerprints posters across threads, detects coordinated manipulation campaigns, auto-hides spam. In the Chrome Web Store.</p>
+            <div class="card-features">
+              <span class="feature-tag">Fingerprinting</span>
+              <span class="feature-tag">Shill Score</span>
+              <span class="feature-tag">Campaign Detection</span>
+              <span class="feature-tag">In CWS</span>
+            </div>
+            <div class="card-links">
+              <a href="https://chromewebstore.google.com" target="_blank" class="card-link">Chrome Web Store &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%204chan%20Integrity" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%204chan%20Integrity" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Universal Thot Blocker -->
+        <div class="project-card reveal">
+          <img src="assets/thot-blocker.png" alt="Universal Thot Blocker" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-tools">Chrome Extension</span>
+              <span class="card-date">2025</span>
+            </div>
+            <h3>Universal Thot Blocker</h3>
+            <p>AI-powered NSFW content filter that works across Twitter, Reddit, Instagram, TikTok, YouTube, and 4chan. Cleans your feed without leaving the platform.</p>
+            <div class="card-features">
+              <span class="feature-tag">AI Content Filter</span>
+              <span class="feature-tag">6 Platforms</span>
+              <span class="feature-tag">Real-Time</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Chrome Web Store (Coming)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Thot%20Blocker" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Thot%20Blocker" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extension Dock -->
+        <div class="project-card reveal">
+          <img src="assets/extension-dock.png" alt="Extension Dock" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-tools">Chrome Extension</span>
+              <span class="card-date">Feb 2026</span>
+            </div>
+            <h3>Extension Dock</h3>
+            <p>WoW-style action bars for Chrome. Pin your favorite extensions into customizable bar layouts, import Stream Deck profiles, share setups with friends. Gaming UI meets browser productivity.</p>
+            <div class="card-features">
+              <span class="feature-tag">Action Bars</span>
+              <span class="feature-tag">Stream Deck Import</span>
+              <span class="feature-tag">Profile Sharing</span>
+              <span class="feature-tag">Firebase Sync</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Chrome Web Store (Coming)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Extension%20Dock" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Extension%20Dock" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media Detox Timer -->
+        <div class="project-card reveal">
+          <img src="assets/detox-timer.png" alt="Social Media Detox Timer" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-tools">Chrome Extension</span>
+              <span class="card-date">Jan 2026</span>
+            </div>
+            <h3>Social Media Detox Timer</h3>
+            <p>Set daily time limits per site. Countdown overlay warns you before time runs out, then auto-blocks. Weekly reports show your progress. Firebase sync across devices.</p>
+            <div class="card-features">
+              <span class="feature-tag">Per-Site Limits</span>
+              <span class="feature-tag">Countdown Overlay</span>
+              <span class="feature-tag">Auto-Block</span>
+              <span class="feature-tag">Weekly Reports</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Chrome Web Store (Coming)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Detox%20Timer" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Detox%20Timer" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Auth Codes -->
+        <div class="project-card reveal">
+          <img src="assets/auth-codes.png" alt="No BS Auth Codes" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-tools">Chrome Extension</span>
+              <span class="card-date">Jan 2026</span>
+            </div>
+            <h3>No BS Auth Codes</h3>
+            <p>2FA authenticator that lives in your browser. One-click copy, instant search, encrypted cloud sync. No phone needed. No BS.</p>
+            <div class="card-features">
+              <span class="feature-tag">TOTP / 2FA</span>
+              <span class="feature-tag">One-Click Copy</span>
+              <span class="feature-tag">Encrypted Sync</span>
+              <span class="feature-tag">No Phone Needed</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Chrome Web Store (Coming)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Auth%20Codes" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Auth%20Codes" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- LingoBlur -->
+        <div class="project-card reveal">
+          <img src="assets/lingoblur.png" alt="LingoBlur" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-language">Chrome Extension</span>
+              <span class="card-date">Jan 2026</span>
+            </div>
+            <h3>LingoBlur</h3>
+            <p>Learn languages passively while browsing. Blurs content on time-wasting sites and replaces it with vocabulary in your target language. The more you procrastinate, the more you learn.</p>
+            <div class="card-features">
+              <span class="feature-tag">Passive Learning</span>
+              <span class="feature-tag">Content Blur</span>
+              <span class="feature-tag">Multi-Language</span>
+              <span class="feature-tag">Vocab Cards</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Chrome Web Store (Coming)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20LingoBlur" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20LingoBlur" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orbital Frames -->
+        <div class="project-card reveal">
+          <img src="assets/orbital-frames.png" alt="Orbital Frames" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-social">Chrome Extension</span>
+              <span class="card-date">2025</span>
+            </div>
+            <h3>Orbital Frames</h3>
+            <p>Universal social layer for the internet. Vote, save, discover, and gamify content across 4chan, Reddit, Twitter/X, YouTube, Facebook, and Amazon. One extension to rule them all.</p>
+            <div class="card-features">
+              <span class="feature-tag">6+ Platforms</span>
+              <span class="feature-tag">Voting System</span>
+              <span class="feature-tag">Gamification</span>
+              <span class="feature-tag">Content Discovery</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Chrome Web Store (Coming)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Orbital%20Frames" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Orbital%20Frames" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hermes -->
+        <div class="project-card reveal">
+          <img src="assets/hermes.png" alt="Hermes AI Life Manager" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-tools">AI Backend</span>
+              <span class="card-date">Feb 2026</span>
+            </div>
+            <h3>Hermes &mdash; AI Life Manager</h3>
+            <p>Your personal AI that manages your life. Email triage, financial tracking, health monitoring, calendar management, and Telegram integration. Always running, always watching your back.</p>
+            <div class="card-features">
+              <span class="feature-tag">Email AI</span>
+              <span class="feature-tag">Finance Tracking</span>
+              <span class="feature-tag">Health Monitor</span>
+              <span class="feature-tag">Telegram</span>
+              <span class="feature-tag">Live on Render</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Private Service</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Hermes" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Hermes" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Secretary -->
+        <div class="project-card reveal">
+          <img src="assets/ai-secretary.png" alt="AI Secretary" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-medical">AI Voice</span>
+              <span class="card-date">Feb 2026</span>
+            </div>
+            <h3>AI Secretary</h3>
+            <p>ElevenLabs-powered phone receptionist SaaS. Answers calls, takes messages, books appointments, sends summaries via Telegram. White-label ready for any business.</p>
+            <div class="card-features">
+              <span class="feature-tag">ElevenLabs Voice</span>
+              <span class="feature-tag">Twilio</span>
+              <span class="feature-tag">Appointment Booking</span>
+              <span class="feature-tag">Live on Render</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">SaaS (Coming)</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20AI%20Secretary" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20AI%20Secretary" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garapina Faviel -->
+        <div class="project-card reveal">
+          <img src="assets/guarapina.png" alt="Garapiña Faviel" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-social">Brand Website</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Garapiña Faviel</h3>
+            <p>Full brand website for an artisanal Cuban-inspired kombucha. Portal, health info, restaurant/bar finder, course pages, NDA section, and a Telegram ordering bot.</p>
+            <div class="card-features">
+              <span class="feature-tag">Brand Site</span>
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">Restaurant Finder</span>
+              <span class="feature-tag">Course Pages</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" style="opacity:0.5; pointer-events:none;">Coming Soon</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Garapina" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Garapina" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LANGUAGE BOTS ═══ -->
+  <section id="languages" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// squire language coaches</span>
+        <h2>AI Language Bots</h2>
+        <p>Each bot is a unique character that teaches a language through AI-generated conversations, sacred texts, and daily challenges on Telegram.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Siddhanath Hindi -->
+        <div class="project-card reveal">
+          <img src="assets/bot-hindi.png" alt="Siddhanath Hindi Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-language">Hindi</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Siddhanath &mdash; Learn Hindi</h3>
+            <p>Yogiraj Siddhanath as your Hindi coach. 20 chapters of real conversational Hindi &mdash; greetings, food, directions, shopping, storytelling. Sacred sayings inspire each lesson.</p>
+            <div class="card-features">
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">20 Chapters</span>
+              <span class="feature-tag">AI Questions</span>
+              <span class="feature-tag">Sacred Sayings</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/Squire_siddhanath_bot" target="_blank" class="card-link">@Squire_siddhanath_bot &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Siddhanath%20Hindi%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Siddhanath%20Hindi%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lord Krishna Sanskrit -->
+        <div class="project-card reveal">
+          <img src="assets/bot-sanskrit.png" alt="Lord Krishna Sanskrit Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-language">Sanskrit</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Lord Krishna &mdash; Learn Sanskrit</h3>
+            <p>Learn Sanskrit through the 701 verses of the Bhagavad Gita. Verse by verse with Pichwai-style artwork, word-by-word breakdowns, and AI-generated practice questions.</p>
+            <div class="card-features">
+              <span class="feature-tag">701 Gita Verses</span>
+              <span class="feature-tag">Pichwai Art</span>
+              <span class="feature-tag">Word-by-Word</span>
+              <span class="feature-tag">Telegram</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/Squire_Lord_Krishna_bot" target="_blank" class="card-link">@Squire_Lord_Krishna_bot &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Krishna%20Sanskrit%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Krishna%20Sanskrit%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arabic -->
+        <div class="project-card reveal">
+          <img src="assets/bot-arabic.png" alt="Learn Arabic Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-language">Arabic</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Siddhanath &mdash; Learn Arabic</h3>
+            <p>Conversational Arabic through daily AI-generated questions. 20 chapters covering greetings, numbers, food, directions, shopping and beyond. Sacred sayings set the tone.</p>
+            <div class="card-features">
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">20 Chapters</span>
+              <span class="feature-tag">AI Questions</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/learn_arabic_siddhanath_bot" target="_blank" class="card-link">@learn_arabic_siddhanath_bot &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Arabic%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Arabic%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Japanese -->
+        <div class="project-card reveal">
+          <img src="assets/bot-japanese.png" alt="Learn Japanese Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-language">Japanese</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Siddhanath &mdash; Learn Japanese</h3>
+            <p>Daily Japanese through AI-powered conversational lessons. Hiragana, katakana, and kanji introduced naturally across 20 progressive chapters.</p>
+            <div class="card-features">
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">20 Chapters</span>
+              <span class="feature-tag">AI Questions</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/learn_japanese_siddhanath_bot" target="_blank" class="card-link">@learn_japanese_siddhanath_bot &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Japanese%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Japanese%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chinese -->
+        <div class="project-card reveal">
+          <img src="assets/bot-chinese.png" alt="Learn Chinese Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-language">Chinese</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Siddhanath &mdash; Learn Chinese</h3>
+            <p>Mandarin Chinese through AI conversation practice. Pinyin and characters introduced progressively across 20 chapters of daily-life topics.</p>
+            <div class="card-features">
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">20 Chapters</span>
+              <span class="feature-tag">Pinyin + Characters</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/learn_chinese_siddhanath_bot" target="_blank" class="card-link">@learn_chinese_siddhanath_bot &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Chinese%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Chinese%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Italian -->
+        <div class="project-card reveal">
+          <img src="assets/bot-italian.png" alt="Learn Italian Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-language">Italian</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Siddhanath &mdash; Learn Italian</h3>
+            <p>Conversational Italian from greetings to storytelling. 20 chapters of AI-generated daily practice with sacred sayings setting the mood.</p>
+            <div class="card-features">
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">20 Chapters</span>
+              <span class="feature-tag">AI Questions</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/learn_italian_siddhanath_bot" target="_blank" class="card-link">@learn_italian_siddhanath_bot &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Italian%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Italian%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spanish -->
+        <div class="project-card reveal">
+          <img src="assets/bot-spanish.png" alt="Learn Spanish Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-language">Spanish</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Siddhanath &mdash; Learn Spanish</h3>
+            <p>Spanish through AI-powered daily conversations. 20 chapters from basic greetings to opinions, culture, and relationships.</p>
+            <div class="card-features">
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">20 Chapters</span>
+              <span class="feature-tag">AI Questions</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/learn_spanish_siddhanath_bot" target="_blank" class="card-link">@learn_spanish_siddhanath_bot &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Spanish%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Spanish%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- French — José Carlos -->
+        <div class="project-card reveal">
+          <img src="assets/bot-french.png" alt="José Carlos French Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-language">French</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Jos&eacute; Carlos &mdash; Learn French</h3>
+            <p>A warm Sorbonne literature professor teaches French to Spanish speakers from Le Caf&eacute; des Lettres in Paris. Real conversational French through daily life, culture, and philosophy.</p>
+            <div class="card-features">
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">40 Chapters</span>
+              <span class="feature-tag">Spanish &rarr; French</span>
+              <span class="feature-tag">Parisian Culture</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/learn_french_josecarlos_bot" target="_blank" class="card-link">@learn_french_josecarlos &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20French%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20French%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gurunath Teachings -->
+        <div class="project-card reveal">
+          <img src="assets/bot-teachings.png" alt="Gurunath Teachings Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-spiritual">Seva</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Gurunath Teachings</h3>
+            <p>All of Yogiraj Siddhanath's teachings delivered verbatim, one by one. A 6-month seva reading plan &mdash; tap "continue" to progress through the complete library.</p>
+            <div class="card-features">
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">Full Library</span>
+              <span class="feature-tag">6-Month Plan</span>
+              <span class="feature-tag">Progress Tracking</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/gurunath_teachings_bot" target="_blank" class="card-link">@gurunath_teachings_bot &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Teachings%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Teachings%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sitamai Dara Nature -->
+        <div class="project-card reveal">
+          <img src="assets/bot-nature.png" alt="Sitamai Dara Nature Bot" class="card-image">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-category cat-spiritual">Nature</span>
+              <span class="card-date">Mar 2026</span>
+            </div>
+            <h3>Sitamai Dara Nature</h3>
+            <p>Discover the trees, flowers, fruits, birds, and medicinal herbs of the ashram. A nature course covering the living world of Siddhanath's sacred grounds.</p>
+            <div class="card-features">
+              <span class="feature-tag">Telegram Bot</span>
+              <span class="feature-tag">Trees &amp; Plants</span>
+              <span class="feature-tag">Birds &amp; Wildlife</span>
+              <span class="feature-tag">Medicinal Herbs</span>
+            </div>
+            <div class="card-links">
+              <a href="https://t.me/sitamai_dara_nature_bot" target="_blank" class="card-link">@sitamai_dara_nature_bot &rarr;</a>
+            </div>
+            <div class="card-actions">
+              <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20about%20Nature%20Bot" class="btn-notify">Notify Me</a>
+              <a href="mailto:instanthpi@gmail.com?subject=Issue%20Report%20%E2%80%94%20Nature%20Bot" class="btn-report">Report Issue</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ INSTANTHPI (FEATURED) ═══ -->
+  <section id="instanthpi" class="featured-section">
+    <div class="container">
+      <div class="featured-card reveal">
+        <div class="featured-badge">&#x1F6A8; In Active Development</div>
+        <h2><span class="text-gradient">InstantHPI</span></h2>
+        <p class="desc">
+          The flagship project. A HIPAA-compliant medical intake platform that uses AI to transform how patients and doctors interact. Built for a real Quebec medical clinic. Five panels, one mission: make healthcare documentation instant.
+        </p>
+
+        <div class="panel-grid">
+          <div class="panel-item">
+            <div class="panel-icon">&#x1F4E5;</div>
+            <h4>Inbox</h4>
+            <p>Spruce Health conversations, patient messages, incoming faxes</p>
+          </div>
+          <div class="panel-item">
+            <div class="panel-icon">&#x1F4CB;</div>
+            <h4>History</h4>
+            <p>Full patient thread, past visits, lab results, medications</p>
+          </div>
+          <div class="panel-item">
+            <div class="panel-icon">&#x23F3;</div>
+            <h4>Queue</h4>
+            <p>60-second auto-send countdown, triage levels P1-P5, urgency scoring</p>
+          </div>
+          <div class="panel-item">
+            <div class="panel-icon">&#x1F916;</div>
+            <h4>AI Panel</h4>
+            <p>Claude-powered SOAP notes, referral letters, HPI summaries in French</p>
+          </div>
+          <div class="panel-item">
+            <div class="panel-icon">&#x1F4DD;</div>
+            <h4>Templates</h4>
+            <p>SOAP notes, referrals, prescriptions, follow-up templates</p>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1.2rem; margin-bottom: 16px; color: #ccc;">What It Does</h3>
+        <ul style="color: #8888a0; font-size: 0.95rem; line-height: 2; padding-left: 20px; margin-bottom: 24px;">
+          <li>Patients answer 10 AI-generated follow-up questions about their symptoms</li>
+          <li>AI generates a complete French medical HPI summary with patient confirmation</li>
+          <li>Doctors get pre-written SOAP notes, referral letters, and triage scores</li>
+          <li>Integrates directly with Spruce Health for real patient messaging</li>
+          <li>All AI runs on AWS Bedrock (HIPAA-compliant under signed BAA)</li>
+          <li>Built with React + Vite + Tailwind, Express + TypeScript, AWS RDS PostgreSQL</li>
+        </ul>
+
+        <div class="status-bar">
+          <div class="status-dot"></div>
+          <span>Currently in active development &mdash; not yet publicly available. Powering a real clinic in Quebec.</span>
+        </div>
+
+        <div class="card-actions" style="margin-top: 24px; border: none; padding: 0;">
+          <a href="mailto:instanthpi@gmail.com?subject=Notify%20me%20when%20InstantHPI%20launches" class="btn-notify" style="flex: none; padding: 12px 32px;">Notify Me When It Launches</a>
+          <a href="mailto:instanthpi@gmail.com?subject=Question%20about%20InstantHPI" class="btn-report" style="flex: none; padding: 12px 32px;">Ask a Question</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MEDICAL ═══ -->
+  <section id="medical" class="section" style="padding: 80px 0;">
+    <div class="container">
+      <span class="section-tag">// medical AI</span>
+      <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 12px;">
+        <span class="text-gradient">Medical</span>
+      </h2>
+      <p style="color: #6666a0; font-size: 1rem; margin-bottom: 48px; max-width: 600px;">
+        AI-powered medical education, research, and tools. From clinical pipelines to free health education bots.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;">
+
+        <!-- InstantHPI Pro -->
+        <a href='/pro' style='display: block; padding: 28px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; transition: all 0.3s;'>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(255,61,113,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #ff3d71;">&#x2695;</div>
+            <div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: #e0e0e8;">InstantHPI Pro</h3>
+              <span style="font-size: 0.75rem; color: #ff3d71; font-weight: 600;">RESTRICTED</span>
+            </div>
+          </div>
+          <p style="color: #6666a0; font-size: 0.9rem; line-height: 1.6;">Desktop command center for doctors. AI-generated SOAP notes, patient inbox, referral letters, triage queue.</p>
+        </a>
+
+        <!-- Medical Sequence -->
+        <a href='/medical-sequence' style='display: block; padding: 28px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; transition: all 0.3s;'>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(0,240,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #00f0ff;">&#x1F52C;</div>
+            <div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: #e0e0e8;">The Medical Sequence</h3>
+              <span style="font-size: 0.75rem; color: #00f0ff; font-weight: 600;">PUBLIC</span>
+            </div>
+          </div>
+          <p style="color: #6666a0; font-size: 0.9rem; line-height: 1.6;">10-step AI clinical pipeline. How InstantHPI processes a patient from intake to diagnosis.</p>
+        </a>
+
+        <!-- Free Medical Education Bot — FEATURED -->
+        <a href='/bot' style='display: block; padding: 28px; background: rgba(0,255,136,0.05); border: 2px solid rgba(0,255,136,0.25); border-radius: 16px; transition: all 0.3s; grid-column: 1 / -1;'>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0,255,136,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #00ff88;">&#x2695;</div>
+            <div>
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: #e0e0e8;">InstantHPI Medical Education Bot</h3>
+              <div style="display: flex; gap: 8px; margin-top: 4px;">
+                <span style="font-size: 0.7rem; color: #00ff88; font-weight: 700; background: rgba(0,255,136,0.1); padding: 2px 8px; border-radius: 4px;">FREE</span>
+                <span style="font-size: 0.7rem; color: #00f0ff; font-weight: 700; background: rgba(0,240,255,0.1); padding: 2px 8px; border-radius: 4px;">LIVE NOW</span>
+              </div>
+            </div>
+          </div>
+          <p style="color: #9999c0; font-size: 0.95rem; line-height: 1.7; max-width: 700px;">Free AI-powered medical education for everyone. Describe your symptoms, get a clinical assessment with timeline, reasoning tree, and downloadable documents — SOAP notes, referrals, imaging requisitions, work leave certificates. Available here on the web and on Telegram (@instanthpibot).</p>
+          <div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <span style="padding: 8px 16px; background: rgba(0,255,136,0.15); border: 1px solid rgba(0,255,136,0.3); border-radius: 8px; color: #00ff88; font-size: 0.85rem; font-weight: 600;">Try it now &rarr;</span>
+            <span style="padding: 8px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #6666a0; font-size: 0.8rem;">Also on Telegram: @instanthpibot</span>
+          </div>
+        </a>
+
+        <!-- Telegram Medical Bot -->
+        <a href="https://t.me/instanthpibot" target="_blank" style="display: block; padding: 28px; background: linear-gradient(135deg, rgba(0,136,204,0.08), rgba(0,240,255,0.05)); border: 2px solid rgba(0,136,204,0.3); border-radius: 16px; transition: all 0.3s; grid-column: 1 / -1;">
+          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+            <div style="width: 56px; height: 56px; border-radius: 14px; background: linear-gradient(135deg, #0088cc, #00aaff); display: flex; align-items: center; justify-content: center;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.4rem; font-weight: 800; color: #e0e0e8;">InstantHPI Telegram Bot</h3>
+              <div style="display: flex; gap: 8px; margin-top: 4px;">
+                <span style="font-size: 0.7rem; color: #00ff88; font-weight: 700; background: rgba(0,255,136,0.1); padding: 2px 8px; border-radius: 4px;">FREE</span>
+                <span style="font-size: 0.7rem; color: #0088cc; font-weight: 700; background: rgba(0,136,204,0.15); padding: 2px 8px; border-radius: 4px;">TELEGRAM</span>
+                <span style="font-size: 0.7rem; color: #ff3d71; font-weight: 700; background: rgba(255,61,113,0.1); padding: 2px 8px; border-radius: 4px;">AI DOCTOR</span>
+              </div>
+            </div>
+          </div>
+          <p style="color: #9999c0; font-size: 0.95rem; line-height: 1.7; max-width: 700px; margin-bottom: 16px;">An autonomous AI medical bot on Telegram. Describe any symptom or complaint &mdash; the bot generates a full clinical assessment: differential diagnosis, reasoning tree, treatment plan, and downloadable documents (SOAP notes, referral letters, imaging requisitions, work certificates). Powered by Claude (Anthropic). Available 24/7, no login required.</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 20px;">
+            <div style="padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; text-align: center;">
+              <div style="font-size: 1.1rem; font-weight: 700; color: #00f0ff;">24/7</div>
+              <div style="font-size: 0.7rem; color: #666; margin-top: 2px;">Always Available</div>
+            </div>
+            <div style="padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; text-align: center;">
+              <div style="font-size: 1.1rem; font-weight: 700; color: #00f0ff;">90%</div>
+              <div style="font-size: 0.7rem; color: #666; margin-top: 2px;">Pre-Consult Automated</div>
+            </div>
+            <div style="padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; text-align: center;">
+              <div style="font-size: 1.1rem; font-weight: 700; color: #00f0ff;">Claude</div>
+              <div style="font-size: 0.7rem; color: #666; margin-top: 2px;">Anthropic AI</div>
+            </div>
+            <div style="padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; text-align: center;">
+              <div style="font-size: 1.1rem; font-weight: 700; color: #00f0ff;">Free</div>
+              <div style="font-size: 0.7rem; color: #666; margin-top: 2px;">No Sign-Up</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <span style="padding: 10px 20px; background: linear-gradient(135deg, #0088cc, #00aaff); border-radius: 8px; color: #fff; font-size: 0.9rem; font-weight: 700;">Open in Telegram &rarr;</span>
+            <span style="padding: 10px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #6666a0; font-size: 0.85rem;">@instanthpibot</span>
+          </div>
+        </a>
+
+        <!-- AI vs Doctors -->
+        <a href='/ai-vs-doctors' style='display: block; padding: 28px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; transition: all 0.3s;'>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(123,97,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #7b61ff;">&#x1F4CA;</div>
+            <div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: #e0e0e8;">AI vs Doctors</h3>
+              <span style="font-size: 0.75rem; color: #7b61ff; font-weight: 600;">RESEARCH</span>
+            </div>
+          </div>
+          <p style="color: #6666a0; font-size: 0.9rem; line-height: 1.6;">What the research says about AI diagnostic accuracy vs human physicians. The data is clear.</p>
+        </a>
+
+        <!-- The Inevitable Future -->
+        <a href='/the-inevitable-future' style='display: block; padding: 28px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; transition: all 0.3s;'>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(255,170,0,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #ffaa00;">&#x26A1;</div>
+            <div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: #e0e0e8;">The Inevitable Future</h3>
+              <span style="font-size: 0.75rem; color: #ffaa00; font-weight: 600;">ARTICLE</span>
+            </div>
+          </div>
+          <p style="color: #6666a0; font-size: 0.9rem; line-height: 1.6;">AI exposure of the US job market. Which industries are next and what it means for healthcare.</p>
+        </a>
+
+        <!-- Global Impact -->
+        <a href='/impact' style='display: block; padding: 28px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; transition: all 0.3s;'>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(0,240,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #00f0ff;">&#x1F30D;</div>
+            <div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: #e0e0e8;">Global Impact</h3>
+              <span style="font-size: 0.75rem; color: #00f0ff; font-weight: 600;">DATA</span>
+            </div>
+          </div>
+          <p style="color: #6666a0; font-size: 0.9rem; line-height: 1.6;">The numbers behind InstantHPI's potential global impact on healthcare access and efficiency.</p>
+        </a>
+
+        <!-- The Journey -->
+        <a href='/journey' style='display: block; padding: 28px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; transition: all 0.3s;'>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #aaa;">&#x1F4D6;</div>
+            <div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: #e0e0e8;">The Journey</h3>
+              <span style="font-size: 0.75rem; color: #aaa; font-weight: 600;">DIARY</span>
+            </div>
+          </div>
+          <p style="color: #6666a0; font-size: 0.9rem; line-height: 1.6;">Transparency diary. Every step documented, from first prompt to live product.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MANIFESTO ═══ -->
+  <section class="manifesto reveal">
+    <div class="container">
+      <span class="section-tag">// the philosophy</span>
+      <blockquote>
+        "Every project on this page was built by <em>one person directing AI</em>. No team. No funding. No permission. Just an idea, a terminal, and Claude. The system said you need a team of 10 and $500K. We said <em>no</em>."
+      </blockquote>
+      <p class="author">&mdash; Carlos Faviel Font, 2026</p>
+
+      <div style="max-width: 700px; margin: 40px auto 0; text-align: left; color: #6666a0; font-size: 0.9rem; line-height: 1.8;">
+        <p style="margin-bottom: 16px;">Since June 2024, I've been working <strong style="color:#aaa;">10+ hours a day with AI</strong>. Every single day. I started by studying AI automation with <em>The Real World</em>, learned the fundamentals of agentic workflows and AI-powered development &mdash; then took my own flight.</p>
+        <p style="margin-bottom: 16px;">I left the course and began building on my own, with a special focus on <strong style="color:#aaa;">agentic AI and automation</strong>. Every project here is the result of that obsession: directing AI to ship real products across medicine, spirituality, language learning, trucking, civic action, and more.</p>
+        <p style="margin-bottom: 24px;">No investors. No co-founders. No CS degree. Just relentless iteration, one prompt at a time.</p>
+        <p style="color: #444; font-size: 0.8rem;">
+          <strong style="color:#555;">Carlos Faviel Font</strong> &mdash; Creator &amp; Director<br>
+          <strong style="color:#555;">Claude</strong> (Anthropic) &mdash; AI Development Partner<br>
+          <strong style="color:#555;">Gemini / Nano Banana 2</strong> (Google) &mdash; AI Image Generation
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 8px; font-size: 1.1rem;">
+        <span class="text-gradient" style="font-weight: 700;">InstantHPI</span>
+      </p>
+      <p>Built with AI. All of it. &mdash; <a href="mailto:instanthpi@gmail.com">instanthpi@gmail.com</a></p>
+      <p style="margin-top: 12px; color: #333;">&copy; 2026 Carlos Faviel Font. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ═══ SCROLL REVEAL ═══ -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Lightbox — click any card image to expand
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = '<img src="" alt="">';
+    document.body.appendChild(lightbox);
+    const lbImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.card-image').forEach(img => {
+      img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lightbox.classList.add('active');
+      });
+    });
+    lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

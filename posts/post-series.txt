@@ -1,0 +1,75 @@
+INSTANTHPI 4CHAN POST SERIES — each post follows the last, each with its image.
+Post them as replies in your own thread, spaced out as the thread moves.
+Reply to anons between series posts. Short, factual, no marketing voice.
+================================================================================
+
+POST 2 (image: img-02-problem.png)
+----------------------------------
+The numbers, since someone will ask. WHO says 23 doctors per 10,000
+people is minimum adequate. Sub-Saharan Africa averages 2.9. South
+Sudan: 0.04 — that is 250,000 patients per doctor. Somalia 0.2,
+Burundi 0.3, Niger 0.4. Below 1 per 10,000 there is no reasonable
+access to healthcare, period. That's who this is built for first.
+If you're in a rich country and your system still refused you —
+you're covered too. That's the second group.
+
+POST 3 (image: img-03-how.png)
+------------------------------
+How it works. You talk to the bot, it walks you through the same
+18-question structured intake (OPQRST) every doctor is trained on.
+Then the case goes through API calls to MULTIPLE ai models that
+debate it and only answer through consensus — disagreement gets
+surfaced, not hidden. You get a clinical summary (HPI) you can hand
+to any doctor on earth and be understood in 2 minutes. The verdict
+always says it plainly: these are the answers of multiple AIs —
+"they offered and recommended" — never pretending to be one human.
+Your identity stays separate from the AI calls. De-identified
+information only.
+
+POST 4 (image: img-04-roadmap.png)
+----------------------------------
+Roadmap, released today:
+1. NOW — free bots, multi-AI consensus (live)
+2. MEMORY — upload your whole history, chronicity index of every
+   conversation, AIs get full prior-visit context, a dossier-AI
+   keeps the structure like a true medical record. One app.
+3. LOCAL EXE — your record runs on YOUR machine, isolated, multiple
+   patients, remembers encounters. Only de-identified data ever
+   leaves for the AI council calls.
+4. CHRONIC CARE — COPD/HTN/DM medication adjustment recommendations
+   decided by an AI council, physician confirms where one exists.
+Everything goes to GitHub. Fork it. This is a group effort now.
+
+POST 5 (image: img-05-honest.png)
+---------------------------------
+Honest limits, so nobody has to dig for them:
+- not for emergencies. chest pain = call emergency services
+- not a doctor replacement. see a physical doctor whenever possible
+- single AI can hallucinate -> that's why council + consensus
+- models age -> pipeline is model-agnostic, engines get swapped
+- I don't blindly trust the products myself. What I trust: AI is
+  10,000,000x better than an untrained person guessing alone.
+This runs for as long as there is money and capacity to run it.
+I'm one drained board-certified family doctor. It's in your hands:
+get involved or it dies. instanthpi.ai/donations
+
+POST 6 (image: img-06-doctors.png)
+----------------------------------
+For the doctors lurking: I know the 2AM charting mountain. I
+automated my own practice out of it — intake, synthesis, results,
+replies. The Physicians Association is $100/month: it keeps
+InstantHPI free for physicians, finances the roadmap and app
+development, and members shape what gets built next. You automate
+your work; you reclaim your life.
+buy.stripe.com/4gMcN61u6fehf4I3yfbMQ44
+
+REPLY DOCTRINE
+--------------
+- every donation/URL question -> instanthpi.ai/donations
+- "proof it works?" -> tell them to run the bot live in the thread
+  and post the output. the demo is the argument.
+- hostility -> answer the technical core, ignore the bait
+- "data harvesting?" -> de-identified API calls, no PHI on our
+  pages, roadmap phase 3 is fully local on your machine
+- every thread posted -> node add-thread.cjs "<url>" "<title>"
+  (appends to the hash-chained ledger at instanthpi.ai/4chan)
