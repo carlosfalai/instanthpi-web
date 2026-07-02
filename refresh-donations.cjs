@@ -31,7 +31,7 @@ const UNLOCK_AT = 1000;
 const SITE_DIR = path.join(__dirname, 'site');
 const JSON_PATH = path.join(SITE_DIR, 'donations', 'donations.json');
 const COURSES_PATH = path.join(SITE_DIR, 'courses', 'courses.json');
-const FILES = ['/donations/index.html', '/donations/donations.json', '/4chan/index.html', '/4chan/threads.json', '/courses/index.html', '/courses/courses.json', '/index.html', '/story.html', '/timeline-data.js'];
+const FILES = ['/donations/index.html', '/donations/donations.json', '/4chan/index.html', '/4chan/threads.json', '/courses/index.html', '/courses/courses.json', '/index.html', '/story.html', '/timeline-data.js', '/law/index.html'];
 // paths REMOVED from the site on every deploy (internal material + license-association mentions)
 const OMIT = p => p.startsWith('/grants/') || /^\/cdp-[^/]+\.js$/.test(p);
 
