@@ -1,0 +1,13 @@
+{
+  "updated": null,
+  "unlock_at": 1000,
+  "modules": {
+    "m1": { "sold": 0, "unlocked": false },
+    "m2": { "sold": 0, "unlocked": false },
+    "m3": { "sold": 0, "unlocked": false },
+    "m4": { "sold": 0, "unlocked": false },
+    "m5": { "sold": 0, "unlocked": false },
+    "m6": { "sold": 0, "unlocked": false },
+    "m7": { "sold": 0, "unlocked": false }
+  }
+}

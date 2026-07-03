@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Physicians — Automate your practice · InstantHPI</title>
+<meta name="description" content="We automate medical practices with AI. Tell us about your practice; we design a plan and send it to you. Consultations available. From light workflow automation to a fully AI-run front office.">
+<style>
+  :root{--ink:#0b0e12;--ink2:#11161d;--panel:#141b24;--line:#243040;--brass:#b08d57;--brass-bright:#d4af7a;--text:#d7dde5;--dim:#8b96a5;--good:#7fb069}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--ink);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.65}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  .hero{padding:66px 0 46px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:'Courier New',monospace;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+  h1{font-size:clamp(28px,5vw,44px);line-height:1.13;font-weight:normal;margin-bottom:18px}
+  h1 em{color:var(--brass-bright);font-style:italic}
+  .lead{font-size:18px;color:var(--dim);max-width:660px;margin-bottom:26px}
+  .lead strong{color:var(--text)}
+  section{padding:48px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:24px}
+  .tier{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:22px;margin-bottom:14px}
+  .tier h3{font-size:18px;font-weight:normal;margin-bottom:6px}
+  .tier h3 .lvl{font-family:'Courier New',monospace;color:var(--brass);font-size:13px;letter-spacing:.12em;margin-right:10px}
+  .tier p{font-size:15px;color:var(--dim);max-width:700px}
+  .tier .who{font-family:'Courier New',monospace;font-size:12px;color:var(--brass-bright);margin-top:8px}
+  form{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:26px;max-width:720px}
+  label{display:block;font-family:'Courier New',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--brass-bright);margin:16px 0 6px}
+  input,select,textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:3px;color:var(--text);font-family:Georgia,serif;font-size:15px;padding:11px 12px}
+  textarea{min-height:90px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brass)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:600px){.row{grid-template-columns:1fr}}
+  .submit{margin-top:22px;background:var(--brass);color:#0b0e12;border:none;font-family:'Courier New',monospace;font-weight:bold;letter-spacing:.08em;padding:15px 34px;border-radius:3px;font-size:15px;text-transform:uppercase;cursor:pointer}
+  .submit:hover{background:var(--brass-bright)}
+  .fineprint{font-family:'Courier New',monospace;font-size:12px;color:var(--dim);margin-top:14px;line-height:1.6}
+  footer{padding:34px 0 60px;font-size:12px;color:var(--dim);font-family:'Courier New',monospace;line-height:1.8}
+  footer a{color:var(--brass)}
+</style>
+</head>
+<body>
+
+<div style="background:#c9704a;color:#0b0e12;font-family:'Courier New',monospace;font-size:12.5px;text-align:center;padding:9px 16px;letter-spacing:.03em;line-height:1.5">
+  <b>FOR PHYSICIANS.</b> This is a professional automation service delivered by a board-certified family doctor with hands-on AI-automation expertise — not an AI-generated consult. Your practice details are reviewed by a person.
+</div>
+
+<nav style="background:#0b0e12;border-bottom:1px solid #243040;font-family:'Courier New',monospace;font-size:13px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px;padding:11px 12px">
+  <a href="/" style="color:#d4af7a;font-weight:bold;text-decoration:none;padding:6px 12px;letter-spacing:.12em">INSTANTHPI</a>
+  <span style="color:#243040;padding:6px 2px">|</span>
+  <a href="https://t.me/InstantHPIBot" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Free Bots</a>
+  <a href="/donations/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Donations</a>
+  <a href="/courses/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Courses</a>
+  <a href="/physicians/" style="color:#d4af7a;text-decoration:none;padding:6px 12px">For Physicians</a>
+  <a href="/law/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Case Check</a>
+  <a href="/4chan/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Ledger</a>
+  <a href="https://github.com/carlosfalai/free-universal-healthcare-ai" style="color:#d7dde5;text-decoration:none;padding:6px 12px">GitHub</a>
+</nav>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">Practice automation · Consultation · Done-for-you plan</div>
+    <h1>Let us automate your practice — <em>and hand you your life back.</em></h1>
+    <p class="lead">We automate medical practices with AI: intake, history-taking, results routing, patient messaging, forms, documentation. These systems exist because a board-certified family doctor built them to escape his own 2 AM charting mountain. <strong>Tell us about your practice below. We design an automation plan tailored to how you actually want to work, and send it to you.</strong> Consultations available.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>The levels of automation — pick where you want to land</h2>
+
+    <div class="tier">
+      <h3><span class="lvl">LEVEL 0</span>Manual (where most practices are)</h3>
+      <p>You and your staff do everything by hand. Nothing wrong with it — but every form, every result, every message is human time.</p>
+    </div>
+    <div class="tier">
+      <h3><span class="lvl">LEVEL 1</span>Assisted — AI drafts, you approve</h3>
+      <p>AI prepares intake summaries, drafts patient replies, pre-fills forms and referral letters. You review and send. The fastest quality-of-life win; nothing goes out without you.</p>
+      <div class="who">Best for: cautious practices, first step, high-touch specialties</div>
+    </div>
+    <div class="tier">
+      <h3><span class="lvl">LEVEL 2</span>Structured — the intake &amp; results engine</h3>
+      <p>Patients complete a conversational AI intake before they arrive; results are auto-routed and each one gets a drafted patient message (normal or abnormal). Your worklist shows only what actually needs you, deduplicated, never recycled.</p>
+      <div class="who">Best for: high-volume primary care, walk-in, telehealth</div>
+    </div>
+    <div class="tier">
+      <h3><span class="lvl">LEVEL 3</span>Council — multi-AI reasoning with citations</h3>
+      <p>Cases run through multiple AI models that debate and reach consensus, each position citing studies and guidelines. You get a decision-ready card; you confirm. Deterministic templates, fail-closed — no chat drift.</p>
+      <div class="who">Best for: complex panels, chronic disease management, second-opinion workflows</div>
+    </div>
+    <div class="tier">
+      <h3><span class="lvl">LEVEL 4</span>Orchestrated — the full carousel</h3>
+      <p>All your intake channels (messaging, fax, email, rosters) feed one pipeline: scan → actionable rule → gated cards → your decision → an executor that carries it out and logs everything, idempotently. You swipe; the practice runs.</p>
+      <div class="who">Best for: clinics ready to scale throughput without adding staff</div>
+    </div>
+    <div class="tier">
+      <h3><span class="lvl">LEVEL 5</span>Autonomous front office (physician-supervised)</h3>
+      <p>The routine runs itself under your standing rules; you supervise exceptions. The rule never changes: the work is AI, the verification is 100% yours. This is the frontier — we build toward it with you, safely.</p>
+      <div class="who">Best for: physicians who want maximum leverage and are comfortable owning the guardrails</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Tell us about your practice</h2>
+    <p style="color:var(--dim);margin-bottom:22px;max-width:700px">Fill this in. It goes straight to Dr. Font (cff@centremedicalfont.ca), who reviews it personally and replies with a proposed plan and the automation level that fits — or books a consultation.</p>
+    <form action="https://formsubmit.co/cff@centremedicalfont.ca" method="POST">
+      <input type="hidden" name="_subject" value="New physician automation request — InstantHPI">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="text" name="_honey" style="display:none">
+
+      <div class="row">
+        <div><label>Your name</label><input type="text" name="Name" required></div>
+        <div><label>Email (for our reply)</label><input type="email" name="Email" required></div>
+      </div>
+      <div class="row">
+        <div><label>Specialty / type of practice</label><input type="text" name="Specialty" placeholder="e.g. family medicine, walk-in, dermatology" required></div>
+        <div><label>Country / region</label><input type="text" name="Region" placeholder="e.g. Quebec, Canada"></div>
+      </div>
+      <div class="row">
+        <div><label>Patients per day (approx.)</label><input type="text" name="Volume" placeholder="e.g. 25"></div>
+        <div><label>Staff size</label><input type="text" name="Staff" placeholder="e.g. solo + 1 secretary"></div>
+      </div>
+      <label>EMR / systems you use today</label>
+      <input type="text" name="EMR" placeholder="e.g. Spruce, a specific EMR, paper, fax">
+
+      <label>How much automation do you want?</label>
+      <select name="Desired automation level">
+        <option>Level 1 — AI drafts, I approve everything</option>
+        <option>Level 2 — structured intake &amp; results engine</option>
+        <option>Level 3 — multi-AI council with citations</option>
+        <option>Level 4 — full orchestrated pipeline (carousel)</option>
+        <option>Level 5 — autonomous front office, I supervise</option>
+        <option>Not sure — recommend what fits me</option>
+      </select>
+
+      <label>Your practice style — how do you like to work?</label>
+      <textarea name="Practice style" placeholder="e.g. I want to keep every clinical decision but drop all the paperwork; or: I want the front office fully automated so I only see the room."></textarea>
+
+      <label>Biggest time-sinks / what you most want to automate</label>
+      <textarea name="Pain points" placeholder="e.g. results follow-up, forms, refills, referral letters, after-hours messages, no-show management"></textarea>
+
+      <label>Anything else / questions</label>
+      <textarea name="Notes"></textarea>
+
+      <button class="submit" type="submit">Send to Dr. Font →</button>
+      <p class="fineprint">Do NOT include any patient-identifying information in this form — describe your practice, not patients. Your details are reviewed by a physician, not an AI, and used only to design your automation plan. We reply from cff@centremedicalfont.ca.</p>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why us</h2>
+    <p style="color:var(--dim);max-width:700px">We are not a vendor selling you a dashboard. We are a working physician who automated his own practice end-to-end and open-sourced the engine. You get plans grounded in real clinical workflow — de-identified AI processing, physician-owned verification, deterministic pipelines that fail closed — not hype. Prefer to learn it yourself? The same systems are taught, copy-pastable, in <a href="/courses/" style="color:var(--brass)">the courses</a>. Want it built for you? Use the form.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Professional automation-consulting service. This page is not medical advice and creates no doctor-patient relationship.
+    We help physicians build compliant, physician-supervised AI workflows; you remain responsible for clinical decisions and for your
+    jurisdiction's privacy law. Reach us directly: <a href="mailto:cff@centremedicalfont.ca">cff@centremedicalfont.ca</a> ·
+    <a href="/donations/">support the free tools</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses — AI Automation in Healthcare · InstantHPI</title>
+<meta name="description" content="Learn AI automation in healthcare from the history of the InstantHPI project. $35 per module, all copy-pastable. Buy in bulk and every extra copy goes free to someone who cannot pay.">
+<style>
+  :root{
+    --ink:#0b0e12; --ink2:#11161d; --panel:#141b24; --line:#243040;
+    --brass:#b08d57; --brass-bright:#d4af7a; --text:#d7dde5; --dim:#8b96a5;
+    --good:#7fb069;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--ink);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.65}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--line);padding:20px 0;position:sticky;top:0;background:rgba(11,14,18,.92);backdrop-filter:blur(6px);z-index:10}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .brand{font-family:'Courier New',monospace;letter-spacing:.18em;font-size:14px;color:var(--brass);text-transform:uppercase;text-decoration:none}
+  .brand b{color:var(--text)}
+  header a.nav{font-family:'Courier New',monospace;font-size:12px;color:var(--dim);text-decoration:none;letter-spacing:.1em;text-transform:uppercase}
+  header a.nav:hover{color:var(--brass-bright)}
+  .hero{padding:70px 0 46px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:'Courier New',monospace;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+  h1{font-size:clamp(28px,5vw,42px);line-height:1.15;font-weight:normal;margin-bottom:18px}
+  h1 em{color:var(--brass-bright);font-style:italic}
+  .lead{font-size:18px;color:var(--dim);max-width:660px;margin-bottom:8px}
+  .lead strong{color:var(--text)}
+  .rule{background:var(--ink2);border:1px solid var(--brass);border-radius:4px;padding:18px 22px;margin-top:26px;max-width:660px}
+  .rule p{font-size:16px}
+  .rule .tag{font-family:'Courier New',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-bright);display:block;margin-bottom:8px}
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  .mod{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:26px;margin-bottom:18px}
+  .mod.unlocked{border-color:var(--good)}
+  .mod-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+  .mod h3{font-size:19px;font-weight:normal}
+  .mod h3 .num{font-family:'Courier New',monospace;color:var(--brass);font-size:13px;letter-spacing:.15em;margin-right:10px}
+  .price{font-family:'Courier New',monospace;font-size:14px;color:var(--brass-bright);white-space:nowrap}
+  .price.free{color:var(--good)}
+  .mod p{font-size:15px;color:var(--dim);margin-bottom:14px;max-width:680px}
+  .mod ul{margin:0 0 16px 18px;color:var(--dim);font-size:14px}
+  .mod li{margin-bottom:4px}
+  .mod li b{color:var(--text);font-weight:normal}
+  .progress{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .bar{flex:1;height:6px;background:var(--ink);border:1px solid var(--line);border-radius:3px;overflow:hidden;max-width:340px}
+  .bar i{display:block;height:100%;background:var(--brass);width:0%}
+  .count{font-family:'Courier New',monospace;font-size:12px;color:var(--dim);white-space:nowrap}
+  .buy{display:inline-block;background:var(--brass);color:#0b0e12;text-decoration:none;font-family:'Courier New',monospace;font-weight:bold;letter-spacing:.08em;padding:11px 24px;border-radius:3px;font-size:13px;text-transform:uppercase}
+  .buy:hover{background:var(--brass-bright)}
+  .buy.free{background:var(--good)}
+  .note{font-family:'Courier New',monospace;font-size:12px;color:var(--dim);margin-top:10px}
+  footer{padding:36px 0 60px;font-size:12px;color:var(--dim);font-family:'Courier New',monospace;line-height:1.8}
+  footer a{color:var(--brass)}
+  #thanks{display:none;background:var(--good);color:#0b0e12;padding:14px 24px;text-align:center;font-family:'Courier New',monospace;font-size:14px}
+</style>
+</head>
+<body>
+
+<div style="background:#c9704a;color:#0b0e12;font-family:'Courier New',monospace;font-size:12.5px;text-align:center;padding:9px 16px;letter-spacing:.03em;line-height:1.5">
+  <b>AI-AUTOMATED EDUCATION.</b> These are self-paced technical courses. The tools they teach produce AI-generated output that is <b>not reviewed by a human</b> — that limitation is part of what you learn to handle. Not medical or legal advice.
+</div>
+
+<div id="thanks">Payment received. Your module arrives at your email within 24 hours — and any extra copies you bought will be handed free to learners who can't pay.</div>
+
+<nav style="background:#0b0e12;border-bottom:1px solid #243040;font-family:'Courier New',monospace;font-size:13px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px;padding:11px 12px">
+  <a href="/" style="color:#d4af7a;font-weight:bold;text-decoration:none;padding:6px 12px;letter-spacing:.12em">INSTANTHPI</a>
+  <span style="color:#243040;padding:6px 2px">|</span>
+  <a href="https://t.me/InstantHPIBot" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Free Bots</a>
+  <a href="/donations/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Donations</a>
+  <a href="/courses/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Courses</a>
+  <a href="/physicians/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">For Physicians</a>
+  <a href="/law/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Case Check</a>
+  <a href="/4chan/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Ledger</a>
+  <a href="https://github.com/carlosfalai/free-universal-healthcare-ai" style="color:#d7dde5;text-decoration:none;padding:6px 12px">GitHub</a>
+  <a href="https://github.com/carlosfalai/free-universal-healthcare-ai/blob/master/MODELS.md" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Which AI?</a>
+</nav>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><b>INSTANT</b>HPI / COURSES</a>
+    <a class="nav" href="/donations/">donations →</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">AI Automation in Healthcare · from the real project history</div>
+    <h1>Learn it the way it was actually built — <em>copy-pastable, all of it.</em></h1>
+    <p class="lead">Six modules drawn from the real history of the InstantHPI project — a board-certified family doctor automating his own practice, then giving it away. <strong>Every module contains the copy-pastable stuff:</strong> the code, the prompts, the exact commands. Every lesson follows the same shape: <strong>what the system is → what structure it has → and at the end, the exact directives you paste into Claude Code to recreate it</strong> — fully sanitized: no patient information, no secrets, no API keys, ever.</p>
+    <div class="rule">
+      <span class="tag">The sponsorship rule</span>
+      <p>Every module costs <strong>$35</strong>. Have money? <strong>Buy in bulk</strong> — set the quantity at checkout, keep one copy, and every extra copy is handed free to someone broke who wants the info. Donations work the same way: money in from those who have it, modules out to those who don't. <strong>Broke?</strong> <a href="mailto:cff@centremedicalfont.ca?subject=Sponsored%20module%20request" style="color:var(--brass-bright)">Email us which module you need</a> — sponsored copies go out as they come in.</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap" id="modules">
+
+    <div class="mod" data-m="m1">
+      <div class="mod-head">
+        <h3><span class="num">MODULE 1</span>Security &amp; Education</h3>
+        <span class="price">$35</span>
+      </div>
+      <p>The anchor module. How to secure health data in every deployment mode — and how to teach it.</p>
+      <ul>
+        <li><b>Pseudonym identifiers:</b> the Google Sheets generator + JS equivalent; only the code travels, identity stays in your sheet</li>
+        <li><b>Local-first:</b> keep everything on-device like paper — when you need nothing else</li>
+        <li><b>Prebuilt verifiable systems:</b> Spruce Health, verifiable EMRs — when to lean on them</li>
+        <li><b>De-identification before every API call</b> + BAA (AWS Bedrock) for working physicians</li>
+      </ul>
+      <a class="buy" href="https://buy.stripe.com/5kQ3cw3Ce4zDbSw3yfbMQ45">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+
+    <div class="mod" data-m="m2">
+      <div class="mod-head">
+        <h3><span class="num">MODULE 2</span>The InstantHPI Story</h3>
+        <span class="price">$35</span>
+      </div>
+      <p>The history of the AI project, decision by decision: what worked, what died, and why — from one overloaded practice to bots serving anyone on Earth.</p>
+      <ul>
+        <li><b>The timeline:</b> every pivot with the reasoning at the time</li>
+        <li><b>The failures:</b> what we shipped that was slop, and how we caught it</li>
+        <li><b>The templates and iteration prompts</b> that survived — copy-pastable</li>
+      </ul>
+      <a class="buy" href="https://buy.stripe.com/bJe14o0q2gil5u87OvbMQ46">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+
+    <div class="mod" data-m="m3">
+      <div class="mod-head">
+        <h3><span class="num">MODULE 3</span>Build the Free Healthcare Bot with Claude Code</h3>
+        <span class="price">$35</span>
+      </div>
+      <p>The guided version of the open-source kit: rebuild the exact Telegram bot, step by step, with every command ready to paste.</p>
+      <ul>
+        <li><b>BotFather → running bot in 15 minutes</b> — exact prompts for Claude Code (use Sonnet 5)</li>
+        <li><b>The 18-question OPQRST intake</b> and the state machine, explained line by line</li>
+        <li><b>The chat images</b> and how to regenerate them with your own branding</li>
+      </ul>
+      <a class="buy" href="https://buy.stripe.com/5kQfZigp0d699Ko2ubbMQ47">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+
+    <div class="mod" data-m="m4">
+      <div class="mod-head">
+        <h3><span class="num">MODULE 4</span>The Multi-AI Council</h3>
+        <span class="price">$35</span>
+      </div>
+      <p>The security layer that makes AI medicine defensible: multiple models debating the same case and answering only through consensus.</p>
+      <ul>
+        <li><b>The council pattern:</b> independent answers → debate → consensus secretary — full prompts included</li>
+        <li><b>Evidence discipline:</b> forcing each AI to cite studies and guidelines for its positions</li>
+        <li><b>Disagreement surfacing</b> and the "they offered and recommended" voice, in the patient's language</li>
+      </ul>
+      <a class="buy" href="https://buy.stripe.com/14A6oIc8K9TXaOs2ubbMR00">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+
+    <div class="mod" data-m="m5">
+      <div class="mod-head">
+        <h3><span class="num">MODULE 5</span>Automating a Medical Practice</h3>
+        <span class="price">$35</span>
+      </div>
+      <p>For physicians: the actual automations that reclaimed a working doctor's life — intake, results, replies, documents.</p>
+      <ul>
+        <li><b>Conversational intake</b> that skips what the chart already knows</li>
+        <li><b>Results routing:</b> every result owes the patient a message — normal or abnormal</li>
+        <li><b>Deterministic pipelines over chat drift:</b> locked templates, fail-closed rendering</li>
+        <li><b>Bedrock BAA setup</b> for real patient data, end to end</li>
+      </ul>
+      <a class="buy" href="https://buy.stripe.com/bJe9AUb4Gd6909O6KrbMR01">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+
+    <div class="mod" data-m="m6">
+      <div class="mod-head">
+        <h3><span class="num">MODULE 6</span>The Economics</h3>
+        <span class="price">$35</span>
+      </div>
+      <p>Healthcare AI at near-zero cost — the numbers that make free universal care possible.</p>
+      <ul>
+        <li><b>Cost per consultation</b> broken down: OCR, de-identification, council debate, batch discounts</li>
+        <li><b>Persona lanes:</b> patient $0 → prepper $5 → builder $50 → physician $300 → clinic — who funds whom</li>
+        <li><b>Model selection:</b> when DeepSeek-class, when Haiku, when Sonnet 5, when a council of all three</li>
+      </ul>
+      <a class="buy" href="https://buy.stripe.com/dRm4gA4Gi0jne0E2ubbMR02">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+
+    <div class="mod" data-m="m7">
+      <div class="mod-head">
+        <h3><span class="num">MODULE 7</span>Prepping with InstantHPI — Post-Apocalyptic Healthcare</h3>
+        <span class="price">$35</span>
+      </div>
+      <p>When there is no grid, no pharmacy, and no doctor within reach: run physician-grade clinical reasoning entirely offline, on hardware you own.</p>
+      <ul>
+        <li><b>The offline stack:</b> local models (Ollama-class) on a laptop or mini-PC, powered by solar/battery — exact hardware tiers by budget</li>
+        <li><b>Your medical record, no cloud:</b> the local-first dossier — multiple family members, remembered encounters, paper-parity backups</li>
+        <li><b>The OPQRST intake without a network:</b> the same 18-question engine the bots use, running air-gapped</li>
+        <li><b>Triage doctrine:</b> what AI guidance is worth when escalation isn't an option — red flags, improvised care limits, when to move</li>
+        <li><b>Copy-pastable:</b> the Claude Code directives to build the whole kit before you need it</li>
+      </ul>
+      <a class="buy" href="https://buy.stripe.com/5kQ4gA6OqaY16yc1q7bMR03">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <h2 style="font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:12px">— Tool modules — one per tool</h2>
+    <p style="color:var(--dim);margin-bottom:24px;max-width:700px">Each tool gets its own module: what it is, its structure, and the Claude Code directives to rebuild it — plus exactly what its output looks like.</p>
+    
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T1</span>The Intake Bot</h3><span class="price">$35</span></div>
+      <p>The Telegram OPQRST engine: 18-question state machine, skips what it already knows, correction loop.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: structured intake JSON + HPI draft</p>
+      <a class="buy" href="https://buy.stripe.com/3cIcN63Ce5DHg8Mc4LbMR04">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T2</span>The Pseudonym Generator</h3><span class="price">$35</span></div>
+      <p>Identity split via Google Sheets formula or 3-line JS. Only the code travels with the case.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: alphanumeric code + a mapping row that never leaves your sheet</p>
+      <a class="buy" href="https://buy.stripe.com/9B6dRa5Kmc252hW9WDbMR05">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T3</span>The De-Identifier</h3><span class="price">$35</span></div>
+      <p>Strips names, DOBs, addresses, ID numbers before any API call.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: clean case text — PHI-free</p>
+      <a class="buy" href="https://buy.stripe.com/00w7sM6Oq5DH7Cg1q7bMR06">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T4</span>Document Router & OCR</h3><span class="price">$35</span></div>
+      <p>Faxes, PDFs and scans become page-indexed text with low-confidence pages flagged.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: searchable text bundle per document</p>
+      <a class="buy" href="https://buy.stripe.com/5kQ5kE1u63vz5u8gl1bMR07">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T5</span>The Multi-AI Council</h3><span class="price">$35</span></div>
+      <p>Independent model answers → debate → consensus secretary; every position must cite evidence.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: consensus report + disagreement log</p>
+      <a class="buy" href="https://buy.stripe.com/6oU8wQ0q2ead09O0m3bMR08">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T6</span>Card Builder & Serve-Time Gate</h3><span class="price">$35</span></div>
+      <p>Locked-spec decision cards, live re-verified before showing; handled cases auto-evict.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: a decision-ready case card</p>
+      <a class="buy" href="https://buy.stripe.com/6oU3cwgp06HLaOsd8PbMR09">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T7</span>Work-Ledger & Executor</h3><span class="price">$35</span></div>
+      <p>Append-only state machine CREATED→DECIDED→EXECUTING→DONE; idempotent, source-faithful execution.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: audit log + the executed action</p>
+      <a class="buy" href="https://buy.stripe.com/28E3cw8Wyc25cWA4CjbMR0a">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">TOOL T8</span>The Publishing Stack</h3><span class="price">$35</span></div>
+      <p>Static pages, git, the deploy babysitter, hash-chained ledgers, Stripe walls.</p>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">OUTPUT: live pages + verifiable JSON ledgers</p>
+      <a class="buy" href="https://buy.stripe.com/fZu8wQa0C4zD8Gk6KrbMR0b">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 style="font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:12px">— Sequence modules — where each tool enters</h2>
+    <p style="color:var(--dim);margin-bottom:24px;max-width:700px">A sequence module teaches a whole pipeline: which tool module enters at which step, to do what, what it hands to the next step, and what the final output looks like.</p>
+    
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">SEQUENCE S1</span>Patient → Report</h3><span class="price">$35</span></div>
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;font-family:'Courier New',monospace;font-size:12.5px;margin-bottom:14px;min-width:520px"><tr><th style="text-align:left;color:var(--brass);padding-right:10px">#</th><th style="text-align:left;color:var(--brass);padding-right:14px">module</th><th style="text-align:left;color:var(--brass);padding-right:14px">enters to do</th><th style="text-align:left;color:var(--brass)">hands off</th></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">1</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T1 Intake Bot</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">collects the OPQRST story, one question at a time</td><td style="color:var(--good);padding:6px 0;vertical-align:top">intake JSON</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">2</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T2 Pseudonym</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">splits identity from the case before anything leaves</td><td style="color:var(--good);padding:6px 0;vertical-align:top">code, e.g. K7M2Q9XR</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">3</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T3 De-Identifier</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">scrubs the free text of the last traces</td><td style="color:var(--good);padding:6px 0;vertical-align:top">clean case text</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">4</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T5 Council</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">debates the case, cites evidence, reaches consensus</td><td style="color:var(--good);padding:6px 0;vertical-align:top">consensus report</td></tr></table></div>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">FINAL OUTPUT: a patient-language consensus HPI PDF you can hand to any doctor on earth</p>
+      <a class="buy" href="https://buy.stripe.com/28EeVeb4Gead8Gk5GnbMR0c">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">SEQUENCE S2</span>The Doctor's Day</h3><span class="price">$35</span></div>
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;font-family:'Courier New',monospace;font-size:12.5px;margin-bottom:14px;min-width:520px"><tr><th style="text-align:left;color:var(--brass);padding-right:10px">#</th><th style="text-align:left;color:var(--brass);padding-right:14px">module</th><th style="text-align:left;color:var(--brass);padding-right:14px">enters to do</th><th style="text-align:left;color:var(--brass)">hands off</th></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">1</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T4 Router & OCR</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">pulls the six intake sources into one worklist</td><td style="color:var(--good);padding:6px 0;vertical-align:top">who is truly waiting</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">2</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T6 Card Builder</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">builds locked-spec cards, live-gated at serve time</td><td style="color:var(--good);padding:6px 0;vertical-align:top">decision-ready cards</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">3</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">— the doctor —</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">swipes: approves, edits, or rejects the recommendation</td><td style="color:var(--good);padding:6px 0;vertical-align:top">a decision</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">4</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T7 Ledger & Executor</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">logs the decision, executes it faithfully</td><td style="color:var(--good);padding:6px 0;vertical-align:top">sent reply + audit trail</td></tr></table></div>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">FINAL OUTPUT: every waiting patient answered, every action logged, zero double-handling</p>
+      <a class="buy" href="https://buy.stripe.com/aFabJ20q20jne0EecTbMR0d">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">SEQUENCE S3</span>The Case Review</h3><span class="price">$35</span></div>
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;font-family:'Courier New',monospace;font-size:12.5px;margin-bottom:14px;min-width:520px"><tr><th style="text-align:left;color:var(--brass);padding-right:10px">#</th><th style="text-align:left;color:var(--brass);padding-right:14px">module</th><th style="text-align:left;color:var(--brass);padding-right:14px">enters to do</th><th style="text-align:left;color:var(--brass)">hands off</th></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">1</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T4 Router & OCR</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">turns up to thousands of record pages into indexed text</td><td style="color:var(--good);padding:6px 0;vertical-align:top">page-indexed bundle</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">2</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T2+T3 Identity split</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">pseudonymizes and scrubs before any AI sees it</td><td style="color:var(--good);padding:6px 0;vertical-align:top">clean case, coded</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">3</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">chunk-map</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">cheap models compress pages into a case digest</td><td style="color:var(--good);padding:6px 0;vertical-align:top">~30k-token digest</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">4</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">T5 Council</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">debates the digest, cites the source pages</td><td style="color:var(--good);padding:6px 0;vertical-align:top">verdict + citations</td></tr></table></div>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">FINAL OUTPUT: the “is it even worth it?” report — timeline, strengths, weaknesses, cited pages</p>
+      <a class="buy" href="https://buy.stripe.com/5kQ00k0q2ead8Gk2ubbMR0e">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><h3><span class="num">SEQUENCE S4</span>Going Public</h3><span class="price">$35</span></div>
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;font-family:'Courier New',monospace;font-size:12.5px;margin-bottom:14px;min-width:520px"><tr><th style="text-align:left;color:var(--brass);padding-right:10px">#</th><th style="text-align:left;color:var(--brass);padding-right:14px">module</th><th style="text-align:left;color:var(--brass);padding-right:14px">enters to do</th><th style="text-align:left;color:var(--brass)">hands off</th></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">1</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">git repos</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">one repo per audience so nothing mixes</td><td style="color:var(--good);padding:6px 0;vertical-align:top">version-controlled truth</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">2</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">deploy babysitter</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">pushes pages through hostile deploy queues</td><td style="color:var(--good);padding:6px 0;vertical-align:top">live pages</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">3</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">hash-chained ledger</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">indexes every public post, append-only</td><td style="color:var(--good);padding:6px 0;vertical-align:top">verifiable ledger JSON</td></tr><tr><td style="color:var(--brass);padding:6px 10px 6px 0;vertical-align:top">4</td><td style="color:var(--text);padding:6px 14px 6px 0;white-space:nowrap;vertical-align:top">payment walls + postbacks</td><td style="color:var(--dim);padding:6px 14px 6px 0;vertical-align:top">Stripe links, supporter wall, affiliate postbacks</td><td style="color:var(--good);padding:6px 0;vertical-align:top">sale/donation ledgers</td></tr></table></div>
+      <p style="font-family:'Courier New',monospace;font-size:13px;color:var(--good)">FINAL OUTPUT: a communication surface people can verify, fork, and fund</p>
+      <a class="buy" href="https://buy.stripe.com/bJe6oIgp0gil3m0c4LbMR0f">Buy — $35 · bulk = sponsor copies</a>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <h2 style="font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:24px">— Challenges — current version</h2>
+    <div class="mod">
+      <ul>
+        <li><b>Delivery is manual right now:</b> modules arrive by email within 24 hours — an automated delivery portal is being built; early buyers get every future revision free</li>
+        <li><b>Content tracks a living codebase:</b> the copy-pastable directives are updated as the systems evolve — what you get is the current version, and updates are re-sent</li>
+        <li><b>Sponsored-copy distribution is manual:</b> requests and gifted copies are matched by email, oldest request first — expect up to a few days when volume spikes</li>
+        <li><b>The Claude Code walkthroughs assume Sonnet 5</b> and current API surfaces; older models or other agents may need adaptation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Modules are delivered to your Stripe receipt email within 24 hours. Bulk purchases: you keep one copy and every
+    extra copy is given free, in your name if you wish, to learners who cannot pay. To request a sponsored copy:
+    cff@centremedicalfont.ca.
+    Not medical advice. · <a href="https://github.com/carlosfalai/free-universal-healthcare-ai">the free open-source kit is on GitHub</a> ·
+    <a href="/donations/">donations</a> · write me: cff@centremedicalfont.ca
+  </div>
+</footer>
+
+<script>
+(function(){
+  if (new URLSearchParams(location.search).get('paid')) {
+    document.getElementById('thanks').style.display = 'block';
+  }
+})();
+</script>
+</body>
+</html>

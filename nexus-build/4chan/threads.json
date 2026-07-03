@@ -1,0 +1,14 @@
+{
+  "chain": [
+    {
+      "i": 0,
+      "ts": "2026-07-02T18:28:29.268Z",
+      "board": "-",
+      "url": "https://instanthpi.ai/4chan",
+      "title": "GENESIS — InstantHPI public launch ledger",
+      "note": "Every thread we participate in gets appended here, hash-chained.",
+      "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "a1cab40c676b27094e8a9155a88713ed3184cc8752a59f75c996b402ce4e1279"
+    }
+  ]
+}

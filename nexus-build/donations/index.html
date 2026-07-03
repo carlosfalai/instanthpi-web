@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donations — InstantHPI · The articulated brain of a physician, powered by AI</title>
+<meta name="description" content="Free AI health education and clinical-reasoning tools for anyone the system turned away. Runs on donations, for as long as there is money and capacity to run it.">
+<style>
+  :root{
+    --ink:#0b0e12; --ink2:#11161d; --panel:#141b24; --line:#243040;
+    --brass:#b08d57; --brass-bright:#d4af7a; --text:#d7dde5; --dim:#8b96a5;
+    --good:#7fb069; --warn:#c9704a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'Courier New',Courier,monospace}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--line);padding:20px 0;position:sticky;top:0;background:rgba(11,14,18,.92);backdrop-filter:blur(6px);z-index:10}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .brand{font-family:'Courier New',monospace;letter-spacing:.18em;font-size:14px;color:var(--brass);text-transform:uppercase}
+  .brand b{color:var(--text)}
+  .donate-btn{display:inline-block;background:var(--brass);color:#0b0e12;text-decoration:none;font-family:'Courier New',monospace;font-weight:bold;letter-spacing:.08em;padding:12px 26px;border-radius:3px;font-size:14px;text-transform:uppercase;transition:background .15s}
+  .donate-btn:hover{background:var(--brass-bright)}
+  .donate-btn.big{padding:16px 40px;font-size:16px}
+  .hero{padding:76px 0 56px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:'Courier New',monospace;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.15;font-weight:normal;margin-bottom:20px}
+  h1 em{color:var(--brass-bright);font-style:italic}
+  .lead{font-size:19px;color:var(--dim);max-width:640px;margin-bottom:30px}
+  .lead strong{color:var(--text)}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:26px}
+  h2::before{content:"— ";color:var(--line)}
+  .manifesto p{font-size:17px;margin-bottom:18px;max-width:700px}
+  .manifesto p.raw{border-left:2px solid var(--brass);padding-left:18px;color:var(--text);font-style:italic}
+  .manifesto p .hl{color:var(--brass-bright)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:22px}
+  .card h3{font-size:17px;font-weight:normal;color:var(--text);margin-bottom:8px}
+  .card p{font-size:14px;color:var(--dim);margin-bottom:14px}
+  .card .sug{font-family:'Courier New',monospace;font-size:13px;color:var(--brass-bright);margin-bottom:12px}
+  .card a{font-family:'Courier New',monospace;font-size:12px;letter-spacing:.08em;color:var(--brass);text-decoration:none;text-transform:uppercase;border-bottom:1px solid var(--line);padding-bottom:2px}
+  .card a:hover{color:var(--brass-bright);border-color:var(--brass)}
+  .card.free .sug{color:var(--good)}
+  .limits li{list-style:none;padding:14px 0;border-bottom:1px dashed var(--line);font-size:15px;max-width:720px}
+  .limits li b{color:var(--brass-bright);font-weight:normal;font-family:'Courier New',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:4px}
+  .limits li span{color:var(--dim)}
+  .status{background:var(--ink2);border:1px solid var(--warn);border-radius:4px;padding:26px;max-width:720px}
+  .status p{font-size:16px;margin-bottom:14px}
+  .status p:last-child{margin-bottom:0}
+  .status .tag{font-family:'Courier New',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--warn);display:block;margin-bottom:12px}
+  .wall-meta{font-family:'Courier New',monospace;font-size:13px;color:var(--dim);margin-bottom:20px}
+  .wall-meta b{color:var(--brass-bright);font-size:18px}
+  #wall{display:flex;flex-direction:column;gap:0}
+  .donor{display:flex;justify-content:space-between;gap:16px;padding:12px 4px;border-bottom:1px dashed var(--line);font-size:15px}
+  .donor .n{color:var(--text)}
+  .donor .a{font-family:'Courier New',monospace;color:var(--brass-bright);white-space:nowrap}
+  .donor .d{font-family:'Courier New',monospace;color:var(--dim);font-size:12px;white-space:nowrap}
+  .empty{color:var(--dim);font-style:italic;padding:18px 0}
+  .cta-final{text-align:center;padding:70px 0}
+  .cta-final p{color:var(--dim);margin-bottom:26px;font-size:17px}
+  .bots{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap}
+  .bots a{font-family:'Courier New',monospace;font-size:13px;color:var(--text);text-decoration:none;border:1px solid var(--line);padding:10px 16px;border-radius:3px}
+  .bots a:hover{border-color:var(--brass);color:var(--brass-bright)}
+  footer{padding:36px 0 60px;font-size:12px;color:var(--dim);font-family:'Courier New',monospace;line-height:1.8}
+  #thanks{display:none;background:var(--good);color:#0b0e12;padding:14px 24px;text-align:center;font-family:'Courier New',monospace;font-size:14px;letter-spacing:.05em}
+</style>
+</head>
+<body>
+
+<div style="background:#c9704a;color:#0b0e12;font-family:'Courier New',monospace;font-size:12.5px;text-align:center;padding:9px 16px;letter-spacing:.03em;line-height:1.5">
+  <b>AI-AUTOMATED SERVICE.</b> Everything here is generated by artificial intelligence and is <b>NOT reviewed by a human</b> before you receive it. It is health education, not medical advice. Not for emergencies. See a real doctor whenever you can. <b>Exception:</b> the Physician Guild lane is verified by licensed physicians.
+</div>
+
+<div id="thanks">Thank you. Your donation keeps this alive for someone the system refused. You are on the wall within the hour.</div>
+
+<nav style="background:#0b0e12;border-bottom:1px solid #243040;font-family:'Courier New',monospace;font-size:13px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px;padding:11px 12px">
+  <a href="/" style="color:#d4af7a;font-weight:bold;text-decoration:none;padding:6px 12px;letter-spacing:.12em">INSTANTHPI</a>
+  <span style="color:#243040;padding:6px 2px">|</span>
+  <a href="https://t.me/InstantHPIBot" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Free Bots</a>
+  <a href="/donations/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Donations</a>
+  <a href="/courses/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Courses</a>
+  <a href="/physicians/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">For Physicians</a>
+  <a href="/law/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Case Check</a>
+  <a href="/4chan/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Ledger</a>
+  <a href="https://github.com/carlosfalai/free-universal-healthcare-ai" style="color:#d7dde5;text-decoration:none;padding:6px 12px">GitHub</a>
+  <a href="https://github.com/carlosfalai/free-universal-healthcare-ai/blob/master/MODELS.md" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Which AI?</a>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><b>INSTANT</b>HPI / DONATIONS</div>
+    <a class="donate-btn" href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">Donate</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">Free clinical reasoning · Any language · On Telegram</div>
+    <h1>The articulated brain of a physician, <em>powered by AI.</em></h1>
+    <p class="lead">If you ever get so screwed by the system that they refuse you help everywhere — <strong>this can help you, at least momentarily.</strong> It is not made for every country. It is made for the places that still allow individuals some degree of responsibility for their own health.</p>
+    <a class="donate-btn big" href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">Donate — any amount</a>
+    <p style="margin-top:14px;font-family:'Courier New',monospace;font-size:13px;color:var(--dim)">or PayPal → <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=cff%40centremedicalfont.ca&item_name=InstantHPI+donation&currency_code=USD" style="color:var(--brass-bright)">cff@centremedicalfont.ca</a></p>
+    <div class="bots">
+      <a href="https://t.me/InstantHPIBot">@InstantHPIBot →</a>
+      <a href="https://t.me/freehealtheducationbot">@freehealtheducationbot →</a>
+      <a href="https://github.com/carlosfalai/free-universal-healthcare-ai">Full source on GitHub (MIT) →</a>
+      <a href="https://instanthpi.ai/4chan/">Thread ledger →</a>
+    </div>
+  </div>
+</div>
+
+<section class="manifesto">
+  <div class="wrap">
+    <h2>Why this exists</h2>
+    <p class="raw">The first goal: change healthcare so that quality care reaches <span class="hl">everyone, for nearly no cost — universally</span>. Not just rich people and rich countries.</p>
+    <p>Healthcare has layers. Some layers belong to <span class="hl">patients</span> — understanding your own symptoms, knowing when something is an emergency, arriving prepared. Other layers belong to <span class="hl">trained physicians</span> — who now have tools and experience they can compare, and AI automation they can use to serve their populations and improve a quality of life that is, frankly, deplorable in modern societies.</p>
+    <p class="raw">Medicine is dephased — out of phase with what its own tools already permit.</p>
+    <p><span class="hl">The method is to spread the method.</span> With the rise of Chinese and other nations' models — free bots, free AI, very affordable AI — the cost of healthcare becomes near null. With models getting better every cycle and running on local computers, this will soon be reality. And the goal is the one the Americans of 1776 wrote into their Second Amendment: <span class="hl">secure AI in the hands of the people</span>, against monopolies who ultimately serve nobody but themselves — who squeeze, destroy, and corrupt. For that reason the first goal is to have <span class="hl">the healthcare blockchain established</span>: the code on GitHub, the knowledge distributed, every node independent — nothing any single company or government can switch off.</p>
+    <p>Part of this effort is targeted outright at third-world nations — giving them significant AI-automation tools to spread free healthcare across their populations. We draw the line with numbers, from day one: <span class="hl">fewer than 1 physician per 10,000 people — more than 10,000 patients per doctor — is no reasonable access to healthcare.</span> That is South Sudan (0.04), Somalia (0.2), Burundi and Sierra Leone (0.3), Niger and Chad (0.4), Malawi and the Central African Republic (0.5). Below the WHO critical-shortage line of 10 per 10,000 — most of Sub-Saharan Africa, at an average of 2.9 — you are critically underserved, and this tool is for you too. These countries are particularly affected, and we look forward to their populations getting the best that technology can offer as far as health. Our systems are meant to help physicians automate care — and to help no-access patients benefit from care independently.</p>
+    <p>For people in the third world with little to no access to information or medical training, this tool will serve. With AI automation, in due course of time, we will have the capacity to run millions of people on little to no expense. Right now that is unlikely to happen — <span class="hl">the rich and wealthy of the world are more worried about their dominion over the species than about the species itself.</span></p>
+    <p>And there is a harder scenario we take seriously: as physicians retreat — because keeping up stops being worth it — it becomes easier for people to consult AI-driven tools and get similar, if not better, results than from trained physicians. That destroys the financial incentive to train. In due course, all medical knowledge consolidates into the hands of a few corporations with complete capacity to practice, because nobody else was trained to continue. <span class="hl">This is a possibility, though extreme. We are preparing for it</span> — by keeping structured clinical reasoning free, public, and in your hands.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What runs today — suggested donations</h2>
+    <p style="color:var(--dim);margin-bottom:26px;max-width:700px">Everything below is free and stays free. If it helped you, the amounts are what each use actually costs us to keep running, roughly. One link, any amount, from $1 — and at checkout you pick which project your donation is for today: the free health bots, medical for preppers, tools for medical doctors, the Sacred Gita, the law system, <a href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43" style="color:var(--brass-bright)">InstantHPI Dating — marriage for success</a>, or the free <a href="/courses/" style="color:var(--brass-bright)">AI education courses</a>.</p>
+    <div class="grid">
+      <div class="card free">
+        <h3>Health education</h3>
+        <p>Ask anything. Structured, physician-grade explanation of your symptoms and what they can mean — the same OPQRST method a real doctor uses. Any language.</p>
+        <div class="sug">Free — suggest $5 if it helped</div>
+        <a href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">Donate $5</a>
+      </div>
+      <div class="card">
+        <h3>Intake prep &amp; synthesis</h3>
+        <p>Full guided intake → a structured HPI: a clinical summary of your history you can hand to any doctor, anywhere, and be understood in two minutes.</p>
+        <div class="sug">Suggested $15</div>
+        <a href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">Donate $15</a>
+      </div>
+      <div class="card">
+        <h3>Recommendations &amp; course of action</h3>
+        <p>Beyond the summary: what likely needs to take place next — tests worth asking for, red flags to watch, when to escalate.</p>
+        <div class="sug">Suggested $25</div>
+        <a href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">Donate $25</a>
+      </div>
+      <div class="card">
+        <h3>The consistency engine</h3>
+        <p>The hard part isn't one good answer — it's bringing down, with consistency, what needs to take place. Deterministic pipelines and locked templates so the 1,000th person gets the same rigor as the 1st.</p>
+        <div class="sug">Suggested $50</div>
+        <a href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">Donate $50</a>
+      </div>
+      <div class="card">
+        <h3>For physicians</h3>
+        <p>Providers use these same automation tools to prepare, synthesize and serve their populations at a scale one human never could. If this saved your clinic hours, price the hours — or join the association below.</p>
+        <div class="sug">Suggested $100 · or $100/month membership</div>
+        <a href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">Donate $100</a>
+      </div>
+      <div class="card">
+        <h3>Keep it alive for those who can't pay</h3>
+        <p>Most of the people this is built for will never be able to donate. That is the point. Patrons carry them.</p>
+        <div class="sug">Anything — $1 to $10,000</div>
+        <a href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">Donate custom</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The Physician Guild — InstantHPI Physician Network — $100/month</h2>
+    <div class="manifesto">
+      <p>An <span class="hl">association of physicians for the AI automation of their work — and the reclaiming of their quality of life.</span> You know the grind: the charting, the inbox, the forms, the results that pile up after the last patient leaves. These systems exist because I automated my own practice out of that grind. The guild brings that to yours.</p>
+      <p>Guild members are <span class="hl">verified as valid practicing physicians against their regional medical boards and receive an ID</span> — so that in the future, not only they but their approved AI works carry proof of work and verification. The rule of the system: the work is 100% AI, but <span class="hl">physicians do 100% of the verification</span>. In the best of worlds: doctors from all over the world, involved in the care of patients all over the world, at record time.</p>
+      <p>Your $100/month is support: <span class="hl">it keeps InstantHPI free for physicians</span>, it finances me, and it funds the future applications and app development on the roadmap above. Members shape what gets built next.</p>
+      <p><span class="hl" style="font-family:'Courier New',monospace;font-size:13px;letter-spacing:.1em">CHALLENGES — CURRENT VERSION:</span> verification against regional medical boards is manual at first (NPI/NPPES and board registries where they exist, document review where they don't); guild IDs v1 are registry entries, not yet cryptographic proof-of-work — that layer comes with the blockchain phase; and until membership grows, "doctors all over the world" is a direction, not yet a fact. You'd be joining early, and it will look like it.</p>
+    </div>
+    <div style="margin-top:26px">
+      <a class="donate-btn big" href="https://buy.stripe.com/4gMcN61u6fehf4I3yfbMQ44">Join — $100/month</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Honest limits — and how we mitigate them</h2>
+    <ul class="limits">
+      <li><b>AI can be wrong</b><span>A single model can hallucinate or miss. Mitigation: multiple models debate the same case independently and must come to a consensus together before anything reaches you. Disagreement is surfaced, not hidden. And in the debate, each AI has to provide proof — medical studies and guideline recommendations supporting its positions — all of which is provided with the discussion and the plan of the case.</span></li>
+      <li><b>Models age</b><span>Mitigation: we adopt better models as they emerge. The pipeline is model-agnostic by design — the reasoning structure stays, the engines upgrade.</span></li>
+      <li><b>Drift and slop</b><span>Chat-based AI degrades over long use. Mitigation: deterministic pipelines and locked templates — the system fails closed rather than improvising.</span></li>
+      <li><b>Communication tools, not healthcare itself</b><span>These are communication and reasoning tools — not free healthcare in and of itself. I don't blindly trust the products myself. What I do trust: the AI, even where it is not yet as good as a full-fledged physician, is 10,000,000&times; better than an untrained individual giving care to himself or herself alone.</span></li>
+      <li><b>It is not for emergencies</b><span>Chest pain, stroke signs, heavy bleeding, difficulty breathing — call your local emergency services. The bot will tell you the same.</span></li>
+      <li><b>It does not replace a doctor</b><span>In light of this technology, we still suggest you go to a physical doctor whenever that is possible. This is a guidance tool for those of you in situations too complex for the current system to provide for. Where a physician is available, the physician decides.</span></li>
+      <li><b>Your identity stays separate from the AI</b><span>The system speaks to the models through API calls that are designed to keep your information distinct and separate from the AI calls themselves — the models reason over the case, not over you.</span></li>
+      <li><b>Not for every jurisdiction</b><span>It exists for countries and individuals that accept a degree of personal responsibility for their own health. If yours doesn't, it may not be for you.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How long will this run</h2>
+    <div class="status">
+      <span class="tag">Honest status — read this</span>
+      <p>We will run this for as long as there is money and capacity to run it. Right now I am completely drained, and under attack from multiple sides. I cannot carry this information and this technology forward on my own any longer.</p>
+      <p>So it is simple: <strong>either you get involved — fund it, use it, build on it — or it dies on its own.</strong> Even as it stands, it is a valuable asset to have. It is given for free.</p>
+      <p>I have been working on this full-time. I paid for all of it out of my own money and revenue — completely, and beyond. <strong>At this point it is in your hands to see this go into the future, or not.</strong></p>
+      <p>We are launching this publicly and will be watching the threads where we post — and we will try to provide as much support as possible.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Roadmap — how this works, and how it will be worked out</h2>
+    <div class="manifesto">
+      <p><span class="hl">Phase 1 — running now:</span> free health education, guided intake, and HPI synthesis on Telegram. An extra layer of security already in place: multiple AI agents, speaking through API calls, debating each case and only answering through consensus.</p>
+      <p><span class="hl">Phase 2 — memory (funded by these donations):</span> upload your entire medical history and have the system give you specific clarity and insight on the different layers of your health issues — past, present, and now. Indexation of multiple conversations into a chronicity view, with the capacity to open new problems. Before every case, the AIs are given the full context of your previous visits. The AI managing the dossier — not the one making recommendations — keeps the structure, allowing visibility: a true medical record for the patient. Easy to use, all within one app.</p>
+      <p><span class="hl">Phase 3 — your record, on your machine:</span> a downloadable exe — the free medical-education InstantHPI healthcare bot — running locally, isolated from the outer world, safe and sound. Memory lives in the document itself; everything stays local in the application. It can hold multiple patients, remembers previous encounters, and when cases are studied between AIs, <strong>only de-identified information is sent over for the API call and the multi-agent discussion.</strong> Your AI matrix, consulted before the physician consultation.</p>
+      <p><span class="hl">Phase 4 — chronic disease</span> — COPD, hypertension, diabetes and the like: chronic-medication recommendation adjustments decided not by one model, but by multiple AI agents called on the case, debating it, and reaching consensus on the best recommended healthcare practices before anything is suggested. And when the verdict comes to you, it speaks in one voice — the physician's voice this system was given: plain, short, and direct — while clearly denoting that these are the answers of multiple AIs: "they offered and recommended…", never pretending to be a single human opinion. Where a physician is in the loop, the physician confirms.</p>
+      <p><span class="hl">Phase 5 — the Physician Guild (InstantHPI Physician Network):</span> an API method where verified physicians — multiple, all over the world — supervise the AI councils, add recommendations, or approve them. People get verified as valid practicing physicians and receive an ID, so that in the future not only they but their approved AI works carry <span class="hl">proof of work and verification</span>. In the best of worlds, doctors from all over the world involved in the care of patients all over the world, through this AI-automated telemed blockchain — better care, at record time. In other words: in our system the work is <span class="hl">100% AI — but physicians do 100% of the verification</span>. The AIs are never alone; they discuss every case among themselves, and the case discussions, reports, and recommendations are given to the patient in their own language. The entire process can be reviewed by physicians who hold board certification and whom we have verified against their regional medical boards — an additional level of security and protection for patients. The door is open: verified physicians join through the association below.</p>
+      <p><span class="hl">Check the work yourself — five sources, side by side.</span> The websites will also carry multiple care-management guidelines drawn from international healthcare guidelines, so you can see for yourself whether the work the AIs do resembles the work of doctors — compared against your own history. Multiple sources, always: <strong>personal, physician, experts, AI, and national healthcare guidelines.</strong></p>
+      <p><span class="hl">This is not my effort.</span> This is a group effort, and all of you are concerned. Everything is being uploaded to GitHub and mirrored on our websites and others. Different AI tools will be used along the way. We encourage you to participate in this healthcare blockchain — save this, fork it, and try things out along the way. It is done when people download this information and get familiar with the technology itself. <span class="hl">I will be reviewing the mods you make to it</span> — share them, make them available, and the future of this gets better and more efficient for all.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Who is behind this</h2>
+    <div class="manifesto">
+      <p>I am a <span class="hl">board-certified family doctor</span> — and a student of <span class="hl">The Real World AI (Andrew Tate's campus)</span>, where I learned automation two to three years ago. In The Real World I am <span class="hl">Solrac</span> — ID: <span class="hl" style="font-family:'Courier New',monospace">01GKB01NCKP96WKE961GW9GY40</span>. I have done multiple campuses there — AI automation is the one this work grew out of. Another way to support me, and to learn automation the way I did: <a href="https://jointherealworld.com/a/ppntpkgfpp" style="color:var(--brass-bright)">join The Real World through my affiliate link</a> — you learn what I learned, and part of it funds this. Since then I have been working on this by myself. Now is the time to release what I have achieved — on multiple layers, for different populations: patients with no access, patients inside broken systems, and the physicians who serve them.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Supporter wall</h2>
+    <div class="wall-meta">Raised so far: <b id="total">$0</b> · <span id="count">0</span> donations · updates hourly</div>
+    <div id="wall"><div class="empty">No donations yet. Be the first name on the wall.</div></div>
+  </div>
+</section>
+
+<div class="cta-final">
+  <div class="wrap">
+    <p>One link. Any amount. Every dollar keeps this free for someone the system refused.</p>
+    <a class="donate-btn big" href="https://buy.stripe.com/00w00kgp0aY14q44CjbMQ43">Donate now</a>
+    <p style="margin-top:14px;font-family:'Courier New',monospace;font-size:13px;color:var(--dim)">PayPal also works → <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=cff%40centremedicalfont.ca&item_name=InstantHPI+donation&currency_code=USD" style="color:var(--brass-bright)">cff@centremedicalfont.ca</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    INSTANTHPI · Free health education, not medical advice. No doctor–patient relationship is created. Not for emergencies.
+    Donations are voluntary gifts to support the project — they are not payment for medical services and are not tax-deductible at this time.
+    If we ever obtain non-profit organization status, we will provide receipts and receipt history for people who donated in the past —
+    so identify your donations well (use the name field, and keep your Stripe email receipt).
+    Payments processed by Stripe. No health information is collected on this page.
+    Write me directly: cff@centremedicalfont.ca
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  if (q.get('thanks')) {
+    document.getElementById('thanks').style.display = 'block';
+  } else if (q.get('joined')) {
+    var t = document.getElementById('thanks');
+    t.textContent = 'Welcome to the association. You automate your work; you reclaim your life.';
+    t.style.display = 'block';
+  }
+  fetch('./donations.json?t=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      var wall = document.getElementById('wall');
+      document.getElementById('total').textContent = '$' + (d.total_usd || 0).toLocaleString('en-US', {maximumFractionDigits: 0});
+      document.getElementById('count').textContent = d.count || 0;
+      if (!d.donors || !d.donors.length) return;
+      wall.innerHTML = '';
+      d.donors.forEach(function(x){
+        var row = document.createElement('div'); row.className = 'donor';
+        var n = document.createElement('span'); n.className = 'n'; n.textContent = (x.name || 'Anonymous') + (x.project ? ' · ' + x.project : '');
+        var a = document.createElement('span'); a.className = 'a'; a.textContent = '$' + x.amount;
+        var dt = document.createElement('span'); dt.className = 'd'; dt.textContent = x.date || '';
+        row.appendChild(n); row.appendChild(a); row.appendChild(dt);
+        wall.appendChild(row);
+      });
+    }).catch(function(){});
+})();
+</script>
+</body>
+</html>
