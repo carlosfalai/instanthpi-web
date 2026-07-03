@@ -73,10 +73,23 @@ verifiable and append-only.
 
 ## Constraints & guardrails
 
+- **Naming:** nodes are called **nodes** or **physician simulators**.
 - **Node neutrality:** the nexus supports no node over any other. Nodes are
-  privately run and privately owned; we neither operate, endorse, nor rank
-  them editorially. The only differentiation is the public, signed grading
-  record — the data speaks, we don't.
+  privately run and privately owned; **we never change the nodes** — we
+  neither operate, endorse, nor rank them editorially. The only
+  differentiation is the public, signed grading record — the data speaks.
+- **Business model:** joining/using a node is between the user and the node.
+  **Running a node costs money: node operators pay us for API usage** (case
+  submission + validation service). In return the network publishes the
+  **list of validated nodes with the scores our physicians provided** — the
+  validation is what operators are buying. We also **index node operators'
+  educational platforms** as part of the listing.
+- **Opt-in publicity:** we only post and make public the nodes whose owners
+  decide to share them with us through the API. Unshared nodes stay private.
+- **Verification funding:** part of the proof-of-verification money comes
+  from the physicians themselves (guild membership) — physicians co-fund the
+  system that pays them per signed grade, keeping verification independent
+  of node money alone.
 - **No PHI ever reaches the nexus** — gate enforced, submissions are
   de-identified by design; violators bounced, repeat violators deregistered.
 - **No prescriptions** — graded conclusions are education/recommendations.
