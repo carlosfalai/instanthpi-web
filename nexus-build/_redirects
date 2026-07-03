@@ -1,0 +1,9 @@
+/thankyou   https://instanthpi.netlify.app/thankyou   302
+/thankyou/* https://instanthpi.netlify.app/thankyou/:splat 302
+/story      https://instanthpi.netlify.app/story      302
+/timeline   https://instanthpi.netlify.app/timeline   302
+/quebec     https://instanthpi.netlify.app/quebec     302
+/journey    https://instanthpi.netlify.app/journey    302
+/impact     https://instanthpi.netlify.app/impact     302
+/social     https://instanthpi.netlify.app/social     302
+/portfolio  https://instanthpi.netlify.app/           302
