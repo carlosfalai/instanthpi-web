@@ -37,6 +37,7 @@
   <a href="/" style="color:#d4af7a;font-weight:bold;text-decoration:none;padding:6px 12px;letter-spacing:.12em">INSTANTHPI</a>
   <span style="color:#243040;padding:6px 2px">|</span>
   <a href="/network/" style="color:#d4af7a;text-decoration:none;padding:6px 12px">Blockchain</a>
+  <a href="https://casecheck-site.onrender.com" style="color:#d4af7a;text-decoration:none;padding:6px 12px">AI Council</a>
   <a href="https://t.me/InstantHPIBot" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Free Bots</a>
   <a href="/donations/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Donations</a>
   <a href="/courses/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Courses</a>
@@ -61,8 +62,29 @@
     <div class="card"><h3><span>1 · Run a node</span>Your models, your price, your channel</h3><p>Stand up your own physician simulator with the <a href="https://github.com/carlosfalai/free-universal-healthcare-ai" style="color:var(--brass)">free bot kit</a>. People join your node directly — that relationship is yours. Your educational platform gets indexed in our listing.</p></div>
     <div class="card"><h3><span>2 · Share it (opt-in) &amp; pay for API usage</span>Submit de-identified cases</h3><p>Only nodes that decide to share with us go public. Operators pay a fee for API usage: cases (de-identified — enforced at our gate, no PHI ever) + the AI's conclusions flow to the review queue. The validation is what you're buying.</p></div>
     <div class="card"><h3><span>3 · Physicians sign their grades</span>"Your name is signed on this case"</h3><p>Board-certified, license-verified physicians grade each case — agree or disagree, with corrections — and their name is imputed on the case, permanently and publicly. Physicians are paid per signed grade; their full record (cases reviewed, agree/disagree split) is public too. Part of verification is funded by the physicians themselves through the <a href="/donations/" style="color:var(--brass)">Guild</a>.</p></div>
-    <div class="card"><h3><span>4 · The public record</span>Validated nodes + scores, published here</h3><p class="mono">COMING ONLINE: the live scoreboard — validated nodes, physician-signed grades, hash-chained and verifiable. Node #1 (our own bot) enters the queue first.</p></div>
+    <div class="card"><h3><span>4 · The public record</span>Validated nodes + scores, published here</h3><p class="mono">COMING ONLINE: the live scoreboard — validated nodes, physician-signed grades, hash-chained and verifiable. Node #1 is <a href="https://t.me/InstantHPIBot" style="color:var(--brass)">@InstantHPIBot</a>, our free medical-education bot; Physician #1 is board-certified (ABFM) and license-verified.</p></div>
     <div class="card"><h3><span>The purpose</span>Protection for mankind</h3><p>Not prescriptions — the proof of concept that refines this technology until it earns trust, so no wealthy minority can become the exclusive possessor of medical knowledge and take away people's autonomy over their own health. The work is AI; the verification is human, licensed, and on the record.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Two lanes, two privacy contracts — no contradiction</h2>
+    <div class="card"><h3><span>Lane A · The paid AI Council (.check services)</span>Private. Nothing kept. Nobody reviews it — ever.</h3><p>The paid checks run entirely inside a signed HIPAA BAA boundary, in memory, and are discarded the moment the PDF is delivered. <strong style="color:var(--text)">Those cases NEVER enter the blockchain, are never seen by a physician, and are never published.</strong> The only remnant is the delivery email itself, fingerprinted (SHA-256) so authenticity can always be proven. You buy anonymity and security — you get exactly that.</p></div>
+    <div class="card"><h3><span>Lane B · Blockchain nodes (free education bots)</span>Public record by design — but only after sanitation, and only if the node opts in.</h3>
+      <p>Verification requires a record, so this lane is the opposite on purpose. The sanitation contract, exactly:</p>
+      <p><strong style="color:var(--text)">Kept forever (the public record):</strong> a de-identified case abstract — age band, sex, the clinical picture, the AI's questions and consensus with citations — plus the physician's signed grade and the hash chain. Nothing else.</p>
+      <p><strong style="color:var(--text)">Never kept, never published:</strong> names, contacts, exact dates, locations, ID numbers, the raw conversation — anything identifying. Every case passes a <strong style="color:var(--text)">de-identification gate inside the BAA boundary before it can enter the queue, and the gate fails closed</strong>: if sanitation cannot run, the case is not submitted at all. Users of a sharing node are told up front that anonymized abstracts may be graded by licensed physicians. <strong style="color:var(--text)">Physicians validate the medicine, never the person.</strong></p>
+    </div>
+    <div class="card"><h3><span>Worked example · what a physician actually sees</span>Case abstract, exactly as it enters the queue</h3>
+      <p class="mono" style="color:var(--text);line-height:1.7">CASE #0001 · Node #1 (@InstantHPIBot) · representative sample of the format<br>
+      ─────────────────────────────────────────<br>
+      PRESENTATION: Adult, 40s, male. 3 days of spreading redness, warmth and pain of the lower left leg after a small scrape; fever 38.3°C since last night; no pus pocket felt; red area growing by the hour; no diabetes; no known allergies.<br>
+      AI QUESTIONS ASKED: onset/spread rate · trauma history · fever/chills · streaking toward groin · diabetes/immunosuppression · prior episodes · tetanus status.<br>
+      AI CONSENSUS (education, not prescription): picture most consistent with <b>cellulitis</b> of the leg; concerning features = fever + rapid spread → this needs a physician TODAY, not self-care; mark the border with a pen to track spread; red-flag education given (streaking, blistering, severe pain out of proportion → emergency, rule out necrotizing infection); typical physician management discussed per IDSA skin &amp; soft-tissue guidelines.<br>
+      ─────────────────────────────────────────<br>
+      PHYSICIAN GRADE: ☑ AGREE — signed, board-certified (ABFM), license-verified. Comment: "Appropriate urgency, correct red flags, correctly refused to name antibiotics. This is what the record shows: no name, no date, no place — the medicine, not the person."</p>
+    </div>
   </div>
 </section>
 
