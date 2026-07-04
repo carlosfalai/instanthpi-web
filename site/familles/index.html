@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une solution pour nos familles — Pétition · InstantHPI</title>
+<meta name="description" content="Pétition citoyenne : autorisez un projet pilote volontaire, gratuit et mesuré pour transformer l'attente aux urgences du Québec en temps de soin. A Solution for Our Families.">
+<meta property="og:title" content="Une solution pour nos familles — Pétition Québec">
+<meta property="og:description" content="2 h 45 avant de voir un médecin, 16 h 48 sur civière. L'attente peut devenir du temps de soin. Signez la pétition pour un projet pilote gratuit, volontaire et mesuré.">
+<style>
+  :root{
+    --ink:#0b0e12; --ink2:#11161d; --panel:#141b24; --line:#243040;
+    --brass:#b08d57; --brass-bright:#d4af7a; --text:#d7dde5; --dim:#8b96a5;
+    --good:#7fb069; --warn:#c9704a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'Courier New',Courier,monospace}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  .en{display:none}
+  body.lang-en .en{display:revert}
+  body.lang-en .fr{display:none}
+  header{border-bottom:1px solid var(--line);padding:20px 0;position:sticky;top:0;background:rgba(11,14,18,.92);backdrop-filter:blur(6px);z-index:10}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .brand{font-family:'Courier New',monospace;letter-spacing:.18em;font-size:14px;color:var(--brass);text-transform:uppercase}
+  .brand b{color:var(--text)}
+  .sign-btn{display:inline-block;background:var(--brass);color:#0b0e12;text-decoration:none;font-family:'Courier New',monospace;font-weight:bold;letter-spacing:.08em;padding:12px 26px;border-radius:3px;font-size:14px;text-transform:uppercase;transition:background .15s;border:none;cursor:pointer}
+  .sign-btn:hover{background:var(--brass-bright)}
+  .sign-btn.big{padding:16px 40px;font-size:16px}
+  .lang-toggle{font-family:'Courier New',monospace;font-size:12px;letter-spacing:.1em}
+  .lang-toggle button{background:none;border:1px solid var(--line);color:var(--dim);padding:6px 12px;cursor:pointer;font-family:inherit;border-radius:3px}
+  .lang-toggle button.active{color:var(--brass-bright);border-color:var(--brass)}
+  .hero{padding:70px 0 50px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:'Courier New',monospace;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.15;font-weight:normal;margin-bottom:20px}
+  h1 em{color:var(--brass-bright);font-style:italic}
+  .lead{font-size:19px;color:var(--dim);max-width:680px;margin-bottom:26px}
+  .lead strong{color:var(--text)}
+  .counter{font-family:'Courier New',monospace;font-size:15px;color:var(--brass-bright);margin-bottom:26px;letter-spacing:.05em}
+  .counter b{font-size:22px}
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:26px}
+  h2::before{content:"— ";color:var(--line)}
+  .petition{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:34px 30px;font-size:16.5px}
+  .petition p{margin-bottom:16px}
+  .petition .addr{color:var(--dim);font-style:italic;margin-bottom:24px}
+  .petition .clause b{color:var(--brass-bright);font-family:'Courier New',monospace;font-size:13.5px;letter-spacing:.06em}
+  .petition ol{margin:0 0 16px 22px}
+  .petition ol li{margin-bottom:14px}
+  .petition .closing{border-left:2px solid var(--brass);padding-left:18px;font-style:italic}
+  .disclosure{font-size:13.5px;color:var(--dim);margin-top:22px;padding-top:18px;border-top:1px dashed var(--line)}
+  .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:22px}
+  .card h3{font-size:16px;font-weight:normal;color:var(--brass-bright);margin-bottom:8px}
+  .card p{font-size:14.5px;color:var(--dim)}
+  form{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:30px;max-width:640px}
+  label{display:block;font-family:'Courier New',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:16px 0 6px}
+  input,select,textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:3px;color:var(--text);padding:11px 12px;font-family:Georgia,serif;font-size:15px}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brass)}
+  .consent{display:flex;gap:10px;align-items:flex-start;margin:20px 0;font-size:13.5px;color:var(--dim)}
+  .consent input{width:auto;margin-top:4px}
+  #form-msg{display:none;margin-top:16px;padding:13px 16px;border-radius:3px;font-family:'Courier New',monospace;font-size:14px}
+  #form-msg.ok{display:block;background:var(--good);color:#0b0e12}
+  #form-msg.err{display:block;background:var(--warn);color:#0b0e12}
+  .wall{display:flex;flex-wrap:wrap;gap:8px}
+  .wall span{font-family:'Courier New',monospace;font-size:12.5px;border:1px solid var(--line);border-radius:3px;padding:6px 10px;color:var(--dim)}
+  .wall span b{color:var(--text);font-weight:normal}
+  .share{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .share a,.share button{font-family:'Courier New',monospace;font-size:13px;color:var(--text);text-decoration:none;border:1px solid var(--line);background:none;padding:10px 16px;border-radius:3px;cursor:pointer}
+  .share a:hover,.share button:hover{border-color:var(--brass);color:var(--brass-bright)}
+  .sources li{font-size:13.5px;color:var(--dim);margin-bottom:10px}
+  .sources a{color:var(--brass-bright)}
+  footer{padding:36px 0 60px;font-size:12px;color:var(--dim);font-family:'Courier New',monospace;line-height:1.8}
+</style>
+</head>
+<body>
+
+<div style="background:#c9704a;color:#0b0e12;font-family:'Courier New',monospace;font-size:12.5px;text-align:center;padding:9px 16px;letter-spacing:.03em;line-height:1.5">
+  <span class="fr"><b>PÉTITION CITOYENNE.</b> Page d'information — pas un avis médical, pas un service d'urgence. En cas d'urgence, composez le 911.</span>
+  <span class="en"><b>CITIZEN PETITION.</b> Information page — not medical advice, not an emergency service. In an emergency, call 911.</span>
+</div>
+
+<nav style="background:#0b0e12;border-bottom:1px solid #243040;font-family:'Courier New',monospace;font-size:13px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px;padding:11px 12px">
+  <a href="/" style="color:#d4af7a;font-weight:bold;text-decoration:none;padding:6px 12px;letter-spacing:.12em">INSTANTHPI</a>
+  <span style="color:#243040;padding:6px 2px">|</span>
+  <a href="/familles/" style="color:#d4af7a;text-decoration:none;padding:6px 12px">Familles</a>
+  <a href="/education/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Education</a>
+  <a href="/network/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Blockchain</a>
+  <a href="https://app.instanthpi.ai" style="color:#d7dde5;text-decoration:none;padding:6px 12px">AI Council</a>
+  <a href="/models/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Which AI?</a>
+  <a href="https://t.me/InstantHPIBot" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Free Bots</a>
+  <a href="/donations/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Donations</a>
+  <a href="/courses/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Courses</a>
+  <a href="/physicians/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">For Physicians</a>
+  <a href="/law/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Case Check</a>
+  <a href="/4chan/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Ledger</a>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="brand">INSTANT<b>HPI</b> · <span class="fr">PÉTITION</span><span class="en">PETITION</span></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <div class="lang-toggle">
+        <button id="btn-fr" class="active" onclick="setLang('fr')">FR</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+      <a class="sign-btn" href="#signer"><span class="fr">Signer</span><span class="en">Sign</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker"><span class="fr">Pétition · Québec · Urgences et cliniques</span><span class="en">Petition · Quebec · ERs and clinics</span></div>
+    <h1 class="fr">Une solution pour <em>nos familles</em></h1>
+    <h1 class="en">A solution for <em>our families</em></h1>
+    <p class="lead fr">Au Québec, nos proches attendent en moyenne <strong>2 h 45</strong> entre le triage et la prise en charge par un médecin d'urgence, et passent en moyenne <strong>16 h 48</strong> sur une civière (Santé Québec, 2025-2026). Ces heures d'attente peuvent devenir du temps utile : un questionnaire médical structuré, complété par le patient qui le souhaite, dans sa langue, gratuitement — prêt pour le médecin avant même que la consultation commence.</p>
+    <p class="lead en">In Quebec, our loved ones wait an average of <strong>2 h 45 min</strong> between triage and being seen by an ER physician, and spend an average of <strong>16 h 48 min</strong> on a stretcher (Santé Québec, 2025-2026). Those waiting hours can become useful time: a structured medical questionnaire, completed voluntarily by the patient, in their own language, free — ready for the physician before the consultation even begins.</p>
+    <div class="counter"><b id="sig-count">…</b> <span class="fr">signatures</span><span class="en">signatures</span></div>
+    <a class="sign-btn big" href="#signer"><span class="fr">Signer la pétition</span><span class="en">Sign the petition</span></a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2><span class="fr">Le texte de la pétition</span><span class="en">The petition text</span></h2>
+
+    <!-- ===================== FRENCH ===================== -->
+    <div class="petition fr">
+      <p style="font-size:19px;margin-bottom:6px"><b>Pétition — Transformer l'attente aux urgences en temps de soin : autorisez un projet pilote volontaire, gratuit et mesuré</b></p>
+      <p class="addr">Adressée au ministre de la Santé et des Services sociaux, à Santé Québec et aux PDG des établissements du réseau.</p>
+
+      <p class="clause"><b>CONSIDÉRANT QUE</b>, malgré de récentes améliorations, les patients du Québec attendent en moyenne 2 h 45 entre la fin du triage et la prise en charge par un médecin d'urgence, avec une durée moyenne de séjour sur civière de 16 h 48 (Santé Québec, 2025-2026), et que ces heures d'attente demeurent très peu mises à profit dans le parcours de soins;</p>
+
+      <p class="clause"><b>CONSIDÉRANT QUE</b> les médecins canadiens consacrent environ 9 heures par semaine à des tâches administratives, dont près de la moitié pourrait être évitée (FCEI, « Patients before Paperwork ») — du temps soustrait à l'examen et à la décision médicale;</p>
+
+      <p class="clause"><b>CONSIDÉRANT QU'</b>il existe des outils numériques gratuits d'aide à la collecte d'information avant la consultation — tel InstantHPI — qui, grâce à l'intelligence artificielle, permettent au patient qui le souhaite de remplir un questionnaire structuré dans sa langue et en tirent un résumé que le médecin peut réviser, corriger et intégrer au dossier s'il le juge utile; l'outil ne pose aucun diagnostic, ne prescrit rien, et le médecin demeure seul responsable de l'évaluation, du diagnostic, du traitement et du dossier;</p>
+
+      <p class="clause"><b>CONSIDÉRANT QUE</b> ces outils fonctionnent dans la langue du patient — le français d'abord, et toute autre langue lorsque le soin l'exige — ce qui peut faciliter l'accès aux soins et pourrait réduire les malentendus liés à la barrière linguistique, le tout dans le respect de la Loi 25 : consentement explicite à la collecte comme à la transmission, aucune conservation des messages ni des photos par l'outil après le traitement, et engagement à réaliser une évaluation des facteurs relatifs à la vie privée (EFVP) avec chaque établissement avant tout déploiement;</p>
+
+      <p class="clause"><b>CONSIDÉRANT QU'</b>un projet pilote encadré, volontaire et rigoureusement mesuré — limité aux patients ambulatoires de faible priorité qui le souhaitent, sur leur propre téléphone, sans aucune modification du triage ni des protocoles cliniques, et sans nouveau système à gérer pour les équipes soignantes (le patient présente simplement son résumé au médecin) — constitue le moyen prudent de vérifier si l'attente peut devenir du temps utile;</p>
+
+      <p style="margin-top:24px"><b style="font-family:'Courier New',monospace;font-size:13.5px;letter-spacing:.06em;color:var(--brass-bright)">NOUS, SOUSSIGNÉS, DEMANDONS</b> au ministre de la Santé et des Services sociaux, à Santé Québec et aux directions des établissements :</p>
+      <ol>
+        <li><b>D'autoriser un projet pilote volontaire et entièrement gratuit</b> — pour les patients comme pour les établissements — d'outils numériques d'auto-questionnaire avant consultation répondant à des critères stricts (gratuité, multilinguisme, aucun diagnostic, conformité à la Loi 25), tel qu'InstantHPI, dans les urgences, GMF et cliniques sans rendez-vous qui se porteront volontaires, les établissements demeurant libres d'évaluer tout outil équivalent;</li>
+        <li><b>De permettre, avec le consentement explicite du patient,</b> que le résumé structuré soit présenté au médecin traitant, afin que la consultation commence avec l'histoire déjà recueillie — le médecin demeurant seul auteur et responsable du dossier médical;</li>
+        <li><b>De mesurer, avec l'appui d'une évaluation indépendante</b> et l'approbation des comités d'éthique des établissements participants, trois indicateurs — le délai avant la prise en charge par un médecin, la durée totale du séjour à l'urgence et le temps de documentation des médecins — et de rendre les résultats publics, qu'ils soient favorables ou non.</li>
+      </ol>
+
+      <p class="closing">Cette pétition ne réclame aucun nouveau budget de programme et n'impose rien ni aux patients ni aux cliniciens : seulement l'autorisation d'essayer, de mesurer et de publier. À coût marginal et à risque encadré, chaque heure passée en salle d'attente peut devenir une heure au service du soin — nous demandons simplement la permission de le vérifier.</p>
+
+      <p class="disclosure"><b>Transparence :</b> cette pétition est portée par le Dr Carlos F. Font, médecin exerçant au Québec et concepteur de l'outil InstantHPI, qui déclare son intérêt dans le projet. L'outil est gratuit pour les patients et le demeurera pendant toute la durée du projet pilote. La version française du présent texte est la version officielle.</p>
+    </div>
+
+    <!-- ===================== ENGLISH ===================== -->
+    <div class="petition en">
+      <p style="font-size:19px;margin-bottom:6px"><b>Petition — Turn ER waiting time into care time: authorize a voluntary, free, and measured pilot project</b></p>
+      <p class="addr">Addressed to the Minister of Health and Social Services, Santé Québec, and the CEOs of the institutions of Quebec's health network.</p>
+
+      <p class="clause"><b>WHEREAS</b>, despite recent improvements, patients in Quebec wait an average of 2 h 45 min between the end of triage and being taken in charge by an emergency physician, with an average stretcher stay of 16 h 48 min (Santé Québec, 2025-2026), and those waiting hours remain largely unused in the care journey;</p>
+
+      <p class="clause"><b>WHEREAS</b> Canadian physicians spend roughly 9 hours per week on administrative tasks, nearly half of which could be avoided (CFIB, "Patients before Paperwork") — time taken away from examination and medical decision-making;</p>
+
+      <p class="clause"><b>WHEREAS</b> free digital tools now exist to help collect information before the consultation — such as InstantHPI — which use artificial intelligence to let a willing patient complete a structured questionnaire in their own language, producing a summary the physician may review, correct, and add to the record if they judge it useful; the tool makes no diagnosis, prescribes nothing, and the physician remains solely responsible for the assessment, diagnosis, treatment, and medical record;</p>
+
+      <p class="clause"><b>WHEREAS</b> these tools work in the patient's language — French first, and any other language where care requires it — which can improve access to care and could reduce misunderstandings caused by language barriers, all in keeping with Quebec's Law 25: explicit consent for both collection and transmission, no retention of messages or photos by the tool after processing, and a commitment to complete a privacy impact assessment (PIA) with each institution before any deployment;</p>
+
+      <p class="clause"><b>WHEREAS</b> a supervised, voluntary, and rigorously measured pilot — limited to willing low-acuity ambulatory patients, on their own phone, with no change to triage or clinical protocols, and no new system for care teams to manage (the patient simply shows their summary to the physician) — is the prudent way to find out whether waiting time can become useful time;</p>
+
+      <p style="margin-top:24px"><b style="font-family:'Courier New',monospace;font-size:13.5px;letter-spacing:.06em;color:var(--brass-bright)">WE, THE UNDERSIGNED, CALL ON</b> the Minister of Health and Social Services, Santé Québec, and the leadership of the institutions concerned:</p>
+      <ol>
+        <li><b>To authorize a voluntary and entirely free pilot project</b> — for patients and institutions alike — of pre-consultation digital self-questionnaire tools meeting strict criteria (free of charge, multilingual, no diagnosis, Law 25 compliant), such as InstantHPI, in the emergency departments, family medicine groups (GMFs), and walk-in clinics that volunteer, with institutions remaining free to evaluate any equivalent tool;</li>
+        <li><b>To allow, with the patient's explicit consent,</b> the structured summary to be presented to the treating physician, so the consultation begins with the history already taken — the physician remaining the sole author of, and solely responsible for, the medical record;</li>
+        <li><b>To measure, with independent evaluation</b> and the approval of participating institutions' ethics committees, three indicators — time before the patient is seen by a physician, total length of stay in the emergency department, and physician documentation time — and to make the results public, favourable or not.</li>
+      </ol>
+
+      <p class="closing">This petition asks for no new program budget and imposes nothing on patients or clinicians: only the authorization to try, to measure, and to publish. At marginal cost and with supervised risk, every hour spent in a waiting room can become an hour in the service of care — we are simply asking permission to find out.</p>
+
+      <p class="disclosure"><b>Transparency:</b> this petition is brought by Dr. Carlos F. Font, a physician practising in Quebec and the creator of the InstantHPI tool, who declares his interest in the project. The tool is free for patients and will remain so for the entire duration of the pilot. The French version of this text is the official version.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="fr">Comment ça fonctionnerait</span><span class="en">How it would work</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3 class="fr">1. Pendant l'attente</h3><h3 class="en">1. While waiting</h3>
+        <p class="fr">Le patient qui le souhaite répond, sur son propre téléphone et dans sa langue, à un questionnaire médical structuré : 18 questions d'accueil, un résumé à confirmer, puis 10 questions ciblées — photos de documents ou de la zone atteinte incluses s'il y a lieu.</p>
+        <p class="en">A willing patient answers, on their own phone and in their own language, a structured medical questionnaire: 18 intake questions, a summary to confirm, then 10 targeted questions — including photos of documents or of the affected area where relevant.</p>
+      </div>
+      <div class="card">
+        <h3 class="fr">2. Avec consentement</h3><h3 class="en">2. With consent</h3>
+        <p class="fr">Le patient présente son résumé structuré au médecin — aucun nouveau système, aucun identifiant pour les équipes. Le médecin révise, corrige et reste seul responsable du dossier.</p>
+        <p class="en">The patient shows their structured summary to the physician — no new system, no logins for care teams. The physician reviews, corrects, and remains solely responsible for the record.</p>
+      </div>
+      <div class="card">
+        <h3 class="fr">3. On mesure tout</h3><h3 class="en">3. Everything is measured</h3>
+        <p class="fr">Trois indicateurs suivis avec évaluation indépendante et approbation éthique : délai avant prise en charge, durée totale du séjour, temps de documentation. Résultats publics, favorables ou non.</p>
+        <p class="en">Three indicators tracked with independent evaluation and ethics approval: time to physician, total length of stay, documentation time. Results made public, favourable or not.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="signer">
+  <div class="wrap">
+    <h2><span class="fr">Signer la pétition</span><span class="en">Sign the petition</span></h2>
+    <form id="petition-form" onsubmit="return submitSig(event)">
+      <label for="f-name"><span class="fr">Nom complet *</span><span class="en">Full name *</span></label>
+      <input id="f-name" required maxlength="120" autocomplete="name">
+      <label for="f-email"><span class="fr">Courriel * <span style="text-transform:none">(jamais publié)</span></span><span class="en">Email * <span style="text-transform:none">(never published)</span></span></label>
+      <input id="f-email" type="email" required maxlength="200" autocomplete="email">
+      <label for="f-postal"><span class="fr">Code postal (facultatif)</span><span class="en">Postal code (optional)</span></label>
+      <input id="f-postal" maxlength="10" autocomplete="postal-code">
+      <label for="f-role"><span class="fr">Je signe en tant que</span><span class="en">I am signing as</span></label>
+      <select id="f-role">
+        <option value="citoyen">Citoyen·ne / Citizen</option>
+        <option value="patient">Patient·e ou proche / Patient or family</option>
+        <option value="soignant">Soignant·e / Care worker</option>
+        <option value="medecin">Médecin / Physician</option>
+      </select>
+      <label for="f-comment"><span class="fr">Commentaire (facultatif)</span><span class="en">Comment (optional)</span></label>
+      <textarea id="f-comment" rows="3" maxlength="500"></textarea>
+      <div class="consent">
+        <input type="checkbox" id="f-consent" required>
+        <label for="f-consent" style="margin:0;text-transform:none;letter-spacing:0;font-family:Georgia,serif;font-size:13.5px">
+          <span class="fr">Je signe cette pétition et je consens à ce que mon nom et mon courriel soient conservés à cette seule fin. Seuls le prénom et l'initiale du nom peuvent être affichés publiquement.</span>
+          <span class="en">I sign this petition and consent to my name and email being kept for this sole purpose. Only my first name and last initial may be displayed publicly.</span>
+        </label>
+      </div>
+      <button class="sign-btn big" type="submit"><span class="fr">Je signe</span><span class="en">I sign</span></button>
+      <div id="form-msg"></div>
+    </form>
+    <div class="share">
+      <button onclick="copyLink(this)"><span class="fr">Copier le lien</span><span class="en">Copy link</span></button>
+      <a id="share-x" target="_blank" rel="noopener">X / Twitter</a>
+      <a id="share-fb" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="fr">Dernières signatures</span><span class="en">Recent signatures</span></h2>
+    <div class="wall" id="wall"><span class="fr">Chargement…</span><span class="en">Loading…</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Sources</h2>
+    <ul class="sources" style="list-style:none">
+      <li>Santé Québec, données annuelles des urgences 2025-2026 (séjour moyen sur civière 16 h 48; triage → médecin 165 min) — <a href="https://www.lapresse.ca/actualites/sante/2026-04-16/temps-d-attente-dans-les-urgences/legere-amelioration-au-quebec.php" target="_blank" rel="noopener">La Presse, 16 avril 2026</a></li>
+      <li>ICIS / CIHI, « Emergency department wait times in Canada » (2024-2025) — <a href="https://www.cihi.ca/en/emergency-department-wait-times-in-canada-insights-from-a-health-system-perspective" target="_blank" rel="noopener">cihi.ca</a></li>
+      <li>FCEI / CFIB, « Patients before Paperwork » — <a href="https://www.cfib-fcei.ca/en/research-economic-analysis/patients-before-paperwork" target="_blank" rel="noopener">cfib-fcei.ca</a></li>
+      <li>IEDM / MEI, analyse des données ICIS 2024-2025 (médiane québécoise 5 h 23) — <a href="https://www.iedm.org/canadians-are-waiting-too-long-in-the-emergency-room/" target="_blank" rel="noopener">iedm.org</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="fr">INSTANTHPI · Pétition citoyenne. Cette page n'offre ni avis médical ni service d'urgence et ne crée aucune relation médecin-patient. Les signatures (nom, courriel, code postal, rôle, commentaire) sont conservées aux seules fins de la pétition et ne sont jamais vendues ni partagées à des fins commerciales. Aucun renseignement de santé n'est recueilli sur cette page. Écrivez-nous : info@instanthpi.ai</span>
+    <span class="en">INSTANTHPI · Citizen petition. This page offers no medical advice or emergency service and creates no doctor-patient relationship. Signatures (name, email, postal code, role, comment) are kept for the sole purpose of this petition and are never sold or shared commercially. No health information is collected on this page. Write to us: info@instanthpi.ai</span>
+  </div>
+</footer>
+
+<script>
+var API = 'https://petition.instanthpi.ai';
+function setLang(l){
+  document.body.classList.toggle('lang-en', l === 'en');
+  document.documentElement.lang = l;
+  document.getElementById('btn-fr').classList.toggle('active', l === 'fr');
+  document.getElementById('btn-en').classList.toggle('active', l === 'en');
+  try { localStorage.setItem('petition-lang', l); } catch(e){}
+}
+(function(){
+  var saved = null;
+  try { saved = localStorage.getItem('petition-lang'); } catch(e){}
+  if (saved === 'en' || (!saved && !/^fr/i.test(navigator.language || 'fr'))) setLang('en');
+  var u = encodeURIComponent(location.origin + '/familles/');
+  var t = encodeURIComponent(document.body.classList.contains('lang-en')
+    ? 'A solution for our families: sign the petition for a free, voluntary, measured pilot in Quebec ERs.'
+    : "Une solution pour nos familles : signez la pétition pour un projet pilote gratuit, volontaire et mesuré dans les urgences du Québec.");
+  document.getElementById('share-x').href = 'https://twitter.com/intent/tweet?text=' + t + '&url=' + u;
+  document.getElementById('share-fb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + u;
+})();
+function copyLink(btn){
+  navigator.clipboard.writeText(location.origin + '/familles/').then(function(){
+    btn.textContent = document.body.classList.contains('lang-en') ? 'Copied!' : 'Copié!';
+  });
+}
+function refreshWall(){
+  fetch(API + '/wall').then(function(r){ return r.json(); }).then(function(d){
+    document.getElementById('sig-count').textContent = d.count.toLocaleString('fr-CA');
+    var w = document.getElementById('wall');
+    if (!d.recent || !d.recent.length) {
+      w.innerHTML = document.body.classList.contains('lang-en')
+        ? '<span>Be the first to sign.</span>' : '<span>Soyez la première personne à signer.</span>';
+      return;
+    }
+    var roles = { patient:'patient·e', soignant:'soignant·e', medecin:'médecin', citoyen:'citoyen·ne' };
+    w.innerHTML = d.recent.map(function(s){
+      return '<span><b>' + s.display.replace(/</g,'&lt;') + '</b> · ' + (roles[s.role] || s.role) + '</span>';
+    }).join('');
+  }).catch(function(){ document.getElementById('sig-count').textContent = '—'; });
+}
+refreshWall();
+function submitSig(e){
+  e.preventDefault();
+  var en = document.body.classList.contains('lang-en');
+  var msg = document.getElementById('form-msg');
+  msg.className = '';
+  fetch(API + '/sign', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: document.getElementById('f-name').value,
+      email: document.getElementById('f-email').value,
+      postal: document.getElementById('f-postal').value,
+      role: document.getElementById('f-role').value,
+      comment: document.getElementById('f-comment').value,
+      lang: en ? 'en' : 'fr'
+    })
+  }).then(function(r){ return r.json(); }).then(function(d){
+    if (d.ok) {
+      msg.className = 'ok';
+      msg.textContent = d.already
+        ? (en ? 'You had already signed — thank you!' : 'Vous aviez déjà signé — merci!')
+        : (en ? 'Signature recorded — thank you!' : 'Signature enregistrée — merci!');
+      if (!d.already) {
+        var c = document.getElementById('sig-count');
+        var n = parseInt(String(c.textContent).replace(/\D/g, ''), 10);
+        if (!isNaN(n)) c.textContent = (n + 1).toLocaleString('fr-CA');
+      }
+      document.getElementById('petition-form').reset();
+    } else {
+      msg.className = 'err';
+      msg.textContent = en ? 'Please check your name and email.' : 'Vérifiez votre nom et votre courriel.';
+    }
+  }).catch(function(){
+    msg.className = 'err';
+    msg.textContent = en ? 'Network error — please try again.' : 'Erreur réseau — réessayez.';
+  });
+  return false;
+}
+</script>
+</body>
+</html>
