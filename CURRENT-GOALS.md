@@ -11,7 +11,7 @@ Nexus: #council grid on homepage (blockchain leads, council = financing arm), /l
 
 ## Deploy system (SOLVED)
 instanthpi.ai = Netlify site "instanthpi-nexus" c1e311c5-9bf4-4ad8-a2a4-9922493d4fab.
-Deploy = rebuild nexus-build/ (copy site/index-nexus.html→index.html, site/{donations,courses,law,4chan,physicians,network}/index.html + json + _redirects), tar zip, POST zip to /sites/<id>/deploys. Seconds. NEVER touch old site 60d1889b (wedged digest queue); portfolio lives at instanthpi.netlify.app via _redirects.
+Deploy = rebuild nexus-build/ (copy site/index-nexus.html→index.html, site/{donations,courses,law,4chan,physicians,network,models,education}/index.html + json (donations/donations.json, 4chan/threads.json, courses/courses.json) + _redirects), tar zip, POST zip to /sites/<id>/deploys. Seconds. models/ + education/ are REQUIRED — every nexus page's nav links "Which AI?"→/models/ and Education→/education/, omitting them 404s live. NEVER touch old site 60d1889b (wedged digest queue); portfolio lives at instanthpi.netlify.app via _redirects.
 
 ## In progress
 1. **CaseCheck upgrade** (~/casecheck-site, Render autodeploy on git push to carlosfalai/casecheck-site):

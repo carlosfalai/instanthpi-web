@@ -15,7 +15,10 @@ const path = require('path');
 const crypto = require('crypto');
 
 const ENV_PATH = 'C:\\Users\\insta\\.claude\\.env';
-const SITE_ID = '60d1889b-2759-4155-a141-4534c9c1864f';
+// 2026-07-03: the instanthpi.ai apex moved to the NEXUS site (c1e311c5).
+// The old site 60d1889b still answers at instanthpi.netlify.app but the
+// hourly wall refresh must land where visitors actually look.
+const SITE_ID = process.env.NETLIFY_SITE_ID || 'c1e311c5-9bf4-4ad8-a2a4-9922493d4fab';
 const PAYMENT_LINK = 'plink_1TooGlKyyCqeElTHOrspyzSC';
 const ASSOC_LINK = 'plink_1TopCoKyyCqeElTHu90yGEng'; // $100/mo physicians association
 const COURSE_LINKS = { // $35 modules; unlock free for everyone at 1000 buyers

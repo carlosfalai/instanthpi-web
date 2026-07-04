@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which AI? — the scores behind the opinions · InstantHPI</title>
+<meta name="description" content="The AI Council, benchmarked: MedQA (medicine) and LegalBench (law) scores for every model seat, with human reference points and what the same questions cost with humans. Every number links to its source.">
+<style>
+  :root{--ink:#0b0e12;--ink2:#11161d;--panel:#141b24;--line:#243040;--brass:#b08d57;--brass-bright:#d4af7a;--text:#d7dde5;--dim:#8b96a5;--good:#7fb069;--warn:#c9704a}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--ink);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.65}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  .hero{padding:64px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:'Courier New',monospace;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:16px}
+  h1{font-size:clamp(28px,5vw,44px);line-height:1.13;font-weight:normal;margin-bottom:16px}
+  h1 em{color:var(--brass-bright);font-style:italic}
+  .lead{font-size:18px;color:var(--dim);max-width:700px}
+  .lead strong{color:var(--text)}
+  section{padding:46px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:10px}
+  .benchline{font-size:15px;color:var(--dim);max-width:740px;margin-bottom:22px}
+  .benchline b{color:var(--text)}
+  .benchwrap{overflow-x:auto;margin:.4rem 0 1rem}
+  table.bench{width:100%;min-width:560px;border-collapse:collapse;font-size:15px}
+  table.bench th{text-align:left;padding:9px 12px;font-family:'Courier New',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass-bright);border-bottom:1px solid var(--line)}
+  table.bench td{padding:11px 12px;border-bottom:1px dashed var(--line);vertical-align:top}
+  table.bench td b{color:var(--text);font-weight:normal;font-size:16px}
+  table.bench td.na{color:var(--dim)}
+  .why{display:block;font-family:'Courier New',monospace;font-size:11.5px;color:var(--dim);max-width:340px;line-height:1.5;margin-top:3px}
+  a.src{font-family:'Courier New',monospace;font-size:11.5px;color:var(--brass);text-decoration:none;white-space:nowrap;margin-left:6px;border-bottom:1px solid var(--line)}
+  a.src:hover{color:var(--brass-bright);border-color:var(--brass)}
+  tr.human td{background:rgba(176,141,87,.08)}
+  tr.human .why{color:var(--brass-bright)}
+  .bmeter{height:6px;background:var(--line);border-radius:3px;max-width:200px;margin-bottom:6px;overflow:hidden}
+  .bmeter i{display:block;height:100%;background:var(--brass);border-radius:3px}
+  .bmeter i.hum{background:var(--good)}
+  table.cmp{width:100%;max-width:720px;border-collapse:collapse;font-size:15px;margin-bottom:14px}
+  table.cmp td{padding:11px 4px;border-bottom:1px dashed var(--line);color:var(--dim)}
+  table.cmp td.amt{font-family:'Courier New',monospace;color:var(--text);text-align:right;white-space:nowrap}
+  table.cmp td.amt b{color:var(--brass-bright)}
+  table.cmp tr.ours td{color:var(--text)}
+  .punch{font-style:italic;color:var(--dim);font-size:15px;max-width:700px;margin-bottom:8px}
+  .price{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:26px;max-width:720px}
+  .price p.tiers{font-family:'Courier New',monospace;font-size:15px;color:var(--brass-bright);margin-bottom:18px;line-height:2}
+  .cta{display:inline-block;background:var(--brass);color:#0b0e12;text-decoration:none;font-family:'Courier New',monospace;font-weight:bold;letter-spacing:.08em;padding:13px 30px;border-radius:3px;font-size:14px;text-transform:uppercase}
+  .cta:hover{background:var(--brass-bright)}
+  .srcnote{font-family:'Courier New',monospace;font-size:12px;color:var(--dim);line-height:1.9;max-width:860px}
+  .srcnote a{color:var(--brass)}
+  footer{padding:34px 0 60px;font-size:12px;color:var(--dim);font-family:'Courier New',monospace;line-height:1.8}
+  footer a{color:var(--brass)}
+</style>
+</head>
+<body>
+
+<div style="background:#c9704a;color:#0b0e12;font-family:'Courier New',monospace;font-size:12.5px;text-align:center;padding:9px 16px;letter-spacing:.03em;line-height:1.5">
+  <b>THESE ARE AI OPINIONS, NOT ADVICE.</b> The checks are 100% AI-generated and stay triage-only — never medical or legal advice. That is exactly why every number on this page links to its source.
+</div>
+
+<nav style="background:#0b0e12;border-bottom:1px solid #243040;font-family:'Courier New',monospace;font-size:13px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px;padding:11px 12px">
+  <a href="/" style="color:#d4af7a;font-weight:bold;text-decoration:none;padding:6px 12px;letter-spacing:.12em">INSTANTHPI</a>
+  <span style="color:#243040;padding:6px 2px">|</span>
+  <a href="/education/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Education</a>
+  <a href="/network/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Blockchain</a>
+  <a href="https://app.instanthpi.ai" style="color:#d4af7a;text-decoration:none;padding:6px 12px">AI Council</a>
+  <a href="/models/" style="color:#d4af7a;text-decoration:none;padding:6px 12px">Which AI?</a>
+  <a href="https://t.me/InstantHPIBot" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Free Bots</a>
+  <a href="/donations/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Donations</a>
+  <a href="/courses/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Courses</a>
+  <a href="/physicians/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">For Physicians</a>
+  <a href="/law/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Case Check</a>
+  <a href="/4chan/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Ledger</a>
+  <a href="https://github.com/carlosfalai/free-universal-healthcare-ai" style="color:#d7dde5;text-decoration:none;padding:6px 12px">GitHub</a>
+</nav>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">Which AI? · the scores behind the opinions</div>
+    <h1>The AI Council, benchmarked — <em>every number links to its source.</em></h1>
+    <p class="lead">Every check runs on a council of independent AI models — all on AWS Bedrock, all inside the BAA boundary. Below: how each seat scores on <strong>MedQA</strong> (the US medical-licensing-style exam) and <strong>LegalBench</strong> (Stanford's legal-reasoning benchmark), next to the human reference points. Independent published evals of the exact model versions where available — siblings labeled as such, <strong>no score invented</strong>.</p>
+  </div>
+</div>
+
+<section id="medicine">
+  <div class="wrap">
+    <h2>Medicine — MedQA (USMLE-style)</h2>
+    <p class="benchline">The medical checks run on models benchmarked against the US medical licensing exam (MedQA). Human pass &asymp; 60%, expert physicians &asymp; 87% — the lead models on this council score ~92%. These are still AI <b>opinions</b>, which is exactly why everything stays triage-only: literature discussion for your own physician, never a prescription.</p>
+    <div class="benchwrap"><table class="bench">
+      <thead><tr><th>Who</th><th>MedQA score</th></tr></thead>
+      <tbody>
+        <tr class="human"><td><b>Expert physicians, same questions</b><span class="why">human reference</span></td><td><div class="bmeter"><i class="hum" style="width:87%"></i></div><b>87%</b> <a class="src" href="https://arxiv.org/abs/2207.08143" target="_blank" rel="noopener">Li&eacute;vin et al. &#8599;</a></td></tr>
+        <tr class="human"><td><b>Human passing threshold (USMLE-style)</b><span class="why">human reference</span></td><td><div class="bmeter"><i class="hum" style="width:60%"></i></div><b>&asymp;60%</b> <a class="src" href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000198" target="_blank" rel="noopener">PLOS Digit. Health &#8599;</a></td></tr>
+        <tr><td><b>Claude Opus 4.1</b><span class="why">Anthropic &middot; chairs the consensus</span></td><td><div class="bmeter"><i style="width:92.5%"></i></div><b>92.5%</b> <a class="src" href="https://www.vals.ai/benchmarks/medqa" target="_blank" rel="noopener">vals.ai &#8599;</a></td></tr>
+        <tr><td><b>Claude Sonnet 4.6</b><span class="why">Anthropic &middot; senior seat</span></td><td><div class="bmeter"><i style="width:92.1%"></i></div><b>92.1%</b> <a class="src" href="https://www.vals.ai/benchmarks/medqa" target="_blank" rel="noopener">vals.ai &#8599;</a></td></tr>
+        <tr><td><b>Amazon Nova Pro</b><span class="why">Amazon &middot; document analysis</span></td><td><div class="bmeter"><i style="width:81.1%"></i></div><b>81.1%</b> <a class="src" href="https://crfm.stanford.edu/helm/lite/latest/#/leaderboard" target="_blank" rel="noopener">Stanford HELM &#8599;</a></td></tr>
+        <tr><td><b>Claude Haiku 4.5</b><span class="why">Anthropic &middot; fast seat</span></td><td><div class="bmeter"><i style="width:79.6%"></i></div><b>79.6%</b> <a class="src" href="https://www.vals.ai/benchmarks/medqa" target="_blank" rel="noopener">vals.ai &#8599;</a></td></tr>
+        <tr><td><b>Llama 4 Maverick</b><span class="why">Meta &middot; open-weight diversity</span></td><td><div class="bmeter"><i style="width:43.3%"></i></div><b>43.3%</b> <a class="src" href="https://www.vals.ai/benchmarks/medqa" target="_blank" rel="noopener">vals.ai &#8599;</a><span class="why">anomalously low vs its own model family on this harness — its legal score is 77.8%</span></td></tr>
+        <tr><td><b>Amazon Nova Lite</b><span class="why">Amazon &middot; fast cross-check seat — cross-checks, never chairs</span></td><td class="na">&mdash;<span class="why">no published score for this exact model</span></td></tr>
+        <tr><td><b>Llama 3.3 70B</b><span class="why">Meta &middot; independent reasoning seat</span></td><td class="na">&mdash;<span class="why">closest published sibling (Llama 3.1 70B): 84.8% <a class="src" href="https://www.vals.ai/benchmarks/medqa" target="_blank" rel="noopener">vals.ai &#8599;</a></span></td></tr>
+        <tr><td><b>Mistral Pixtral Large</b><span class="why">Mistral (EU) &middot; European lab &middot; vision seat</span></td><td class="na">&mdash;<span class="why">its text backbone (Mistral Large 24.11): 76.2% <a class="src" href="https://www.vals.ai/benchmarks/medqa" target="_blank" rel="noopener">vals.ai &#8599;</a></span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section id="law">
+  <div class="wrap">
+    <h2>Law — LegalBench (legal reasoning)</h2>
+    <p class="benchline">Legal triage runs on models independently scored on LegalBench — Stanford's legal-reasoning benchmark — where the lead seats score 82–84%. For context, a passing lawyer needs &asymp;58–62% on the bar exam's MBE (a different test; shown for context, and it links to its source like everything else). These are still AI <b>opinions</b>, which is exactly why this stays triage-only, never legal advice.</p>
+    <div class="benchwrap"><table class="bench">
+      <thead><tr><th>Who</th><th>LegalBench score</th></tr></thead>
+      <tbody>
+        <tr class="human"><td><b>Passing-lawyer threshold (bar exam MBE — a different test, shown for context)</b><span class="why">human reference</span></td><td><div class="bmeter"><i class="hum" style="width:60%"></i></div><b>&asymp;60%</b> <a class="src" href="https://www.ncbex.org/exams/mbe" target="_blank" rel="noopener">NCBE &#8599;</a></td></tr>
+        <tr><td><b>Claude Opus 4.1</b><span class="why">Anthropic &middot; chairs the consensus</span></td><td><div class="bmeter"><i style="width:83.5%"></i></div><b>83.5%</b> <a class="src" href="https://www.vals.ai/benchmarks/legal_bench" target="_blank" rel="noopener">vals.ai &#8599;</a></td></tr>
+        <tr><td><b>Claude Sonnet 4.6</b><span class="why">Anthropic &middot; senior seat</span></td><td><div class="bmeter"><i style="width:82.1%"></i></div><b>82.1%</b> <a class="src" href="https://www.vals.ai/benchmarks/legal_bench" target="_blank" rel="noopener">vals.ai &#8599;</a></td></tr>
+        <tr><td><b>Claude Haiku 4.5</b><span class="why">Anthropic &middot; fast seat</span></td><td><div class="bmeter"><i style="width:81.2%"></i></div><b>81.2%</b> <a class="src" href="https://www.vals.ai/benchmarks/legal_bench" target="_blank" rel="noopener">vals.ai &#8599;</a></td></tr>
+        <tr><td><b>Llama 4 Maverick</b><span class="why">Meta &middot; open-weight diversity</span></td><td><div class="bmeter"><i style="width:77.8%"></i></div><b>77.8%</b> <a class="src" href="https://www.vals.ai/benchmarks/legal_bench" target="_blank" rel="noopener">vals.ai &#8599;</a></td></tr>
+        <tr><td><b>Llama 3.3 70B</b><span class="why">Meta &middot; independent reasoning seat</span></td><td><div class="bmeter"><i style="width:77.2%"></i></div><b>77.2%</b> <a class="src" href="https://www.vals.ai/models/together_meta-llama_Llama-3.3-70B-Instruct-Turbo" target="_blank" rel="noopener">vals.ai &#8599;</a></td></tr>
+        <tr><td><b>Amazon Nova Pro</b><span class="why">Amazon &middot; document analysis</span></td><td><div class="bmeter"><i style="width:73.6%"></i></div><b>73.6%</b> <a class="src" href="https://crfm.stanford.edu/helm/lite/latest/#/leaderboard" target="_blank" rel="noopener">Stanford HELM &#8599;</a></td></tr>
+        <tr><td><b>Amazon Nova Lite</b><span class="why">Amazon &middot; fast cross-check seat — cross-checks, never chairs</span></td><td class="na">&mdash;<span class="why">no published score for this exact model</span></td></tr>
+        <tr><td><b>Mistral Pixtral Large</b><span class="why">Mistral (EU) &middot; European lab &middot; vision seat</span></td><td class="na">&mdash;<span class="why">no published score for this exact model</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section id="cost">
+  <div class="wrap">
+    <h2>What the same questions cost with humans</h2>
+    <p class="benchline">Two worked examples from the live checks — the legal side and the medical side.</p>
+
+    <p style="font-family:'Courier New',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass-bright);margin-bottom:10px">Legal — what the same questions cost per side, with humans</p>
+    <table class="cmp"><tbody>
+      <tr><td>Contested divorce, lawyer fees</td><td class="amt">$15,000 – $50,000+ <b>per side</b></td></tr>
+      <tr><td>Human-led expert panel (family lawyer + forensic accountant + mediator)</td><td class="amt">$10,000 – $30,000+</td></tr>
+      <tr><td>Family-lawyer retainer, just to start</td><td class="amt">$3,000 – $10,000</td></tr>
+      <tr><td>One consultation hour</td><td class="amt">$300 – $500</td></tr>
+      <tr class="ours"><td>DivorceCheck AI Opinion &amp; Verdict</td><td class="amt"><b>$25 – $249</b></td></tr>
+    </tbody></table>
+
+    <p style="font-family:'Courier New',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass-bright);margin:26px 0 10px">Medical — what this costs with humans</p>
+    <table class="cmp"><tbody>
+      <tr><td>Human-led longevity expert panel (MD + specialists, concierge)</td><td class="amt">$10,000 – $100,000 / year</td></tr>
+      <tr><td>Longevity-clinic membership</td><td class="amt">$2,500 – $15,000+ / year</td></tr>
+      <tr><td>Executive health assessment</td><td class="amt">$2,000 – $5,000</td></tr>
+      <tr><td>One functional-medicine consult</td><td class="amt">$300 – $600</td></tr>
+      <tr class="ours"><td>ImmortalityCheck AI Opinion &amp; Discussion</td><td class="amt"><b>$25 – $249</b></td></tr>
+    </tbody></table>
+
+    <p class="punch">Our system doesn't replace any of them — but it sure helps to educate you before you pay them.</p>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2>Pick your council size</h2>
+    <div class="price">
+      <p class="tiers">
+        <a href="https://app.instanthpi.ai" style="color:var(--brass-bright);text-decoration:none;border-bottom:1px solid var(--line)">2 models — $25</a> &nbsp;&middot;&nbsp;
+        <a href="https://app.instanthpi.ai" style="color:var(--brass-bright);text-decoration:none;border-bottom:1px solid var(--line)">5 — $49</a> &nbsp;&middot;&nbsp;
+        <a href="https://app.instanthpi.ai" style="color:var(--brass-bright);text-decoration:none;border-bottom:1px solid var(--line)">10 — $99</a> &nbsp;&middot;&nbsp;
+        <a href="https://app.instanthpi.ai" style="color:var(--brass-bright);text-decoration:none;border-bottom:1px solid var(--line)">12 (full bench) — $249</a>
+      </p>
+      <p style="font-size:14px;color:var(--dim);margin-bottom:20px">More seats = more independent opinions debating your case before the chair writes the consensus. RandomCheck runs the live council seats on every $5 question.</p>
+      <a class="cta" href="https://app.instanthpi.ai">Ask the AI Council &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="wrap">
+    <h2>Sources</h2>
+    <p class="srcnote">Independent published evals of the exact model versions where available — siblings labeled as such, no score invented, re-verified 2026-07-03. Official benchmarks:
+      <a href="https://arxiv.org/abs/2009.13081" target="_blank" rel="noopener">MedQA paper</a> &middot;
+      <a href="https://github.com/jind11/MedQA" target="_blank" rel="noopener">MedQA data</a> &middot;
+      <a href="https://hazyresearch.stanford.edu/legalbench/" target="_blank" rel="noopener">LegalBench</a> &middot;
+      <a href="https://arxiv.org/abs/2308.11462" target="_blank" rel="noopener">LegalBench paper</a>.
+      Independent leaderboards:
+      <a href="https://www.vals.ai/benchmarks/medqa" target="_blank" rel="noopener">vals.ai MedQA</a> &middot;
+      <a href="https://www.vals.ai/benchmarks/legal_bench" target="_blank" rel="noopener">vals.ai LegalBench</a> &middot;
+      <a href="https://crfm.stanford.edu/helm/lite/latest/#/leaderboard" target="_blank" rel="noopener">Stanford HELM</a> &middot;
+      <a href="https://www.ncbex.org/exams/mbe" target="_blank" rel="noopener">NCBE MBE</a>.
+      Scores move as models ship.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Our brand is security — access to anonymity, security, and AI Councils.
+    Every check is a 100% AI-generated opinion, triage-only — never medical or legal advice.
+    <a href="https://app.instanthpi.ai">Ask the council</a> ·
+    <a href="/donations/">fund the free tools</a>
+  </div>
+</footer>
+
+</body>
+</html>
