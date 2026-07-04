@@ -1,5 +1,3 @@
-/thankyou   https://instanthpi.netlify.app/thankyou   302
-/thankyou/* https://instanthpi.netlify.app/thankyou/:splat 302
 /story      https://instanthpi.netlify.app/story      302
 /timeline   https://instanthpi.netlify.app/timeline   302
 /quebec     https://instanthpi.netlify.app/quebec     302
