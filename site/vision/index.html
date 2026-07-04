@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vision Control — InstantHPI</title>
+<meta name="description" content="You decide what gets built. Post an idea for $1. Support an idea with a donation of $1 or more — every donation is a vote, allocated to that specific idea.">
+<style>
+:root{--ink:#0b0e12;--ink2:#11161d;--panel:#141b24;--line:#243040;--brass:#b08d57;--brass-bright:#d4af7a;--text:#d7dde5;--dim:#8b96a5;--good:#7fb069;--warn:#c9704a}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line);padding:20px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-family:'Courier New',monospace;letter-spacing:.18em;font-size:14px;color:var(--brass);text-transform:uppercase}
+.brand b{color:var(--text)}
+.hero{padding:70px 0 50px;border-bottom:1px solid var(--line)}
+.kicker{font-family:'Courier New',monospace;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+h1{font-size:clamp(30px,5vw,44px);line-height:1.15;font-weight:normal;margin-bottom:20px}
+h1 em{color:var(--brass-bright);font-style:italic}
+.lead{font-size:18px;color:var(--dim);max-width:680px}
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+h2{font-family:'Courier New',monospace;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:26px}
+h2::before{content:"— ";color:var(--line)}
+.rules{background:var(--panel);border:1px solid var(--brass);border-radius:4px;padding:24px;font-size:15.5px;max-width:680px}
+.rules b{color:var(--brass-bright)}
+.rules .fee{font-size:12.5px;color:var(--dim);font-family:'Courier New',monospace;margin-top:12px}
+.idea{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:22px;margin-bottom:14px}
+.idea h3{font-size:17px;font-weight:normal;color:var(--text);margin-bottom:6px}
+.idea .raised{font-family:'Courier New',monospace;color:var(--brass-bright);font-size:14px}
+.idea p{font-size:14.5px;color:var(--dim);margin:8px 0 12px}
+.idea .badge{font-family:'Courier New',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:3px;border:1px solid var(--line);color:var(--dim);margin-left:8px}
+.idea .badge.pending{color:var(--warn);border-color:var(--warn)}
+.btn{display:inline-block;background:var(--brass);color:#0b0e12;text-decoration:none;font-family:'Courier New',monospace;font-weight:bold;letter-spacing:.08em;padding:11px 22px;border-radius:3px;font-size:13px;text-transform:uppercase;border:none;cursor:pointer}
+.btn:hover{background:var(--brass-bright)}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--text)}
+.btn.ghost:hover{border-color:var(--brass);color:var(--brass-bright)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:30px;max-width:640px}
+label{display:block;font-family:'Courier New',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:16px 0 6px}
+input,textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:3px;color:var(--text);padding:11px 12px;font-family:Georgia,serif;font-size:15px}
+input:focus,textarea:focus{outline:none;border-color:var(--brass)}
+.notice{background:var(--ink2);border:1px dashed var(--line);border-radius:4px;padding:16px 20px;font-family:'Courier New',monospace;font-size:13px;color:var(--dim);max-width:640px}
+#post-msg{display:none;margin-top:16px;padding:13px 16px;border-radius:3px;font-family:'Courier New',monospace;font-size:14px}
+#post-msg.ok{display:block;background:var(--good);color:#0b0e12}
+#post-msg.err{display:block;background:var(--warn);color:#0b0e12}
+#thanks{display:none;background:var(--good);color:#0b0e12;padding:14px 24px;text-align:center;font-family:'Courier New',monospace;font-size:14px}
+.acct{font-family:'Courier New',monospace;font-size:13px;color:var(--dim)}
+.acct b{color:var(--brass-bright)}
+footer{padding:36px 0 60px;font-size:12px;color:var(--dim);font-family:'Courier New',monospace;line-height:1.8}
+</style>
+<script src="/hub-config.js"></script>
+</head>
+<body>
+
+<div id="thanks">Payment received — totals update within the hour. Thank you for steering the vision.</div>
+
+<nav style="background:#0b0e12;border-bottom:1px solid #243040;font-family:'Courier New',monospace;font-size:13px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px;padding:11px 12px">
+  <a href="/" style="color:#d4af7a;font-weight:bold;text-decoration:none;padding:6px 12px;letter-spacing:.12em">INSTANTHPI</a>
+  <span style="color:#243040;padding:6px 2px">|</span>
+  <a href="/hub/" style="color:#d4af7a;text-decoration:none;padding:6px 12px">Hub</a>
+  <a href="/familles/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Familles</a>
+  <a href="/vision/" style="color:#d4af7a;text-decoration:none;padding:6px 12px">Vision Control</a>
+  <a href="/join/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Get Involved</a>
+  <a href="/education/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Education</a>
+  <a href="/network/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Blockchain</a>
+  <a href="https://app.instanthpi.ai" style="color:#d7dde5;text-decoration:none;padding:6px 12px">AI Council</a>
+  <a href="https://t.me/InstantHPIBot" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Free Bots</a>
+  <a href="/donations/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Donations</a>
+  <a href="/courses/" style="color:#d7dde5;text-decoration:none;padding:6px 12px">Courses</a>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="brand">INSTANT<b>HPI</b> · VISION CONTROL</div>
+    <div id="auth-area" class="acct"></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">Vision Control · You steer</div>
+    <h1>You decide <em>what gets built</em></h1>
+    <p class="lead">InstantHPI ships free healthcare tools. Which ones come next is not our call — it's yours. Post what you want to exist. Fund what you want to see. We build the leaderboard, top-down, and report what every dollar did.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>The rules</h2>
+    <div class="rules">
+      <p><b>Post an idea: $1.</b> The dollar activates your idea and puts it on the board.</p>
+      <p style="margin-top:10px"><b>Support an idea: donate $1 or more.</b> Every donation is a vote — the board ranks by dollars raised.</p>
+      <p style="margin-top:10px">100% of your donation, net of payment-processing fees, is allocated to this idea. Each idea's total and spending are reported publicly.</p>
+      <p class="fee">Fee honesty: card processing costs about $0.63 on a $1 charge; larger amounts lose proportionally less. Totals update hourly.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The board</h2>
+    <div id="ideas"><div class="notice">Loading ideas…</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Post your idea</h2>
+    <div id="post-gate" class="notice">Sign-in is coming online shortly — posting and personal donation history unlock with it. You can already support ideas above without an account.</div>
+    <form id="post-form" style="display:none" onsubmit="return postIdea(event)">
+      <label for="i-title">Idea title * (80 chars)</label><input id="i-title" required maxlength="80">
+      <label for="i-body">What should exist, and for whom? * (1000 chars)</label><textarea id="i-body" rows="5" required maxlength="1000"></textarea>
+      <button class="btn" type="submit" style="margin-top:20px;padding:14px 34px;font-size:15px">Post idea — then pay $1 to activate</button>
+      <div id="post-msg"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    INSTANTHPI · Vision Control is a community funding board, not an investment; donations are voluntary gifts, not purchases, and are not tax-deductible at this time.
+    Ideas that are unsafe, illegal, or medically irresponsible are declined and refunded.
+    No health information is collected on this page. Write us: info@instanthpi.ai
+  </div>
+</footer>
+
+<script>
+var API = window.HUB.API;
+var auth = null;
+try { auth = JSON.parse(localStorage.getItem('hub-auth') || 'null'); } catch (e) {}
+if (new URLSearchParams(location.search).get('thanks')) document.getElementById('thanks').style.display = 'block';
+
+function money(cents) { return '$' + (cents / 100).toFixed(2); }
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+function myKey() { return (auth && auth.userKey) ? auth.userKey : 'anon'; }
+
+function renderAuth() {
+  var el = document.getElementById('auth-area');
+  if (auth && auth.profile) {
+    el.innerHTML = 'Signed in: <b>' + esc(auth.profile.name || auth.profile.email) + '</b>';
+    document.getElementById('post-gate').style.display = 'none';
+    document.getElementById('post-form').style.display = 'block';
+  } else if (window.HUB.GOOGLE_CLIENT_ID) {
+    el.innerHTML = '<div id="gsi-btn"></div>';
+    var s = document.createElement('script');
+    s.src = 'https://accounts.google.com/gsi/client';
+    s.onload = function () {
+      google.accounts.id.initialize({ client_id: window.HUB.GOOGLE_CLIENT_ID, callback: onGoogle });
+      google.accounts.id.renderButton(document.getElementById('gsi-btn'), { theme: 'outline', size: 'medium' });
+    };
+    document.head.appendChild(s);
+  } else {
+    el.textContent = 'Sign-in coming online shortly';
+  }
+}
+function onGoogle(resp) {
+  fetch(API + '/auth/google', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ credential: resp.credential }) })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (d.token) {
+        auth = { token: d.token, profile: d.profile };
+        // userKey mirrors the worker derivation via /me donations matching; store after first /ideas payUrl
+        localStorage.setItem('hub-auth', JSON.stringify(auth));
+        renderAuth(); loadIdeas();
+      }
+    });
+}
+function loadIdeas() {
+  var headers = auth ? { Authorization: 'Bearer ' + auth.token } : {};
+  fetch(API + '/ideas', { headers: headers }).then(function (r) { return r.json(); }).then(function (d) {
+    var el = document.getElementById('ideas');
+    if (!d.ideas || !d.ideas.length) {
+      el.innerHTML = '<div class="notice">No ideas on the board yet — be the first. Post yours below for $1.</div>';
+      return;
+    }
+    el.innerHTML = d.ideas.map(function (i) {
+      var badge = i.status === 'pending'
+        ? '<span class="badge pending">pending $1 activation</span>'
+        : '<span class="badge">active</span>';
+      var support = i.status === 'active'
+        ? '<a class="btn" href="' + d.payBase + '?client_reference_id=' + i.id + '.' + myKey() + '" target="_blank" rel="noopener">Support — $1+</a>'
+        : (i.mine ? '<a class="btn" href="' + d.payBase + '?client_reference_id=' + i.id + '.' + myKey() + '" target="_blank" rel="noopener">Pay $1 to activate</a>' : '');
+      return '<div class="idea"><h3>' + esc(i.title) + badge + '</h3>' +
+        '<div class="raised">' + money(i.cents) + ' raised · ' + i.id + '</div>' +
+        '<p>' + esc(i.body) + '</p>' + support + '</div>';
+    }).join('');
+  }).catch(function () {
+    document.getElementById('ideas').innerHTML = '<div class="notice">Could not load the board — refresh to retry.</div>';
+  });
+}
+function postIdea(e) {
+  e.preventDefault();
+  var msg = document.getElementById('post-msg'); msg.className = '';
+  fetch(API + '/ideas', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + (auth ? auth.token : '') },
+    body: JSON.stringify({ title: document.getElementById('i-title').value, body: document.getElementById('i-body').value })
+  }).then(function (r) { return r.json(); }).then(function (d) {
+    if (d.id) {
+      msg.className = 'ok';
+      msg.innerHTML = 'Idea ' + d.id + ' created — <a href="' + d.payUrl + '" style="color:#0b0e12;font-weight:bold" target="_blank" rel="noopener">pay $1 now to activate it</a>.';
+      document.getElementById('post-form').reset();
+      loadIdeas();
+    } else {
+      msg.className = 'err';
+      msg.textContent = d.error === 'unauthorized' ? 'Please sign in first.' : 'Check the title (4+ chars) and description (10+ chars).';
+    }
+  }).catch(function () { msg.className = 'err'; msg.textContent = 'Network error — please try again.'; });
+  return false;
+}
+renderAuth();
+loadIdeas();
+</script>
+</body>
+</html>
