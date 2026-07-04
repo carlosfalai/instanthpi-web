@@ -43,7 +43,13 @@ const api = async (p, opts = {}) => {
 
   // Upload worker (module syntax)
   const code = fs.readFileSync(path.join(__dirname, 'worker.js'), 'utf8');
-  const metadata = { main_module: 'worker.js', bindings: [{ type: 'kv_namespace', name: 'SIGS', namespace_id: kv.id }], compatibility_date: '2025-01-01' };
+  let secrets = {};
+  try { secrets = JSON.parse(fs.readFileSync(path.join(__dirname, '.secrets.json'), 'utf8')); } catch {}
+  const bindings = [{ type: 'kv_namespace', name: 'SIGS', namespace_id: kv.id }];
+  for (const name of ['ADMIN_SECRET', 'SESSION_SECRET', 'VC_PAY_URL', 'GOOGLE_CLIENT_ID']) {
+    bindings.push({ type: 'plain_text', name, text: secrets[name] || '' });
+  }
+  const metadata = { main_module: 'worker.js', bindings, compatibility_date: '2025-01-01' };
   const fd = new FormData();
   fd.append('metadata', new Blob([JSON.stringify(metadata)], { type: 'application/json' }));
   fd.append('worker.js', new Blob([code], { type: 'application/javascript+module' }), 'worker.js');

@@ -4,3 +4,4 @@ pinned/
 worker-metadata.json
 node_modules/
 .env
+petition-worker/.secrets.json
